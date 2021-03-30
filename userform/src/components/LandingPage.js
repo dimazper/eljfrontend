@@ -9,6 +9,8 @@ import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import apply from "./apply_images.png"
 
+// landing page
+
 export class LandingPage extends Component {
     constructor(props) {
         super(props) //since we are extending class Table so we have to use super in order to override Component class constructor
