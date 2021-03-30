@@ -9,6 +9,8 @@ import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import apply from "./apply_images.png"
 
+// landing page
+
 export class LandingPage extends Component {
     constructor(props) {
         super(props) //since we are extending class Table so we have to use super in order to override Component class constructor
@@ -49,7 +51,7 @@ export class LandingPage extends Component {
                   <li class="right"><a href="#about">Contact Us</a></li>
                </ul>
                <nav title="Early Learning Center Form" />
-              <h1 id='title'>Landing Page</h1>             
+              <h1 id='title'>Childcare Assistant Application</h1>             
               <table id='users'>
                  <tbody>
                     <tr>{this.createTableHeader()}</tr>
@@ -61,8 +63,12 @@ export class LandingPage extends Component {
   <div class="column">
     <div class="card">
       <h3>New Application</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <p>Use this application to apply for:</p>
+      <p>Childcare Subsidy - Payments that help families with the cost of pre-school 
+                        childcare</p>
+        <p>Oscar Subsidy - Payments for children who are at school and are under 14 years (or under
+                        18 if you get a Child Disability Allowance for them)    </p>
+
       <button class="button button1">Apply Now</button>
     </div>
   </div>
@@ -70,7 +76,7 @@ export class LandingPage extends Component {
   <div class="column">
     <div class="card">
       <h3>In Progress</h3>
-      <p>Some text</p>
+      <p>Your application is in progress</p>
       <p>Some text</p>
     </div>
   </div>
@@ -78,7 +84,7 @@ export class LandingPage extends Component {
   <div class="column">
     <div class="card">
       <h3>Completed</h3>
-      <p>Some text</p>
+      <p>Your application is completed</p>
       <p>Some text</p>
     </div>
   </div>
