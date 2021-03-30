@@ -4,6 +4,8 @@ import {Placeholder } from './components/Placeholder'
 import {UserForm} from './components/UserForm'
 import Footer from './components/footer'
 import { Switch, Route } from 'react-router-dom'
+import LandingPage from './components/LandingPage';
+import UserForm from './components/UserForm';
 
 class App extends Component {
   render() { 
@@ -11,8 +13,9 @@ class App extends Component {
       <div>
       <div className="App">
         
-        <Placeholder/>
-        
+        {/* <Placeholder/> */}
+        {/* <LandingPage/> */}
+        {/* <UserForm/> */}
       </div>
       
       </div>

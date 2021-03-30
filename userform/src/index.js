@@ -7,6 +7,7 @@ import Placeholder from './components/Placeholder'
 import LoginPage from './components/LoginPage'
 import reportWebVitals from './reportWebVitals';
 import UserForm from './components/UserForm';
+import LandingPage from './components/LandingPage';
 
 
 
@@ -14,7 +15,7 @@ const rootElement = document.getElementById('root');
     ReactDOM.render(
       <BrowserRouter>
         <Switch>
-          <Route exact path='/' component={Placeholder} />
+          <Route exact path='/' component={LandingPage} />
           <Route path='/login' component={LoginPage} />
           <Route path='/userform' component={UserForm} />
         </Switch>
