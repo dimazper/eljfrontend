@@ -11,7 +11,7 @@ class App extends Component {
       <div>
       <div className="App">
         
-        {/* <Placeholder/> */}
+        <Placeholder/>
         
       </div>
       

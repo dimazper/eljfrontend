@@ -4,7 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 import RaisedButton from 'material-ui/RaisedButton';
-import './placeholder.css';
+import './Placeholder.css';
 import { Link } from 'react-router-dom';
 
 export class Placeholder extends Component {
