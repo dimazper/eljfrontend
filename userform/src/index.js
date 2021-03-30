@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 // import './index.css';
 // import App from './App';
-import Placeholder from './components/Placeholder'
+import {Placeholder} from './components/Placeholder'
 import LoginPage from './components/LoginPage'
 import reportWebVitals from './reportWebVitals';
 import UserForm from './components/UserForm';
