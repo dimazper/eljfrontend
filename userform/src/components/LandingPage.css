@@ -54,9 +54,11 @@ body {
 
 /* Float four columns side by side */
 .column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
+  /* float: center; */
+  margin: center;
+  width: 33.2%;
+  border: 3px solid #ffffff;
+  padding: 10px;
 }
 
 /* Remove extra left and right margins, due to padding */
