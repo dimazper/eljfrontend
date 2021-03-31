@@ -15,8 +15,9 @@ const rootElement = document.getElementById('root');
     ReactDOM.render(
       <BrowserRouter>
         <Switch>
-          <Route exact path='/' component={LandingPage} />
+          <Route exact path='/' component={Placeholder} />
           <Route path='/login' component={LoginPage} />
+          <Route path='/landing' component={LandingPage} />
           <Route path='/userform' component={UserForm} />
         </Switch>
       </BrowserRouter>,

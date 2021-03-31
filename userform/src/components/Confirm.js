@@ -16,12 +16,16 @@ export class FormUserDetails extends Component {
     }; 
     
     render() { 
-        const { values: {firstName, lastName, email, occupation, city, bio} } = this.props;
+        const { values: {title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, bio} } = this.props;
         return (  
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar title="Confirm User Data" />
                     <List>
+                    <ListItem
+                        primaryText="Title"
+                        secondaryText={ title }
+                        />
                         <ListItem
                         primaryText="First Name"
                         secondaryText={ firstName }
@@ -29,6 +33,23 @@ export class FormUserDetails extends Component {
                         <ListItem
                         primaryText="Last Name"
                         secondaryText={ lastName }
+                        />
+                        
+                        <ListItem
+                        primaryText="First name (not same as birth certificate)"
+                        secondaryText={ firstNameNOTsame }
+                        />
+                         <ListItem
+                        primaryText="Last name (not same as birth certificate)"
+                        secondaryText={ lastNameNOTsame }
+                        />
+                         <ListItem
+                        primaryText="Other name(s) known by"
+                        secondaryText={ nameOtherKnown }
+                        />
+                         <ListItem
+                        primaryText="Preferred"
+                        secondaryText={ namePrefer }
                         />
                         <ListItem
                         primaryText="Email"
@@ -50,17 +71,18 @@ export class FormUserDetails extends Component {
                     </List>
                     <br/>
                     <RaisedButton
-                       label="Confirm & Continue" 
-                       primary={true}
-                       style={styles.button}
-                       onClick={this.continue}
-                    />
-                    <RaisedButton
                        label="Back" 
                        primary={false}
                        style={styles.button}
                        onClick={this.back}
                     />
+                    <RaisedButton
+                       label="Confirm & Continue" 
+                       primary={true}
+                       style={styles.button}
+                       onClick={this.continue}
+                    />
+                    
                 </React.Fragment>
             </MuiThemeProvider>
         );
