@@ -8,8 +8,13 @@ import Success from './Success';
 export class  UserForm extends Component {
     state = { 
         step: 1,
+        title: '',
         firstName: '',
         lastName: '',
+        firstNameNOTsame: '',
+        lastNameNOTsame:'',
+        nameOtherKnown: '',
+        namePrefer:'',
         email: '',
         occupation: '',
         city: '',
@@ -39,9 +44,9 @@ export class  UserForm extends Component {
 
     render() {
         const { step } = this.state;
-        const { firstName, lastName, email, occupation, city, 
+        const { title, firstName, lastName, firstNameNOTsame,lastNameNOTsame, nameOtherKnown,namePrefer, email, occupation, city, 
             bio} = this.state;
-        const values = { firstName, lastName, email, occupation, city, 
+        const values = { title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, 
             bio} 
         
             switch(step) {
