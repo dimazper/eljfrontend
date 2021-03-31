@@ -8,6 +8,8 @@ import './LandingPage.css';
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import apply from "./apply_images.png"
+import { Link } from 'react-router-dom';
+
 
 // landing page
 
@@ -23,41 +25,60 @@ export class LandingPage extends Component {
            ]
         }
      }
-     createTableData() {
+
+     createTableDataInProgress() {
         return this.state.users.map((user, index) => {
-           const { In_Progress, Completed } = user 
+           const { In_Progress } = user 
            return (
               <tr key={In_Progress}>
-                 <td>{In_Progress}</td>
+                  <td>{In_Progress}</td>
+              </tr>              
+           )
+        })
+     }
+
+     createTableDataCompleted() {
+        return this.state.users.map((user, index) => {
+           const { Completed } = user 
+           return (
+              <tr key={Completed}>
                  <td>{Completed}</td>
               </tr>              
            )
         })
      }
 
-     createTableHeader() {
+     createTableHeaderInProgress() {
         let header = Object.keys(this.state.users[0])
         return header.map((key, index) => {
            return <th key={index}>{key.toUpperCase()}</th>
         })
      }
+
+     createTableHeaderCompleted() {
+        let header = Object.keys(this.state.users[0])
+        return header.map((key, index) => {
+           return <th key={index}>{key.toUpperCase()}</th>
+        })
+     }
+
      render() {
         return (
             <div>
                <ul class="topnav">
                   <li><a class="active" href="#home">Home</a></li>
-                  <li><a href="#news">Childcare Subsidy</a></li>
+                  <li><a href="#news">Childcare Assistance Application</a></li>
                   <li><a href="#contact">Oscar Subsidy</a></li>
-                  <li class="right"><a href="#about">Contact Us</a></li>
+                  <li class="right"><a href="#about">Log Out</a></li>
                </ul>
                <nav title="Early Learning Center Form" />
-              <h1 id='title'>Childcare Assistant Application</h1>             
-              <table id='users'>
+              <h1 id='title'>Childcare Assistance Application</h1>             
+              {/* <table id='users'>
                  <tbody>
                     <tr>{this.createTableHeader()}</tr>
                     {this.createTableData()}
                  </tbody>
-              </table>
+              </table> */}
 
               <div class="row">
   <div class="column">
@@ -69,7 +90,7 @@ export class LandingPage extends Component {
         <p>Oscar Subsidy - Payments for children who are at school and are under 14 years (or under
                         18 if you get a Child Disability Allowance for them)    </p>
 
-      <button class="button button1">Apply Now</button>
+      <Link to="/userform"><button class="button button1">Apply Now</button></Link>
     </div>
   </div>
 
@@ -77,7 +98,13 @@ export class LandingPage extends Component {
     <div class="card">
       <h3>In Progress</h3>
       <p>Your application is in progress</p>
-      <p>Some text</p>
+      {/* <table id='users'>
+                 <tbody>
+                    <tr>{this.createTableHeaderInProgress()}</tr>
+                    {this.createTableDataInProgress()}
+                 </tbody>
+              </table> */}
+      <p>Client Number: 1234567</p>
     </div>
   </div>
   
@@ -85,7 +112,13 @@ export class LandingPage extends Component {
     <div class="card">
       <h3>Completed</h3>
       <p>Your application is completed</p>
-      <p>Some text</p>
+      {/* <table id='users'>
+                 <tbody>
+                    <tr>{this.createTableHeaderCompleted()}</tr>
+                    {this.createTableDataCompleted()}
+                 </tbody>
+              </table> */}
+      <p>Client Number: 1234567</p>
     </div>
   </div>
 </div>
