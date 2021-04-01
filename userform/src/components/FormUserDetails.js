@@ -24,42 +24,39 @@ export class FormUserDetails extends Component {
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar title="Early Learning Center Form" /><br></br>
-                   
-    <FormControl component="fieldset">
-      <FormLabel component="legend"><b>1.</b> What is your full name?</FormLabel>
-      <FormGroup aria-label="position" row>
+{/* Question 1              */}
+      <FormControl component="fieldset">
+      <p class="question">1. What is your full name?</p>
+              <FormGroup aria-label="position" row>
         
-        <FormControlLabel
-          value="mr"
-          control={<Checkbox color="primary" />}
-          label="Mr"
-          labelPlacement="end"
-          onChange={handleChange('title')}
-                       defaultValue={values.title}
-        />
-        <FormControlLabel
-          value="mrs"
-          control={<Checkbox color="primary" />}
-          label="Mrs"
-          labelPlacement="end"
-        />
-        <FormControlLabel
-          value="ms"
-          control={<Checkbox color="primary" />}
-          label="Ms"
-          labelPlacement="end"
-        />
-        <FormControlLabel
-          value="miss"
-          control={<Checkbox color="primary" />}
-          label="Miss"
-          labelPlacement="end"
-        />
-        
-      </FormGroup>
-    </FormControl><br></br>
-                    
-
+                <FormControlLabel
+                    value="mr"
+                    control={<Checkbox color="primary" />}
+                    label="Mr"
+                    labelPlacement="end"
+                    onChange={handleChange('title')}
+                    defaultValue={values.title}
+                />
+                <FormControlLabel
+                    value="mrs"
+                    control={<Checkbox color="primary" />}
+                    label="Mrs"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="ms"
+                    control={<Checkbox color="primary" />}
+                    label="Ms"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="miss"
+                    control={<Checkbox color="primary" />}
+                    label="Miss"
+                    labelPlacement="end"
+                />
+              </FormGroup>
+                <br></br>
                     <TextField 
                        hintText="Enter Your First Name" //hfgfg
                        floatingLabelText="First and middle names"
@@ -73,21 +70,29 @@ export class FormUserDetails extends Component {
                        onChange={handleChange('lastName')}
                        defaultValue={values.lastName}
                     />
-                    <br/><br></br><br></br>
-                    <FormLabel component="legend"><b>2. </b>Is the name of your birth certificate the same as above?</FormLabel>
+                    <br/>
+                    <br/>
+                    <br/>
 
-                    <FormControlLabel
-          value="no"
-          control={<Checkbox color="primary" />}
-          label="No"
-          labelPlacement="end" 
-        />
-        <FormControlLabel
-          value="yes"
-          control={<Checkbox color="primary" />}
-          label="Yes"
-          labelPlacement="end"
-        /><br></br>
+  {/* end of question 1 */}
+
+  {/* question 2 */}
+        <p class="question"><b>2. </b>Is the name of your birth certificate the same as above?</p>
+            <FormGroup aria-label="position" row>
+                <FormControlLabel
+                  value="no"
+                  control={<Checkbox color="primary" />}
+                  label="No"
+                  labelPlacement="end" 
+                />
+                <FormControlLabel
+                  value="yes"
+                  control={<Checkbox color="primary" />}
+                  label="Yes"
+                  labelPlacement="end"
+                />
+            </FormGroup>
+        
                    <TextField 
                        hintText="Enter Your First Name" //hfgfg
                        floatingLabelText="First and middle names"
@@ -101,8 +106,10 @@ export class FormUserDetails extends Component {
                        onChange={handleChange('lastNameNOTsame')}
                        defaultValue={values.lastNameNOTsame}
                     />
+        
+        
                     <br/><br></br><br></br>
-                    <FormLabel component="legend"><b>3. </b>Have you ever been known by another name?</FormLabel>
+                    <p class="question"><b>3. </b>Have you ever been known by another name?</p>
                     <FormControlLabel
           value="no"
           control={<Checkbox color="primary" />}
@@ -121,7 +128,7 @@ export class FormUserDetails extends Component {
                        onChange={handleChange('nameOtherKnown')}
                        defaultValue={values.nameOtherKnown}
                     /><br></br><br></br><br></br>
-                     <FormLabel component="legend"><b>4. </b>What name would you like us to call you?</FormLabel>
+                     <p class="question"><b>4. </b>What name would you like us to call you?</p>
                     <FormControlLabel
           value="3q1name"
           control={<Checkbox color="primary" />}
@@ -146,6 +153,7 @@ export class FormUserDetails extends Component {
                        style={styles.button}
                        onClick={this.continue}
                     />
+                    </FormControl>
                 </React.Fragment>
             </MuiThemeProvider>
         );
