@@ -156,3 +156,7 @@ body {
 div {
   text-align: center;
 }
+
+.question {
+  text-align: left;
+}
