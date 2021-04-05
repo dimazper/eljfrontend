@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import FormUserDetails from './FormUserDetails';
-import FormPersonalDetails from './FormPersonalDetails';
-import Confirm from './Confirm';
+import ElsFormUserDetails from './ElsFormUserDetails';
+import ElsFormPersonalDetails from './ElsFormPersonalDetails';
+import ElsConfirm from './ElsConfirm';
 import Success from './Success';
 
 
-export class  ELSForm extends Component {
+export class  ElsUserForm extends Component {
     state = { 
         step: 1,
+        title: '',
         firstName: '',
         lastName: '',
+        firstNameNOTsame: '',
+        lastNameNOTsame:'',
+        nameOtherKnown: '',
+        namePrefer:'',
         email: '',
         occupation: '',
         city: '',
@@ -39,15 +44,15 @@ export class  ELSForm extends Component {
 
     render() {
         const { step } = this.state;
-        const { firstName, lastName, email, occupation, city, 
+        const { title, firstName, lastName, firstNameNOTsame,lastNameNOTsame, nameOtherKnown,namePrefer, email, occupation, city, 
             bio} = this.state;
-        const values = { firstName, lastName, email, occupation, city, 
+        const values = { title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, 
             bio} 
         
             switch(step) {
                 case 1:
                     return(
-                        <FormUserDetails
+                        <ElsFormUserDetails
                             nextStep={this.nextStep}
                             handleChange={this.handleChange}
                             values={values} 
@@ -55,7 +60,7 @@ export class  ELSForm extends Component {
                     );
                 case 2:
                     return(
-                        <FormPersonalDetails
+                        <ElsFormPersonalDetails
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
                             handleChange={this.handleChange}
@@ -64,7 +69,7 @@ export class  ELSForm extends Component {
                     );
                 case 3:
                     return(
-                        <Confirm
+                        <ElsConfirm
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
                             handleChange={this.handleChange}
@@ -77,4 +82,4 @@ export class  ELSForm extends Component {
     }
 }
  
-export default ELSForm;
+export default ElsUserForm;
