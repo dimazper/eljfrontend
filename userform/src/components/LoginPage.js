@@ -6,7 +6,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 // import { UserForm } from './components/UserForm';
 
-
 export class LoginPage extends Component {
     constructor(props)
     {
@@ -68,7 +67,7 @@ export class LoginPage extends Component {
                             <p>Password:</p><input></input><p>  </p> */}
                             {/* <Link to="/userform"><button> Login </button></Link> */}
                         </div>
-                    </div>                 
+                    </div> 
                 </React.Fragment>
             </MuiThemeProvider>
         );
