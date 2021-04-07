@@ -10,10 +10,8 @@ import UserForm from './components/UserForm';
 import LandingPage from './components/LandingPage';
 import ElsUserForm from './components/ElsUserForm';
 import ElsLandingPage from './components/ElsLandingPage';
-
-
-
-
+import FetchUser from './components/FetchUser';
+// import Table from './components/Table';
 
 
 
@@ -28,9 +26,8 @@ const rootElement = document.getElementById('root');
           <Route path='/userform' component={UserForm} />
           <Route path='/els' component={ElsUserForm} />
           <Route path='/elslanding' component={ElsLandingPage} />
-
-
-
+          <Route path='/fetchuser' component={FetchUser} />
+          {/* <Route path='/table' component={Table} /> */}
 
         </Switch>
       </BrowserRouter>,
