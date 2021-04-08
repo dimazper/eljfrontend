@@ -15,6 +15,8 @@ export class Success extends Component {
     }; 
     
     render() { 
+        const { values: {title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, bio} } = this.props;
+
         return (  
             <MuiThemeProvider>
                 <React.Fragment>
