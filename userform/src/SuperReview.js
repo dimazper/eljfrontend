@@ -4,7 +4,7 @@ import FetchUser from './components/FetchUser';
 import './App.css';
 
   
-class App extends React.Component {
+class SuperReview extends React.Component {
   
     state = {
         ccs : [],
@@ -60,7 +60,7 @@ class App extends React.Component {
   }
 }
   
-export default App;
+export default SuperReview;
 
 
 

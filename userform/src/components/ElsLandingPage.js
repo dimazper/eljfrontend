@@ -5,6 +5,10 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 // import { Card } from 'material-ui';
 import './LandingPage.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faSchool } from '@fortawesome/free-solid-svg-icons';
+
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import apply from "./apply_images.png"
@@ -72,7 +76,7 @@ export class ElsLandingPage extends Component {
                   <li class="right"><a href="#about">Log Out</a></li>
                </ul>
                <nav title="Early Learning Center Form" />
-              <h1 id='title'>Childcare Assistance Application</h1>             
+              <h1 id='title'>CCS Supervisor Portal <FontAwesomeIcon color='blue' icon={faSchool}/></h1>             
               {/* <table id='users'>
                  <tbody>
                     <tr>{this.createTableHeader()}</tr>
@@ -81,44 +85,33 @@ export class ElsLandingPage extends Component {
               </table> */}
 
               <div class="row">
-  <div class="column">
-    <div class="card">
-      <h3>New Application</h3>
-      <p>Use this application to apply for:</p>
-      <p>Childcare Subsidy - Payments that help families with the cost of pre-school 
-                        childcare</p>
-        <p>Oscar Subsidy - Payments for children who are at school and are under 14 years (or under
-                        18 if you get a Child Disability Allowance for them)    </p>
-
-      <Link to="/userform"><button class="button button1">Apply Now</button></Link>
-    </div>
-  </div>
+ 
 
   <div class="column">
     <div class="card">
       <h3>In Progress</h3>
-      <p>Your application is in progress</p>
+      <p></p>
       {/* <table id='users'>
                  <tbody>
                     <tr>{this.createTableHeaderInProgress()}</tr>
                     {this.createTableDataInProgress()}
                  </tbody>
               </table> */}
-      <p>Client Number: 1234567</p>
+      <p><a href='/App'>Application: 2</a></p>
     </div>
   </div>
   
   <div class="column">
     <div class="card">
       <h3>Completed</h3>
-      <p>Your application is completed</p>
+      <p>0 completed applications</p>
       {/* <table id='users'>
                  <tbody>
                     <tr>{this.createTableHeaderCompleted()}</tr>
                     {this.createTableDataCompleted()}
                  </tbody>
               </table> */}
-      <p>Client Number: 1234567</p>
+      <p></p>
     </div>
   </div>
 </div>

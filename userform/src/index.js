@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 // import './index.css';
-// import App from './App';
+import App from './App';
 import {Placeholder} from './components/Placeholder'
 import LoginPage from './components/LoginPage'
 import reportWebVitals from './reportWebVitals';
@@ -11,6 +11,7 @@ import LandingPage from './components/LandingPage';
 import ElsUserForm from './components/ElsUserForm';
 import ElsLandingPage from './components/ElsLandingPage';
 import FetchUser from './components/FetchUser';
+import SuperReview from './SuperReview';
 // import Table from './components/Table';
 
 
@@ -27,6 +28,7 @@ const rootElement = document.getElementById('root');
           <Route path='/els' component={ElsUserForm} />
           <Route path='/elslanding' component={ElsLandingPage} />
           <Route path='/fetchuser' component={FetchUser} />
+          <Route path='/review' component={SuperReview} />
           {/* <Route path='/table' component={Table} /> */}
 
         </Switch>

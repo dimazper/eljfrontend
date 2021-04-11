@@ -95,6 +95,10 @@ body {
   font-family: arial, sans-serif;
 }
 
+#title2 {
+  text-align: left;
+  font-family: arial, sans-serif;
+}
 #users {
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

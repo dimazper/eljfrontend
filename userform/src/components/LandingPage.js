@@ -4,11 +4,13 @@ import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 // import { Card } from 'material-ui';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './LandingPage.css';
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import apply from "./apply_images.png"
 import { Link } from 'react-router-dom';
+import { faChild } from '@fortawesome/free-solid-svg-icons';
 
 
 // landing page
@@ -69,10 +71,10 @@ export class LandingPage extends Component {
                   <li><a class="active" href="#home">Home</a></li>
                   <li><a href="#news">Childcare Assistance Application</a></li>
                   <li><a href="#contact">Oscar Subsidy</a></li>
-                  <li class="right"><a href="#about">Log Out</a></li>
+                  <li class="right"><a href="/login">Log Out</a></li>
                </ul>
                <nav title="Early Learning Center Form" />
-              <h1 id='title'>Childcare Assistance Application</h1>             
+              <h1 id='title'>Childcare Assistance Application <FontAwesomeIcon color='blue' icon={faChild}/></h1>             
               {/* <table id='users'>
                  <tbody>
                     <tr>{this.createTableHeader()}</tr>
@@ -97,28 +99,30 @@ export class LandingPage extends Component {
   <div class="column">
     <div class="card">
       <h3>In Progress</h3>
-      <p>Your application is in progress</p>
+      <p>Application: 2
+         (ELS Supervisor)
+      </p>
       {/* <table id='users'>
                  <tbody>
                     <tr>{this.createTableHeaderInProgress()}</tr>
                     {this.createTableDataInProgress()}
                  </tbody>
               </table> */}
-      <p>Client Number: 1234567</p>
+      <p></p>
     </div>
   </div>
   
   <div class="column">
     <div class="card">
       <h3>Completed</h3>
-      <p>Your application is completed</p>
+      <p>0 completed applications</p>
       {/* <table id='users'>
                  <tbody>
                     <tr>{this.createTableHeaderCompleted()}</tr>
                     {this.createTableDataCompleted()}
                  </tbody>
               </table> */}
-      <p>Client Number: 1234567</p>
+      <p></p>
     </div>
   </div>
 </div>
