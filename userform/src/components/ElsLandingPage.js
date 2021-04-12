@@ -97,7 +97,7 @@ export class ElsLandingPage extends Component {
                     {this.createTableDataInProgress()}
                  </tbody>
               </table> */}
-      <p><a href='/App'>Application: 2</a></p>
+      <p><a href='/review'>Application: 2</a></p>
     </div>
   </div>
   

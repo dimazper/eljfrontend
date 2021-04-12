@@ -8,6 +8,7 @@ import Success from './Success';
 export class  ElsUserForm extends Component {
     state = { 
         step: 1,
+        clientNumber:'',
         title: '',
         firstName: '',
         lastName: '',
@@ -44,9 +45,9 @@ export class  ElsUserForm extends Component {
 
     render() {
         const { step } = this.state;
-        const { title, firstName, lastName, firstNameNOTsame,lastNameNOTsame, nameOtherKnown,namePrefer, email, occupation, city, 
+        const { clientNumber, title, firstName, lastName, firstNameNOTsame,lastNameNOTsame, nameOtherKnown,namePrefer, email, occupation, city, 
             bio} = this.state;
-        const values = { title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, 
+        const values = { clientNumber, title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, 
             bio} 
         
             switch(step) {

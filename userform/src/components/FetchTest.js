@@ -9,22 +9,16 @@ import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
-let string = "20";
-let num = parseInt(string);
-let twenty_Hrs_ECE = num+"_Hrs_ECE";
-
-export class FetchUser extends Component {   
+export class FetchTest extends Component {   
     constructor (props) {
         super (props)
-
-        var num = 20;
-        var hrs = num.toString ();
-       
+        // var num = 20;
+        // var hrs = num.toString ();
         this.state = {
             loading: true,
             datastore: null,     
             users: [
-                { _id: '', ECE_Id: '', Org_name: '', Telephone: '', Fax: '', Email: '', twenty_Hrs_ECE: ''}
+                { _id: '', ECE_Id: '', Org_name: '', Telephone: '', Fax: '', Email: ''}
             ]
         }
     }
@@ -41,9 +35,8 @@ export class FetchUser extends Component {
     }
 
     renderTableData() {
- 
         return this.state.users.map((user, index) => {
-           const {_id, ECE_Id, Org_name, Telephone, Fax, Email,twenty_Hrs_ECE } = user 
+           const {_id, ECE_Id, Org_name, Telephone, Fax, Email } = user 
            return (
               <tr key={_id}>
                   <td>{_id}</td>
@@ -52,7 +45,6 @@ export class FetchUser extends Component {
                   <td>{Telephone}</td>
                   <td>{Fax}</td>
                   <td>{Email}</td>
-                  <td>{twenty_Hrs_ECE}</td>
               </tr>              
            )
         })
@@ -66,7 +58,6 @@ export class FetchUser extends Component {
      }
      
      render (){
-  
          return (
              <div>    
                 <h1 id='title'></h1>  
@@ -85,7 +76,7 @@ export class FetchUser extends Component {
                      <div>ECE ID: {this.state.datastore.ECE_Id}</div>
                      <div>Phone number: {this.state.datastore.Telephone}</div>
                      <div>Email: {this.state.datastore.Email}</div>
-                     <div>20 hours ECE: YES {alert(twenty_Hrs_ECE)}</div>
+                     <div>20 hours ECE: YES</div>
                      <p><b></b>  
                             
                             <FormControlLabel
@@ -135,4 +126,4 @@ export class FetchUser extends Component {
 //     }
 // }
  
-export default FetchUser;
+export default FetchTest;

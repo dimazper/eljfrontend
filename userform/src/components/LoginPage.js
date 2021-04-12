@@ -27,7 +27,7 @@ export class LoginPage extends Component {
 
     routeChange=()=> {
         if (this.state.username === 'parent'){
-            window.location.href='/userform';
+            window.location.href='/landing';
         }
         else if (this.state.username === 'els'){
             window.location.href='/elslanding';
