@@ -3,11 +3,46 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import { List, ListItem } from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton';
+import axios from 'axios';
 
 export class FormUserDetails extends Component {
+    constructor(props)
+    {
+        super(props);
+        this.state= {
+            clientNumber:'',
+            firstName: '',
+        }
+    }
+
     continue = e => {
         e.preventDefault();
         //Process Form//
+        
+        console.log("test")
+        
+        const axios = require('axios')
+        var body = {
+            clientNumber: this.props.values.clientNumber,
+            firstName: this.props.values.firstName,
+
+            
+
+        }
+        axios({
+            method: 'post',
+            url: 'http://34.230.74.44:8000/ccs/',
+            headers: {'authorization': 'Token 5f1c57dbbe2dbaabe6f8ada1c7f3c0e6dd2e2a35'},
+            data: body
+        })
+          .then(function (response) {
+            console.log(response);
+          })
+
+
+
+
+
         this.props.nextStep();
     };
     back = e => {
@@ -16,12 +51,17 @@ export class FormUserDetails extends Component {
     }; 
     
     render() { 
-        const { values: {title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, bio} } = this.props;
+        const { values: {clientNumber, title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, bio} } = this.props;
+        
         return (  
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar title="Confirm User Data" />
                     <List>
+                    <ListItem
+                        primaryText="Client Number"
+                        secondaryText={ clientNumber }
+                        />
                     <ListItem
                         primaryText="Title"
                         secondaryText={ title }

@@ -5,7 +5,6 @@ import './App.css';
 
   
 class SuperReview extends React.Component {
-  
     state = {
         ccs : [],
     }
@@ -24,14 +23,32 @@ class SuperReview extends React.Component {
         })
         .catch(err => {})
     }
+
+    // componentDidMount() {
+  
+    //     let data ;
+  
+    //     axios.get('https://catalogue.data.govt.nz/api/3/action/datastore_search?resource_id=f65dfeb4-94be-4879-957c-e081d9570216&limit=50000',
+        
+    //     )
+    //     .then(res => {
+    //         data = res.data;
+    //         this.setState({
+    //             ccs : data    
+    //         });
+    //     })
+    //     .catch(err => {})
+    // }
   
   render() {
+
     return(
       <div>
             {this.state.ccs.map((ccs) =>  (
             <div key={ccs}>
             <div >
                   <div ><h1>CCS Application: {ccs.id}</h1>
+                  {/* <p>TEST: {ccs.twenty_Hrs_ECE}</p> */}
 
                         <p>Primary Applicant: {ccs.firstName} {ccs.lastName}</p>
                         <p>Client number: {ccs.clientNumber} </p>

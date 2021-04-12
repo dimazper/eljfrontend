@@ -25,6 +25,7 @@ const rootElement = document.getElementById('root');
       
       <BrowserRouter>
       <Header/>
+      <div>
         <Switch>
           <Route exact path='/' component={App} />
           <Route path='/login' component={LoginPage} />
@@ -37,6 +38,7 @@ const rootElement = document.getElementById('root');
           {/* <Route path='/table' component={Table} /> */}
 
         </Switch>
+        </div>
         <div class='footer'>
         <Footer/>
         </div>

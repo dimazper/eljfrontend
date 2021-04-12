@@ -26,6 +26,12 @@ export class ElsFormUserDetails extends Component {
                     <AppBar title="Early Learning Center Form" /><br></br>
 {/* Question 1              */}
       <FormControl component="fieldset">
+      <TextField 
+                       hintText="Work and Income Client Number" //hfgfg
+                       floatingLabelText="Enter Client Number "
+                       onChange={handleChange('firstName')}
+                       defaultValue={values.clientNumber}
+                    />
       <p class="question">1. What is your full name?</p>
               <FormGroup aria-label="position" row>
         

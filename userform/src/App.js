@@ -29,19 +29,12 @@ class App extends React.Component {
   render() {
     return(
       <div>
-            {this.state.ccs.map((ccs) =>  (
-            <div key={ccs}>
-            <div >
-                  <div >
+            
                         
-                        <Placeholder/>
-                        {/* <FetchUser /> */}
-                     
-                  </div>
-            </div>
-            </div>
-            )
-        )}
+        <Placeholder/>
+           
+            
+        
       </div>
       );
   }
