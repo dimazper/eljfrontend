@@ -1,6 +1,8 @@
 /* navigation bar */
 body {
   margin: 0;
+  margin-bottom:50px;
+
 }
 
 ul.topnav {
@@ -50,7 +52,11 @@ ul.topnav li.right {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+
+    margin-bottom:50px;
 }
+
+
 
 /* Float four columns side by side */
 .column {
@@ -163,4 +169,12 @@ div {
 
 .question {
   text-align: left;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
