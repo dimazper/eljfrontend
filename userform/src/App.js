@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import FetchUser from './components/FetchUser';
 import './App.css';
+import Placeholder from './components/Placeholder';
 
   
 class App extends React.Component {
@@ -31,25 +32,11 @@ class App extends React.Component {
             {this.state.ccs.map((ccs) =>  (
             <div key={ccs}>
             <div >
-                  <div ><h1>CCS Application: {ccs.id}</h1>
-
-                        <p>Primary Applicant: {ccs.firstName} {ccs.lastName}</p>
-                        <p>Client number: {ccs.clientNumber} </p>
-                        <p>Child full name: {ccs.Child_ECE_ChildName_1}</p>
-                        <p>Early Childhood Service: {ccs.Child_ECE_Provider_1}</p>
-                        <p>Weekly Total Hours ECE: {ccs.Child_ECE_WeekTotal_1}</p>
-                        <p>Total CCS hours used: 3</p>
+                  <div >
                         
-                        <p>Care start date: {ccs.Child_ECE_StartDate_1}</p>
-                        <br>
-                        </br>
-
-                        <footer >
-                        <p><b>Supervisor Data Match</b></p>
-                        <FetchUser />
-                        <p>What is your CCS/OSCAR providor number?: <input></input></p>
-                        <br></br><button> Accept </button>
-                        </footer>
+                        <Placeholder/>
+                        {/* <FetchUser /> */}
+                     
                   </div>
             </div>
             </div>

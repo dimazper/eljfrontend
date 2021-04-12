@@ -12,6 +12,9 @@ import ElsUserForm from './components/ElsUserForm';
 import ElsLandingPage from './components/ElsLandingPage';
 import FetchUser from './components/FetchUser';
 import SuperReview from './SuperReview';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 // import Table from './components/Table';
 
 
@@ -19,9 +22,11 @@ import SuperReview from './SuperReview';
 
 const rootElement = document.getElementById('root');
     ReactDOM.render(
+      
       <BrowserRouter>
+      <Header/>
         <Switch>
-          <Route exact path='/' component={Placeholder} />
+          <Route exact path='/' component={App} />
           <Route path='/login' component={LoginPage} />
           <Route path='/landing' component={LandingPage} />
           <Route path='/userform' component={UserForm} />
@@ -32,6 +37,9 @@ const rootElement = document.getElementById('root');
           {/* <Route path='/table' component={Table} /> */}
 
         </Switch>
+        <div class='footer'>
+        <Footer/>
+        </div>
       </BrowserRouter>,
       rootElement
     );
