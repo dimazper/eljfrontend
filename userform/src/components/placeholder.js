@@ -8,6 +8,7 @@ import './Placeholder.css';
 import { Link } from 'react-router-dom';
 import { styled } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Header from "./Header";
 
 const MyButton = styled(Button)({
   background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -33,9 +34,9 @@ export class Placeholder extends Component {
     render() { 
         return (  
             <MuiThemeProvider>
-            
+            <Header/>
                 <React.Fragment>
-                    <AppBar title="Placeholder Info Page" />
+                    
                     <div class="row">
                         <p><br/></p>
                         <p>Lorum ipsum, information about early learning</p>

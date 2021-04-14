@@ -4,6 +4,11 @@ import AppBar from 'material-ui/AppBar';
 import { List, ListItem } from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton';
 import axios from 'axios';
+import HeaderForm from './HeaderForm';
+// Import React Progress Bar
+import "react-step-progress-bar/styles.css";
+import { ProgressBar } from "react-step-progress-bar";
+// Import React Progress Bar
 
 export class FormUserDetails extends Component {
     constructor(props)
@@ -55,8 +60,15 @@ export class FormUserDetails extends Component {
         
         return (  
             <MuiThemeProvider>
+                <HeaderForm/>
                 <React.Fragment>
-                    <AppBar title="Confirm User Data" />
+                <h1 id='title'>
+                <ProgressBar
+                    percent={100}
+                    filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                />
+                </h1> 
+                    {/* <AppBar title="Confirm User Data" /> */}
                     <List>
                     <ListItem
                         primaryText="Client Number"

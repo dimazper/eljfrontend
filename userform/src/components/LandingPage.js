@@ -11,6 +11,7 @@ import { Button } from 'react-bootstrap';
 import apply from "./apply_images.png"
 import { Link } from 'react-router-dom';
 import { faChild } from '@fortawesome/free-solid-svg-icons';
+import Header from "./Header";
 
 
 // landing page
@@ -66,51 +67,31 @@ export class LandingPage extends Component {
 
      render() {
         return (
-            <div>
-               <ul class="topnav">
-                  <li><a class="active" href="#home">Home</a></li>
-                  <li><a href="#news">Childcare Assistance Application</a></li>
-                  <li><a href="#contact">Oscar Subsidy</a></li>
-                  <li class="right"><a href="/login">Log Out</a></li>
-               </ul>
-               <nav title="Early Learning Center Form" />
-              <h1 id='title'>Childcare Assistance Application <FontAwesomeIcon color='blue' icon={faChild}/></h1>             
-              {/* <table id='users'>
-                 <tbody>
-                    <tr>{this.createTableHeader()}</tr>
-                    {this.createTableData()}
-                 </tbody>
-              </table> */}
-
-              <div class="row">
-  <div class="column">
-    <div class="card">
-      <h3>New Application</h3>
-      <p>Use this application to apply for:</p>
-      <p>Childcare Subsidy - Payments that help families with the cost of pre-school 
+           
+<div class="row">
+   <Header/>
+   <h1 id='title'>Childcare Assistance Application <FontAwesomeIcon color='blue' icon={faChild}/></h1>             
+      <div class="column">
+         <div class="card">
+            <h3>New Application</h3>
+               <p>Use this application to apply for:</p>
+                     <p>Childcare Subsidy - Payments that help families with the cost of pre-school 
                         childcare</p>
-        <p>Oscar Subsidy - Payments for children who are at school and are under 14 years (or under
-                        18 if you get a Child Disability Allowance for them)    </p>
+               <p>Oscar Subsidy - Payments for children who are at school and are under 14 years (or under
+                     18 if you get a Child Disability Allowance for them)    </p>
 
-      <Link to="/userform"><button class="button button1">Apply Now</button></Link>
-    </div>
-  </div>
+            <Link to="/userform"><button class="button button1">Apply Now</button></Link>
+         </div>
+      </div>
 
-  <div class="column">
-    <div class="card">
-      <h3>In Progress</h3>
-      <p>Application: 2
-         (ELS Supervisor)
-      </p>
-      {/* <table id='users'>
-                 <tbody>
-                    <tr>{this.createTableHeaderInProgress()}</tr>
-                    {this.createTableDataInProgress()}
-                 </tbody>
-              </table> */}
-      <p></p>
-    </div>
-  </div>
+      <div class="column">
+         <div class="card">
+            <h3>In Progress</h3>
+               <p>Application: 2
+                  (ELS Supervisor)
+               </p>
+         </div>
+      </div>
   
   <div class="column">
     <div class="card">
@@ -127,38 +108,7 @@ export class LandingPage extends Component {
   </div>
 </div>
 
-               {/* <Card style={{ width: '18rem' }}>
-               <Card.Img variant="top" src={apply} alt="apply logo" width="200" height="200"/>
-                  <Card.Body>
-                     <Card.Title>New Applicant</Card.Title>
-                     <Card.Text>
-                        Use this application to apply for:
-                        <br/>
-                        Childcare Subsidy - Payments that help families with the cost of pre-school 
-                        childcare
-                        <br/>
-                        Oscar Subsidy - Payments for children who are at school and are under 14 years (or under
-                        18 if you get a Child Disability Allowance for them)    
-                     </Card.Text>
-                        <button variant="primary" class="button button1">Apply Now</button>
-                  </Card.Body>
-
-                  <Card.Img variant="top" src={apply} alt="apply logo" width="200" height="200"/>
-                  <Card.Body>
-                     <Card.Title id='right'>New Applicant</Card.Title>
-                     <Card.Text>
-                        Use this application to apply for:
-                        <br/>
-                        Childcare Subsidy - Payments that help families with the cost of pre-school 
-                        childcare
-                        <br/>
-                        Oscar Subsidy - Payments for children who are at school and are under 14 years (or under
-                        18 if you get a Child Disability Allowance for them)    
-                     </Card.Text>
-                        <button variant="primary" class="button button1">Apply Now</button>
-                  </Card.Body>
-               </Card> */}
-            </div>
+               
         )
      }
 }

@@ -4,6 +4,7 @@ import AppBar from 'material-ui/AppBar';
 // import { useHistory } from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+import HeaderForm from './HeaderForm';
 // import { UserForm } from './components/UserForm';
 
 export class LoginPage extends Component {
@@ -40,8 +41,9 @@ export class LoginPage extends Component {
     render() { 
         return (  
             <MuiThemeProvider>
+                <HeaderForm/> 
                 <React.Fragment>
-                    <AppBar title="Login page" />
+                    {/* <AppBar title="Login page" /> */}
                     <div class="row">
                         <p><br/></p>
                         <p>Please enter your login name and password</p>

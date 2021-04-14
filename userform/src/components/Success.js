@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import HeaderForm from './HeaderForm';
 
 export class Success extends Component {
     continue = e => {
@@ -18,8 +19,9 @@ export class Success extends Component {
 
         return (  
             <MuiThemeProvider>
+                <HeaderForm/>
                 <React.Fragment>
-                    <AppBar title="Success" />
+                    {/* <AppBar title="Success" /> */}
                     <h1>Thank You For Your Submission</h1>
                     <Link to="/landing">Landing</Link>
                     <p>You will get an email with further instructions</p>

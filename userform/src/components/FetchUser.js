@@ -22,7 +22,8 @@ export class FetchUser extends Component {
        
         this.state = {
             loading: true,
-            datastore: null,     
+            datastore: null,
+            school: "",     
             users: [
                 { _id: '', ECE_Id: '', Org_name: '', Telephone: '', Fax: '', Email: '', twenty_Hrs_ECE: ''}
             ]
@@ -30,7 +31,7 @@ export class FetchUser extends Component {
     }
 
     async componentDidMount (){
-        const url = "https://catalogue.data.govt.nz/api/3/action/datastore_search?resource_id=f65dfeb4-94be-4879-957c-e081d9570216&limit=50000";
+        const url = `https://catalogue.data.govt.nz/api/3/action/datastore_search?resource_id=f65dfeb4-94be-4879-957c-e081d9570216&q=${this.state.school}`;
         const response = await fetch (url);
         const data = await response.json();
         this.setState({ datastore: data.result.records[3000], loading: false});
@@ -38,32 +39,33 @@ export class FetchUser extends Component {
 
         // let ece_id = this.state.datastore.ECE_Id;
         // let _id = this.state.datastore._id;
+
     }
 
-    renderTableData() {
+    // renderTableData() {
  
-        return this.state.users.map((user, index) => {
-           const {_id, ECE_Id, Org_name, Telephone, Fax, Email,twenty_Hrs_ECE } = user 
-           return (
-              <tr key={_id}>
-                  <td>{_id}</td>
-                  <td>{ECE_Id}</td>
-                  <td>{Org_name}</td>
-                  <td>{Telephone}</td>
-                  <td>{Fax}</td>
-                  <td>{Email}</td>
-                  <td>{twenty_Hrs_ECE}</td>
-              </tr>              
-           )
-        })
-     }
+    //     return this.state.users.map((user, index) => {
+    //        const {_id, ECE_Id, Org_name, Telephone, Fax, Email,twenty_Hrs_ECE } = user 
+    //        return (
+    //           <tr key={_id}>
+    //               <td>{_id}</td>
+    //               <td>{ECE_Id}</td>
+    //               <td>{Org_name}</td>
+    //               <td>{Telephone}</td>
+    //               <td>{Fax}</td>
+    //               <td>{Email}</td>
+    //               <td>{twenty_Hrs_ECE}</td>
+    //           </tr>              
+    //        )
+    //     })
+    //  }
 
-     createTableHeader() {
-        let header = Object.keys(this.state.users[0])
-        return header.map((key, index) => {
-           return <th key={index}>{key.toUpperCase()}</th>
-        })
-     }
+    //  createTableHeader() {
+    //     let header = Object.keys(this.state.users[0])
+    //     return header.map((key, index) => {
+    //        return <th key={index}>{key.toUpperCase()}</th>
+    //     })
+    //  }
      
      render (){
   
