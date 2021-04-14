@@ -11,15 +11,21 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import './Userform.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ProgressBar from 'react-bootstrap/ProgressBar';
 import { faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 import Progress from './progress'
 import BorderLinearProgress from '@material-ui/core/LinearProgress';
 import DatePicker from 'react-bootstrap';
+import HeaderForm from './HeaderForm';
+// Import React Progress Bar
+import "react-step-progress-bar/styles.css";
+import { ProgressBar } from "react-step-progress-bar";
+// Import React Progress Bar
+
 
 
 
 import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import ReactPaginate from 'react-paginate';
 
 export class FormUserDetails extends Component {
     state = { 
@@ -43,27 +49,26 @@ export class FormUserDetails extends Component {
 
 
         return (  
-            <MuiThemeProvider id='title'>
+            
+             
+            <MuiThemeProvider id='title'> 
+            <HeaderForm/>               
                 <React.Fragment>
-                <h1 id='title'>
-                    <BorderLinearProgress variant="determinate" value={10} />
-
-                    {/* <FontAwesomeIcon color='#067BEA' icon={faCircle}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/>
-                    <FontAwesomeIcon color='lightblue' icon={faDotCircle}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/>
-                    <FontAwesomeIcon color='lightblue' icon={faDotCircle}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/>
-                    <FontAwesomeIcon color='lightblue' icon={faDotCircle}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/>
-                    <FontAwesomeIcon color='lightblue' icon={faDotCircle}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/><FontAwesomeIcon color='lightgrey' icon={faEllipsisH}/>
-                    <FontAwesomeIcon color='lightblue' icon={faDotCircle}/> */}
-
-                   
-                
-           
-                </h1>
-                    <br></br>
+                <ProgressBar
+                    percent={10}
+                    filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                    text="10%"
+                    color="green"
+                    height="15px"
+                />            
 {/* Question 1              */}
       <FormControl component="fieldset">
-     
-      <TextField 
+      
+                    {/* <BorderLinearProgress variant="determinate" value={10} /> */}       
+                
+                    <h2>Tell us about yourself </h2>
+
+                    <TextField 
                        hintText="9 digit Number" //hfgfg
                        floatingLabelText="Work and Income Client Number "
                        onChange={handleChange('clientNumber')}
@@ -74,9 +79,10 @@ export class FormUserDetails extends Component {
                        floatingLabelText="IRD Number"
                        onChange={handleChange('irdNumber')}
                        defaultValue={values.irdNumber}
-                    /><br></br>
-      <p class="question">What is your full name?</p>
-              <FormGroup aria-label="position" row>
+                    />
+                    <br></br>
+                <p class="question">What is your full name?</p>
+                <FormGroup aria-label="position" row>
         
                 <FormControlLabel
                     value="mr"
@@ -126,15 +132,13 @@ export class FormUserDetails extends Component {
                        onChange={handleChange('lastName')}
                        defaultValue={values.lastName}
                     /></FormGroup>
-                    <br/>
-                    <br/>
-                    <br/>
-
+                    <br></br>
   {/* end of question 1 */}
 
   {/* question 2 */}
-  <p class="question">Is the name of your birth certificate different to above?</p>
-        <div className='question'>   <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
+                <p class="question">Is the name of your birth certificate different to above?</p>
+                <div className='question'>   
+                <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
                         value="no"
                         label="Yes"
                         aria-label="position" row
@@ -152,44 +156,43 @@ export class FormUserDetails extends Component {
                     onChange={handleChange('lastNameNOTsame')}
                     defaultValue={values.lastNameNOTsame}
                     /></div> : null }
-        </div> 
+                </div> 
            
-        
-                 
-        
-        
-                    <br/><br></br><br></br>
+                <br></br>
                     <p class="question">Have you ever been known by another name?</p>
                     <div className='question'>   <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                         value="yes"
                         label="Yes"
                         aria-label="position" row
-                />{ showing3 ? <div>  
+                    />{ showing3 ? <div>  
                     <TextField 
                        hintText="Other names known by" 
                        floatingLabelText="Other name(s) known by"
                        onChange={handleChange('nameOtherKnown')}
                        defaultValue={values.nameOtherKnown}
                     /></div> : null }
-        </div> 
+                    </div> 
                     <br></br>
-        <br></br><br></br><br></br>
+        
                      <p class="question">What name would you like us to call you?</p>
                      <p onChange={() => this.state.namePrefer.value}></p>
                     <div className='question'><FormControlLabel
-          value="3q1name"
-          onClick={() => this.setState({ showing4: !showing4, namePrefer: {showfirst} })}
-          control={<Checkbox color="white" />}
-          label={showfirst}
-          labelPlacement="end"
-        /><br></br>
-        <br></br><br></br>{ showing4 ? <div>
-        <TextField 
-                       hintText="Name you would like to be referred to" 
-                       floatingLabelText="Preferred name"
-                       onChange={handleChange('namePrefer')}
-                       defaultValue={values.namePrefer}
-                    /></div> : null }<br></br>
+                        value="3q1name"
+                        onClick={() => this.setState({ showing4: !showing4, namePrefer: {showfirst} })}
+                        control={<Checkbox color="white" />}
+                        label={showfirst}
+                        labelPlacement="end"
+                    />
+                    <br></br>
+                    { showing4 ?<div>
+                        <TextField 
+                        hintText="Name you would like to be referred to" 
+                        floatingLabelText="Preferred name"
+                        onChange={handleChange('namePrefer')}
+                        defaultValue={values.namePrefer}
+                        /></div> : null }
+                        
+                    <br></br>
                     <p class="question">What is your date of birth? </p>
                     <TextField
                         type='date' 
@@ -198,9 +201,9 @@ export class FormUserDetails extends Component {
                         defaultValue={values.namePrefer}/>
                         
                     
-
-                        <p class="question">Are you? </p>
-                        <FormGroup aria-label="position" row>
+        <br></br><br></br>
+        <p class="question">Are you? </p>
+        <FormGroup aria-label="position" row>
         
         <FormControlLabel
             value="male"
@@ -225,9 +228,198 @@ export class FormUserDetails extends Component {
 
             label="Gender diverse"
             labelPlacement="end"
-        />
+        />  
+        </FormGroup>
+        <br></br>
+        <p class="question">Where do you live?</p>
+                    <FormGroup aria-label="position" row>
+                    <TextField 
+                       hintText="Enter your flat number" //hfgfg
+                       floatingLabelText="Flat/ House Number "
+                       onChange={handleChange('clientNumber')}
+                       defaultValue={values.clientNumber}
+                    />
+                    <TextField 
+                       hintText="Enter your street name" //hfgfg
+                       floatingLabelText="Street Name"
+                       onChange={handleChange('irdNumber')}
+                       defaultValue={values.irdNumber}
+                    />
+                    </FormGroup>
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                       hintText="Enter your suburb" //hfgfg
+                       floatingLabelText="Suburb "
+                       onChange={handleChange('clientNumber')}
+                       defaultValue={values.clientNumber}
+                    />
+                    <TextField 
+                       hintText="Enter your town/ city" //hfgfg
+                       floatingLabelText="Town/ City"
+                       onChange={handleChange('irdNumber')}
+                       defaultValue={values.irdNumber}
+                    />
+                    </FormGroup>
+                    <br></br>           
+                <p class="question">Is your mailing address different from where you live?</p>
+                <div className='question'>   
+                <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
+                        value="no"
+                        label="Yes"
+                        aria-label="position" row
+                />{ showing2 ? <div>  
+                    <TextField class="question"
+                    hintText="Tell us your mailing address" //hfgfg
+                    floatingLabelText="Mailing address"
+                    onChange={handleChange('firstNameNOTsame')}
+                    defaultValue={values.firstNameNOTsame}
+                 />
+                </div> : null }
+                </div>          
+                <br></br>
+
+                <p class="question">How else can we contact you?</p>
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                       hintText="Enter your home phone" //hfgfg
+                       floatingLabelText="Home phone "
+                       onChange={handleChange('clientNumber')}
+                       defaultValue={values.clientNumber}
+                    />
+                    <TextField 
+                       hintText="Enter your mobile phone" //hfgfg
+                       floatingLabelText="Mobile phone"
+                       onChange={handleChange('irdNumber')}
+                       defaultValue={values.irdNumber}
+                    />
+                    </FormGroup>
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                       hintText="Enter your other phone" //hfgfg
+                       floatingLabelText="Other phone "
+                       onChange={handleChange('clientNumber')}
+                       defaultValue={values.clientNumber}
+                    />
+                    </FormGroup>
+                    <br></br> 
+
+                    <p class="question">Do you agree to get emails from us?</p>
+                    <div className='question'>   <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                        value="yes"
+                        label="Yes"
+                        aria-label="position" row
+                />{ showing3 ? <div>  
+                    <TextField 
+                       hintText="Tell us your mailing address" 
+                       floatingLabelText="Mailing address"
+                       onChange={handleChange('nameOtherKnown')}
+                       defaultValue={values.nameOtherKnown}
+                    /></div> : null }
+                    </div> 
+                    <br></br>  
+
+                    <p class="question">Tick the group(s) you most identify with.</p>
+                <FormGroup aria-label="position" coloumn>
         
-      </FormGroup>
+                <FormControlLabel
+                    value="Maori"
+                    control={<Checkbox color="primary" />}
+                    label="Maori"
+                    labelPlacement="end"
+                    onChange={handleChange('title')}
+                    defaultValue={values.title}
+                />
+                <FormControlLabel
+                    value="New Zealand European"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+
+                    label="New Zealand European"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Other European"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+
+                    label="Other European"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Cook Island Māori"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+
+                    label="Cook Island Māori"
+                    labelPlacement="end"
+                />
+
+                <FormControlLabel
+                    value="Niuean"
+                    control={<Checkbox color="primary" />}
+                    label="Niuean"
+                    labelPlacement="end"
+                    onChange={handleChange('title')}
+                    defaultValue={values.title}
+                />
+                <FormControlLabel
+                    value="Tokelauan"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+
+                    label="Tokelauan"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Samoan"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+
+                    label="Samoan"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Tongan"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+
+                    label="Tongan"
+                    labelPlacement="end"
+                />
+
+<FormControlLabel
+                    value="Indian"
+                    control={<Checkbox color="primary" />}
+                    label="Indian"
+                    labelPlacement="end"
+                    onChange={handleChange('title')}
+                    defaultValue={values.title}
+                />
+                <FormControlLabel
+                    value="Chinese"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+
+                    label="Chinese"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Don’t want to answer"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+
+                    label="Don’t want to answer"
+                    labelPlacement="end"
+                />
+                <FormControlLabel
+                    value="Other"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+
+                    label="Other"
+                    labelPlacement="end"
+                />
+              </FormGroup>        
                     
                     <RaisedButton
                        label="Continue" 

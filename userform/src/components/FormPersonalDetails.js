@@ -3,6 +3,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import HeaderForm from './HeaderForm';
+import './Userform.css';
+// Import React Progress Bar
+import "react-step-progress-bar/styles.css";
+import { ProgressBar } from "react-step-progress-bar";
+// Import React Progress Bar
 
 
 
@@ -25,11 +31,18 @@ export class FormPersonalDetails extends Component {
 
         return (  
             <MuiThemeProvider>
-                
+                <HeaderForm/> 
                 <React.Fragment>
+                <ProgressBar
+                    percent={35}
+                    filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                    text="20%"
+                    color="green"
+                    height="15px"
+                />
 
-                    
-                    
+                    <h2>Tell us about your work, education and activities</h2>
+
                     <TextField 
                        hintText="Flat/House number" 
                        floatingLabelText="Number"
@@ -62,11 +75,11 @@ export class FormPersonalDetails extends Component {
                        primary={true}
                        style={styles.button}
                        onClick={this.continue}
-                    /><p>test</p><br/><br/>
+                    />
                 
 
                     
-                </React.Fragment><br/><p>test</p>
+                </React.Fragment><br/>
               
             </MuiThemeProvider>
         );

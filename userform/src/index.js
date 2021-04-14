@@ -24,7 +24,7 @@ const rootElement = document.getElementById('root');
     ReactDOM.render(
       
       <BrowserRouter>
-      <Header/>
+      {/* <Header/> */}
       <div>
         <Switch>
           <Route exact path='/' component={App} />
@@ -35,6 +35,7 @@ const rootElement = document.getElementById('root');
           <Route path='/elslanding' component={ElsLandingPage} />
           <Route path='/fetchuser' component={FetchUser} />
           <Route path='/review' component={SuperReview} />
+          <Route path='/placeholder' component={Placeholder} />
           {/* <Route path='/table' component={Table} /> */}
 
         </Switch>

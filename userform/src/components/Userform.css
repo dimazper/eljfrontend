@@ -1,11 +1,28 @@
-#MuiThemeProvider, #top {
-    position: relative;
-    z-index: 100;
+#MuiThemeProvider,
+#top {
+  position: relative;
+  z-index: 100;
 }
 #MuiThemeProvider {
-    margin: 12px 0 3px;
-    text-align: center;
+  margin: 12px 0 3px;
+  text-align: center;
 }
 .MuiThemeProvider {
-    text-align: centre;
+  text-align: centre;
+}
+
+.indexedStep {
+  color: white;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  background-color: rgba(211, 211, 211, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indexedStep.accomplished {
+  background-color: rgba(0, 116, 217, 1);
 }
