@@ -11,11 +11,15 @@ import { Button } from 'react-bootstrap';
 import apply from "./apply_images.png"
 import { Link } from 'react-router-dom';
 import { faChild } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios'
 
 
 // landing page
 
 export class LandingPage extends Component {
+  
+
+
     constructor(props) {
         super(props) //since we are extending class Table so we have to use super in order to override Component class constructor
         this.state = { //state is by default an object
@@ -24,10 +28,24 @@ export class LandingPage extends Component {
               { In_Progress: '', Completed: '' },
               { In_Progress: '', Completed: '' },
               { In_Progress: '', Completed: '' },
-           ]
+           ],
+           ccs: []
         }
      }
+     componentDidMount() {
 
+      let data ;
+
+      axios.get(`http://34.230.74.44:8000/ccs/${data}`,
+      {headers: {'authorization': 'Token 5f1c57dbbe2dbaabe6f8ada1c7f3c0e6dd2e2a35'}})
+      .then(res => {
+          data = res.data;
+          this.setState({
+              ccs : data    
+          });
+      })
+      .catch(err => {})
+  }
      createTableDataInProgress() {
         return this.state.users.map((user, index) => {
            const { In_Progress } = user 

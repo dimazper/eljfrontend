@@ -24,7 +24,7 @@ const rootElement = document.getElementById('root');
     ReactDOM.render(
       
       <BrowserRouter>
-      <Header/>
+      
       <div>
         <Switch>
           <Route exact path='/' component={App} />

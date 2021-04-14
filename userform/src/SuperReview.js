@@ -41,7 +41,7 @@ class SuperReview extends React.Component {
     // }
   
   render() {
-
+        
     return(
       <div>
             {this.state.ccs.map((ccs) =>  (
@@ -78,6 +78,8 @@ class SuperReview extends React.Component {
 }
   
 export default SuperReview;
+
+
 
 
 

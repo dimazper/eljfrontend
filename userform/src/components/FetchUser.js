@@ -8,6 +8,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import axios from 'axios';
+import { data } from 'jquery';
 
 let string = "20";
 let num = parseInt(string);
@@ -19,28 +21,44 @@ export class FetchUser extends Component {
 
         var num = 20;
         var hrs = num.toString ();
-       
         this.state = {
             loading: true,
-            datastore: null,     
+            datastore: null, 
+            school: 'Maori Hill Montessori Preschool',
+            ccs: '',  
             users: [
-                { _id: '', ECE_Id: '', Org_name: '', Telephone: '', Fax: '', Email: '', twenty_Hrs_ECE: ''}
+                { Org_name: '',  ECE_Id: '', Telephone: '', Fax: '', Email: '', twenty_Hrs_ECE: ''}
             ]
         }
     }
-
+    
+    getUsers() {
+        axios
+          .get("http://34.230.74.44:8000/ccs/2?", {headers: {'authorization': 'Token 5f1c57dbbe2dbaabe6f8ada1c7f3c0e6dd2e2a35'}})
+          .then(response => console.log(response))
+          .then(response => this.setState.ccs(response))
+          .catch(error => this.setState({ error, isLoading: false }));
+      }
+    
     async componentDidMount (){
-        const url = "https://catalogue.data.govt.nz/api/3/action/datastore_search?resource_id=f65dfeb4-94be-4879-957c-e081d9570216&limit=50000";
+        var school = this.state.school;
+
+        const url = `https://catalogue.data.govt.nz/api/3/action/datastore_search?resource_id=f65dfeb4-94be-4879-957c-e081d9570216&q='${school}'`;
+        
         const response = await fetch (url);
-        const data = await response.json();
-        this.setState({ datastore: data.result.records[3000], loading: false});
+        const datarec = await response.json();
+        this.setState({ datastore: datarec.result.records[0], loading: false});
         // this.setState({ datastore: data.result.records[20566], loading: false});
 
         // let ece_id = this.state.datastore.ECE_Id;
         // let _id = this.state.datastore._id;
+       this.getSchool();
+       this.getUsers();
+        
     }
 
     renderTableData() {
+
  
         return this.state.users.map((user, index) => {
            const {_id, ECE_Id, Org_name, Telephone, Fax, Email,twenty_Hrs_ECE } = user 
@@ -65,11 +83,28 @@ export class FetchUser extends Component {
         })
      }
      
+     getSchool() {
+        let data ;
+  
+        axios.get('http://34.230.74.44:8000/ccs/',
+        {headers: {'authorization': 'Token 5f1c57dbbe2dbaabe6f8ada1c7f3c0e6dd2e2a35'}})
+        .then(res => {
+            data = res.data;
+            this.setState({
+                ccs : data    
+            });
+        })
+        .catch(err => {})
+     }
      render (){
   
          return (
-             <div>    
+             
+             <div>   
+
+             
                 <h1 id='title'></h1>  
+
                 <table id='users'>
                  <tbody>                   
                     {/* <tr>{this.createTableHeader()}</tr>
@@ -85,7 +120,8 @@ export class FetchUser extends Component {
                      <div>ECE ID: {this.state.datastore.ECE_Id}</div>
                      <div>Phone number: {this.state.datastore.Telephone}</div>
                      <div>Email: {this.state.datastore.Email}</div>
-                     <div>20 hours ECE: YES {alert(twenty_Hrs_ECE)}</div>
+                     <div>20 hours ECE: YES </div>
+                     
                      <p><b></b>  
                             
                             <FormControlLabel
