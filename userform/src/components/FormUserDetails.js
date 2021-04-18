@@ -17,15 +17,16 @@ import BorderLinearProgress from '@material-ui/core/LinearProgress';
 import DatePicker from 'react-bootstrap';
 import HeaderForm from './HeaderForm';
 // Import React Progress Bar
-import "react-step-progress-bar/styles.css";
-import { ProgressBar } from "react-step-progress-bar";
+// import "react-step-progress-bar/styles.css";
+// import { ProgressBar, Step } from "react-step-progress-bar";
 // Import React Progress Bar
-
-
-
+import Accordion from './Accordion';
+import ProgressBar from './ProgressBar';
+import './LandingPage.css';
 
 import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import ReactPaginate from 'react-paginate';
+
 
 export class FormUserDetails extends Component {
     state = { 
@@ -48,27 +49,34 @@ export class FormUserDetails extends Component {
         const showsecond = values.firstNameNOTsame+" "+values.lastNameNOTsame;
 
 
-        return (  
-            
-             
+        return (          
             <MuiThemeProvider id='title'> 
-            <HeaderForm/>               
-                <React.Fragment>
-                <ProgressBar
+                <HeaderForm/>                        
+            <React.Fragment>
+
+                {/* <ProgressBar
                     percent={10}
-                    filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                    filledBackground="linear-gradient(to right, #00080, #f0bb31)"
                     text="10%"
-                    color="green"
                     height="15px"
-                />            
-{/* Question 1              */}
-      <FormControl component="fieldset">
+                />             */}
+
+                <br></br>
+
+                <ProgressBar percent={25}></ProgressBar>
+
+
+                    {/* Question 1              */}
+                    <FormControl component="fieldset">
       
-                    {/* <BorderLinearProgress variant="determinate" value={10} /> */}       
+                    {/* <BorderLinearProgress variant="determinate" value={10} /> */} 
+                    <br></br>      
                 
                     <h2>Tell us about yourself </h2>
-
-                    <TextField 
+                    
+                    {/* <div class="card"> */}
+                    <TextField
+                        style={styles.input}
                        hintText="9 digit Number" //hfgfg
                        floatingLabelText="Work and Income Client Number "
                        onChange={handleChange('clientNumber')}
@@ -81,43 +89,41 @@ export class FormUserDetails extends Component {
                        defaultValue={values.irdNumber}
                     />
                     <br></br>
-                <p class="question">What is your full name?</p>
-                <FormGroup aria-label="position" row>
-        
-                <FormControlLabel
+
+                    <Accordion/> 
+
+                    <p class="question">What is your full name?</p>                
+                    <FormGroup aria-label="position" row>     
+                    <FormControlLabel
                     value="mr"
                     control={<Checkbox color="primary" />}
                     label="Mr"
                     labelPlacement="end"
                     onChange={handleChange('title')}
                     defaultValue={values.title}
-                />
-                <FormControlLabel
+                    />
+                    <FormControlLabel
                     value="mrs"
                     control={<Checkbox color="primary" />}
                     onChange={handleChange('title')}
-
                     label="Mrs"
                     labelPlacement="end"
-                />
-                <FormControlLabel
+                    />
+                    <FormControlLabel
                     value="ms"
                     control={<Checkbox color="primary" />}
                     onChange={handleChange('title')}
-
                     label="Ms"
                     labelPlacement="end"
-                />
-                <FormControlLabel
+                    />
+                    <FormControlLabel
                     value="miss"
                     control={<Checkbox color="primary" />}
                     onChange={handleChange('title')}
-
                     label="Miss"
                     labelPlacement="end"
-                />
-              </FormGroup>
-                <br></br>
+                    />
+                    </FormGroup>
                     <FormGroup aria-label="position" row>
                     <TextField 
                        hintText="Enter Your First Name" //hfgfg
@@ -125,46 +131,54 @@ export class FormUserDetails extends Component {
                        onChange={handleChange('firstName')}
                        defaultValue={values.firstName}
                     />
-                    
                     <TextField 
                        hintText="Enter Your Last Name" 
                        floatingLabelText="Surname or family name"
                        onChange={handleChange('lastName')}
                        defaultValue={values.lastName}
-                    /></FormGroup>
+                    />
+                    </FormGroup>
                     <br></br>
-  {/* end of question 1 */}
+                    {/* end of question 1 */}
 
-  {/* question 2 */}
-                <p class="question">Is the name of your birth certificate different to above?</p>
-                <div className='question'>   
-                <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
+                    {/* question 2 */}
+                    <p class="question">Is the name of your birth certificate different to above?</p>
+                    <div className='question'>   
+                    <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
                         value="no"
                         label="Yes"
                         aria-label="position" row
-                />{ showing2 ? <div>  
+                        labelPlacement="end"
+                    />
+                    { showing2 ? 
+                    <div>  
                     <TextField class="question"
                     hintText="Enter Your First Name" //hfgfg
                     floatingLabelText="First and middle names"
                     onChange={handleChange('firstNameNOTsame')}
                     defaultValue={values.firstNameNOTsame}
-                 />
-                 
-                 <TextField 
+                    />              
+                    <TextField 
                     hintText="Enter Your Last Name" 
                     floatingLabelText="Surname or family name"
                     onChange={handleChange('lastNameNOTsame')}
                     defaultValue={values.lastNameNOTsame}
-                    /></div> : null }
-                </div> 
+                    />
+                    </div> : null }
+                    </div> 
            
-                <br></br>
+                    <br></br>
+
                     <p class="question">Have you ever been known by another name?</p>
-                    <div className='question'>   <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                    <div className='question'>   
+                    <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                         value="yes"
                         label="Yes"
                         aria-label="position" row
-                    />{ showing3 ? <div>  
+                        labelPlacement="end"
+                    />
+                    { showing3 ? 
+                    <div>  
                     <TextField 
                        hintText="Other names known by" 
                        floatingLabelText="Other name(s) known by"
@@ -176,62 +190,66 @@ export class FormUserDetails extends Component {
         
                      <p class="question">What name would you like us to call you?</p>
                      <p onChange={() => this.state.namePrefer.value}></p>
-                    <div className='question'><FormControlLabel
+                    <div className='question'>
+                    <FormControlLabel
                         value="3q1name"
                         onClick={() => this.setState({ showing4: !showing4, namePrefer: {showfirst} })}
                         control={<Checkbox color="white" />}
                         label={showfirst}
                         labelPlacement="end"
                     />
-                    <br></br>
-                    { showing4 ?<div>
+                    { showing4 ?
+                    <div>
                         <TextField 
                         hintText="Name you would like to be referred to" 
                         floatingLabelText="Preferred name"
                         onChange={handleChange('namePrefer')}
                         defaultValue={values.namePrefer}
-                        /></div> : null }
-                        
+                        />
+                    </div> : null }
+                    </div>    
                     <br></br>
                     <p class="question">What is your date of birth? </p>
-                    <TextField
-                        type='date' 
-                        floatingLabelText=''
-                        onChange={handleChange('dob')}
-                        defaultValue={values.namePrefer}/>
-                        
-                    
-        <br></br><br></br>
-        <p class="question">Are you? </p>
-        <FormGroup aria-label="position" row>
-        
-        <FormControlLabel
-            value="male"
-            control={<Checkbox color="primary" />}
-            label="Male"
-            labelPlacement="end"
-            onChange={handleChange('gender')}
-            defaultValue={values.gender}
-        />
-        <FormControlLabel
-            value="female"
-            control={<Checkbox color="primary" />}
-            onChange={handleChange('gender')}
+                    <FormGroup aria-label="position" row>
+                    <TextField 
+                       type='date' 
+                       hintText="Your date of birth" //hfgfg
+                       floatingLabelText="Enter your date of birth"
+                       onChange={handleChange('dob')}
+                       defaultValue={values.dob}
+                    />
+                    </FormGroup>
+                    <br></br>
+                    <p class="question">Are you? </p>
+                    <FormGroup aria-label="position" row>      
+                    <FormControlLabel
+                        value="male"
+                        control={<Checkbox color="primary" />}
+                        label="Male"
+                        labelPlacement="end"
+                        onChange={handleChange('gender')}
+                        defaultValue={values.gender}
+                    />
+                    <FormControlLabel
+                        value="female"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('gender')}
 
-            label="Female"
-            labelPlacement="end"
-        />
-        <FormControlLabel
-            value="diverse"
-            control={<Checkbox color="primary" />}
-            onChange={handleChange('gender')}
+                        label="Female"
+                        labelPlacement="end"
+                    />
+                    <FormControlLabel
+                        value="diverse"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('gender')}
 
-            label="Gender diverse"
-            labelPlacement="end"
-        />  
-        </FormGroup>
-        <br></br>
-        <p class="question">Where do you live?</p>
+                        label="Gender diverse"
+                        labelPlacement="end"
+                    />  
+                    </FormGroup>
+                    <br></br>
+
+                    <p class="question">Where do you live?</p>
                     <FormGroup aria-label="position" row>
                     <TextField 
                        hintText="Enter your flat number" //hfgfg
@@ -260,25 +278,27 @@ export class FormUserDetails extends Component {
                        defaultValue={values.irdNumber}
                     />
                     </FormGroup>
-                    <br></br>           
-                <p class="question">Is your mailing address different from where you live?</p>
-                <div className='question'>   
-                <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
+                    <br></br> 
+
+                    <p class="question">Is your mailing address different from where you live?</p>
+                    <div className='question'>   
+                    <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
                         value="no"
                         label="Yes"
                         aria-label="position" row
-                />{ showing2 ? <div>  
+                        labelPlacement="end"
+                    />{ showing2 ? <div>  
                     <TextField class="question"
                     hintText="Tell us your mailing address" //hfgfg
                     floatingLabelText="Mailing address"
                     onChange={handleChange('firstNameNOTsame')}
                     defaultValue={values.firstNameNOTsame}
-                 />
-                </div> : null }
-                </div>          
-                <br></br>
+                    />
+                    </div> : null }
+                    </div>          
+                    <br></br>
 
-                <p class="question">How else can we contact you?</p>
+                    <p class="question">How else can we contact you?</p>
                     <FormGroup aria-label="position" coloumn>
                     <TextField 
                        hintText="Enter your home phone" //hfgfg
@@ -293,6 +313,7 @@ export class FormUserDetails extends Component {
                        defaultValue={values.irdNumber}
                     />
                     </FormGroup>
+
                     <FormGroup aria-label="position" coloumn>
                     <TextField 
                        hintText="Enter your other phone" //hfgfg
@@ -308,7 +329,8 @@ export class FormUserDetails extends Component {
                         value="yes"
                         label="Yes"
                         aria-label="position" row
-                />{ showing3 ? <div>  
+                        labelPlacement="end"
+                    />{ showing3 ? <div>  
                     <TextField 
                        hintText="Tell us your mailing address" 
                        floatingLabelText="Mailing address"
@@ -319,116 +341,151 @@ export class FormUserDetails extends Component {
                     <br></br>  
 
                     <p class="question">Tick the group(s) you most identify with.</p>
-                <FormGroup aria-label="position" coloumn>
+                    <FormGroup aria-label="position" row>
         
-                <FormControlLabel
-                    value="Maori"
-                    control={<Checkbox color="primary" />}
-                    label="Maori"
-                    labelPlacement="end"
-                    onChange={handleChange('title')}
-                    defaultValue={values.title}
-                />
-                <FormControlLabel
-                    value="New Zealand European"
-                    control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                    <FormControlLabel
+                        value="Maori"
+                        control={<Checkbox color="primary" />}
+                        label="Maori"
+                        labelPlacement="end"
+                        onChange={handleChange('title')}
+                        defaultValue={values.title}
+                    />
+                    <FormControlLabel
+                        value="New Zealand European"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('title')}
 
-                    label="New Zealand European"
-                    labelPlacement="end"
-                />
-                <FormControlLabel
-                    value="Other European"
-                    control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                        label="New Zealand European"
+                        labelPlacement="end"
+                    />
+                    <FormControlLabel
+                        value="Other European"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('title')}
 
-                    label="Other European"
-                    labelPlacement="end"
-                />
-                <FormControlLabel
-                    value="Cook Island Māori"
-                    control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                        label="Other European"
+                        labelPlacement="end"
+                    />
+                    <FormControlLabel
+                        value="Cook Island Māori"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('title')}
 
-                    label="Cook Island Māori"
-                    labelPlacement="end"
-                />
+                        label="Cook Island Māori"
+                        labelPlacement="end"
+                    />
 
-                <FormControlLabel
-                    value="Niuean"
-                    control={<Checkbox color="primary" />}
-                    label="Niuean"
-                    labelPlacement="end"
-                    onChange={handleChange('title')}
-                    defaultValue={values.title}
-                />
-                <FormControlLabel
-                    value="Tokelauan"
-                    control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                    <FormControlLabel
+                        value="Niuean"
+                        control={<Checkbox color="primary" />}
+                        label="Niuean"
+                        labelPlacement="end"
+                        onChange={handleChange('title')}
+                        defaultValue={values.title}
+                    />
+                    <FormControlLabel
+                        value="Tokelauan"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('title')}
 
-                    label="Tokelauan"
-                    labelPlacement="end"
-                />
-                <FormControlLabel
-                    value="Samoan"
-                    control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                        label="Tokelauan"
+                        labelPlacement="end"
+                    />
+                    <FormControlLabel
+                        value="Samoan"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('title')}
 
-                    label="Samoan"
-                    labelPlacement="end"
-                />
-                <FormControlLabel
-                    value="Tongan"
-                    control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                        label="Samoan"
+                        labelPlacement="end"
+                    />
+                    <FormControlLabel
+                        value="Tongan"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('title')}
 
-                    label="Tongan"
-                    labelPlacement="end"
-                />
+                        label="Tongan"
+                        labelPlacement="end"
+                    />
 
-<FormControlLabel
-                    value="Indian"
-                    control={<Checkbox color="primary" />}
-                    label="Indian"
-                    labelPlacement="end"
-                    onChange={handleChange('title')}
-                    defaultValue={values.title}
-                />
-                <FormControlLabel
-                    value="Chinese"
-                    control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                    <FormControlLabel
+                        value="Indian"
+                        control={<Checkbox color="primary" />}
+                        label="Indian"
+                        labelPlacement="end"
+                        onChange={handleChange('title')}
+                        defaultValue={values.title}
+                    />
+                    <FormControlLabel
+                        value="Chinese"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('title')}
 
-                    label="Chinese"
-                    labelPlacement="end"
+                        label="Chinese"
+                        labelPlacement="end"
                 />
-                <FormControlLabel
-                    value="Don’t want to answer"
-                    control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                    <FormControlLabel
+                        value="Don’t want to answer"
+                        control={<Checkbox color="primary" />}
+                        onChange={handleChange('title')}
 
-                    label="Don’t want to answer"
-                    labelPlacement="end"
-                />
-                <FormControlLabel
+                        label="Don’t want to answer"
+                        labelPlacement="end"
+                    />
+                {/* <FormControlLabel
                     value="Other"
                     control={<Checkbox color="primary" />}
                     onChange={handleChange('title')}
 
                     label="Other"
                     labelPlacement="end"
-                />
-              </FormGroup>        
+                /> */}
+
+                <div className='question'>   
+                <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
+                        value="no"
+                        label="Other"
+                        aria-label="position" row
+                        labelPlacement="end"
+                />{ showing2 ? <div>  
+                    <TextField class="question"
+                    hintText="Please write below" //hfgfg
+                    floatingLabelText="Please write below"
+                    onChange={handleChange('firstNameNOTsame')}
+                    defaultValue={values.firstNameNOTsame}
+                 />
+                    </div> : null }
+                </div>                
+              </FormGroup>
+                <br></br>   
+
+                <p class="question">Do you usually live in New Zealand?</p>                
+                    <FormGroup aria-label="position" row>     
+                    <FormControlLabel
+                    value="Yes"
+                    control={<Checkbox color="primary" />}
+                    label="Yes"
+                    labelPlacement="end"
+                    onChange={handleChange('title')}
+                    defaultValue={values.title}
+                    />
+                    <FormControlLabel
+                    value="No"
+                    control={<Checkbox color="primary" />}
+                    onChange={handleChange('title')}
+                    label="No"
+                    labelPlacement="end"
+                    />
+                    </FormGroup>     
                     
                     <RaisedButton
                        label="Continue" 
                        primary={true}
                        style={styles.button}
                        onClick={this.continue}
-                       color="red"
                     /><br/><br/>
-                    </div>
+                    {/* </div> */}
                     </FormControl><br></br>
                 </React.Fragment>
             </MuiThemeProvider>
@@ -438,7 +495,7 @@ export class FormUserDetails extends Component {
 
 const styles = {
     button: {
-        margin: 15
+        margin: 15        
     }
 }
  
