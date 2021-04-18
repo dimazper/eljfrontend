@@ -7,6 +7,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 import './Placeholder.css';
 import './LandingPage.css';
 import { Link } from 'react-router-dom';
+import { faChild } from '@fortawesome/free-solid-svg-icons';
+import parent from '../assets/parent2.png';
+
 
 export class Header extends Component {
     continue = e => {
@@ -24,7 +27,8 @@ export class Header extends Component {
             <div class="row">
                <ul class="topnav">
                   <li><a class="active" href="#home">Home</a></li>
-                  <li><a href="#news">Childcare Assistance Application</a></li>
+                  <li><img width="80" height="70" src={parent} alt="parent" /></li>
+                  <li><a href="#news">Childcare Assistance Application</a></li>                
                   <li><a href="#contact">Oscar Subsidy</a></li>
                   <li class="right"><a href="/login">Log Out</a></li>
                </ul>             
