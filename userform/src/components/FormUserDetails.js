@@ -61,20 +61,23 @@ export class FormUserDetails extends Component {
                     height="15px"
                 />             */}
 
-                <br></br>
+                
 
-                <ProgressBar percent={25}></ProgressBar>
+                
 
 
                     {/* Question 1              */}
                     <FormControl component="fieldset">
       
                     {/* <BorderLinearProgress variant="determinate" value={10} /> */} 
-                    <br></br>      
-                
+                          
+                    <div class="card">
                     <h2>Tell us about yourself </h2>
-                    
-                    {/* <div class="card"> */}
+                    <br></br>
+                    <br></br>
+                    <ProgressBar></ProgressBar>
+                    <br></br>
+                    <br></br>
                     <TextField
                         style={styles.input}
                        hintText="9 digit Number" //hfgfg
@@ -85,12 +88,12 @@ export class FormUserDetails extends Component {
                        variant="outlined"
                        id="mui-theme-provider-outlined-input"
                     />
-                    <TextField 
+                    {/* <TextField 
                        hintText="9 digit number" //hfgfg
                        floatingLabelText="IRD Number"
                        onChange={handleChange('irdNumber')}
                        defaultValue={values.irdNumber}
-                    />
+                    /> */}
                     <br></br>
 
                     <Accordion/> 
@@ -488,7 +491,7 @@ export class FormUserDetails extends Component {
                        style={styles.button}
                        onClick={this.continue}
                     /><br/><br/>
-                    {/* </div> */}
+                    </div>
                     </FormControl><br></br>
                 </React.Fragment>
             </MuiThemeProvider>
