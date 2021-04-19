@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 // import { Checkbox } from 'material-ui';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -81,6 +81,9 @@ export class FormUserDetails extends Component {
                        floatingLabelText="Work and Income Client Number "
                        onChange={handleChange('clientNumber')}
                        defaultValue={values.clientNumber}
+                       label="Work and Income Client Number"
+                       variant="outlined"
+                       id="mui-theme-provider-outlined-input"
                     />
                     <TextField 
                        hintText="9 digit number" //hfgfg
