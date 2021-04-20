@@ -45,7 +45,7 @@ export class  UserForm extends Component {
 
     render() {
         const { step } = this.state;
-        const { clientNumber,title, firstName, lastName, firstNameNOTsame,lastNameNOTsame, nameOtherKnown,namePrefer, email, occupation, city, 
+        const { clientNumber, title, firstName, lastName, firstNameNOTsame,lastNameNOTsame, nameOtherKnown,namePrefer, email, occupation, city, 
             bio} = this.state;
         const values = { clientNumber, title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, 
             bio} 
