@@ -116,14 +116,17 @@ export class FormUserDetails extends React.Component {
                             aria-label="gender"
                             name="gender2"
                             className={classes.group}
-                            value={this.state.value}
-                            onChange={this.handleChange}
+                            // value={this.state.value}
+                            // onChange={this.handleChange}
                         >
                             <FormControlLabel
+                            style={styles.input}
                             value="Mr"
                             control={<Radio color="primary" />}
                             label="Mr"
                             labelPlacement="end"
+                            onChange={handleChange('Title')}
+                            defaultValue={values.Mr}
                             />
                             <FormControlLabel
                             value="Mrs"
@@ -409,7 +412,7 @@ export class FormUserDetails extends React.Component {
                         id="mui-theme-provider-outlined-input"
                         />
                     </FormGroup>
-                    
+
                      {/* <p onChange={() => this.state.namePrefer.value}></p>
                     <div className='question'>
                     <FormControlLabel
@@ -431,43 +434,56 @@ export class FormUserDetails extends React.Component {
                     </div>     */}
                     <br></br>
                     <p class="question">What is your date of birth? </p>
-                    <FormGroup aria-label="position" row>
-                    <TextField 
-                       type='date' 
-                       hintText="Your date of birth" //hfgfg
-                       floatingLabelText="Enter your date of birth"
-                       onChange={handleChange('dob')}
-                       defaultValue={values.dob}
-                    />
+                    <FormGroup aria-label="position" coloumn> 
+                    <TextField
+                        style={styles.input}
+                        hintText="DOB" //hfgfg
+                        onChange={handleChange('DOB')}
+                        defaultValue={values.DOB}
+                        label="Date of birth, eg.5/04/1996"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
                     </FormGroup>
+            
                     <br></br>
                     <p class="question">Are you? </p>
-                    <FormGroup aria-label="position" row>      
-                    <FormControlLabel
-                        value="male"
-                        control={<Checkbox color="primary" />}
-                        label="Male"
-                        labelPlacement="end"
-                        onChange={handleChange('gender')}
-                        defaultValue={values.gender}
-                    />
-                    <FormControlLabel
-                        value="female"
-                        control={<Checkbox color="primary" />}
-                        onChange={handleChange('gender')}
-
-                        label="Female"
-                        labelPlacement="end"
-                    />
-                    <FormControlLabel
-                        value="diverse"
-                        control={<Checkbox color="primary" />}
-                        onChange={handleChange('gender')}
-
-                        label="Gender diverse"
-                        labelPlacement="end"
-                    />  
+                    <div className={classes.root}> 
+                <FormGroup aria-label="position" row>                  
+                    <FormControl component="fieldset" className={classes.formControl}>
+                        <RadioGroup
+                            className={classes.group}
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                        >
+                            <FormControlLabel
+                            value="Male"
+                            control={<Radio color="primary" />}
+                            label="Male"
+                            labelPlacement="end"
+                            onChange={handleChange('Male')}
+                            defaultValue={values.Male}
+                            />
+                            <FormControlLabel
+                            value="Female"
+                            control={<Radio color="primary" />}
+                            label="Female"
+                            labelPlacement="end"
+                            onChange={handleChange('Female')}
+                            defaultValue={values.Female}
+                            />
+                            <FormControlLabel
+                            value="Gender Diverse"
+                            control={<Radio color="primary" />}
+                            label="Gender Diverse"
+                            labelPlacement="end"
+                            onChange={handleChange('GenderDiverse')}
+                            defaultValue={values.GenderDiverse}
+                            />
+                        </RadioGroup>
+                    </FormControl>
                     </FormGroup>
+                </div>
                     <br></br>
 
                     <p class="question">Where do you live?</p>
