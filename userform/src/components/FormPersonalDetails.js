@@ -125,13 +125,13 @@ export class FormPersonalDetails extends Component {
           value="no"
           control={<Radio color="primary" />}
           label="No"
-          labelPlacement="start"
+          labelPlacement="end"
         />
         <FormControlLabel
           value="yes"
           control={<Radio color="primary" />}
           label="Yes"
-          labelPlacement="start"
+          labelPlacement="end"
           onClick={() => this.setState({ showing2: !showing2 })}
         />
       </RadioGroup>
@@ -208,13 +208,13 @@ export class FormPersonalDetails extends Component {
 value="no"
 control={<Radio color="primary" />}
 label="No"
-labelPlacement="start"
+labelPlacement="end"
 />
 <FormControlLabel
 value="yes"
 control={<Radio color="primary" />}
 label="Yes"
-labelPlacement="start"
+labelPlacement="end"
 />
 </RadioGroup>
 
@@ -227,13 +227,13 @@ labelPlacement="start"
 value="no"
 control={<Radio color="primary" />}
 label="No"
-labelPlacement="start"
+labelPlacement="end"
 />
 <FormControlLabel
 value="yes"
 control={<Radio color="primary" />}
 label="Yes"
-labelPlacement="start"
+labelPlacement="end"
 />
 </RadioGroup>
 
@@ -246,13 +246,13 @@ labelPlacement="start"
 value="no"
 control={<Radio color="primary" />}
 label="No"
-labelPlacement="start"
+labelPlacement="end"
 />
 <FormControlLabel
 value="yes"
 control={<Radio color="primary" />}
 label="Yes"
-labelPlacement="start"
+labelPlacement="end"
 />
 </RadioGroup>
 

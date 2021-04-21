@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
+import FormIncomeDetails from './FormIncomeDetails';
+
 import Confirm from './Confirm';
 import Success from './Success';
 
@@ -68,7 +70,16 @@ export class  UserForm extends Component {
                             values={values} 
                         />
                     );
-                case 3:
+                    case 3:
+                        return(
+                            <FormIncomeDetails
+                                nextStep={this.nextStep}
+                                prevStep={this.prevStep}
+                                handleChange={this.handleChange}
+                                values={values} 
+                            />
+                        );
+                case 4:
                     return(
                         <Confirm
                             nextStep={this.nextStep}
@@ -77,7 +88,7 @@ export class  UserForm extends Component {
                             values={values} 
                         />
                     );
-                case 4:
+                case 5:
                     return <Success />; 
             }
     }
