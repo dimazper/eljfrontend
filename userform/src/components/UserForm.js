@@ -5,6 +5,7 @@ import FormIncomeDetails from './FormIncomeDetails';
 
 import Confirm from './Confirm';
 import Success from './Success';
+import FormDependentChildren from './FormDependentChildren';
 
 
 export class  UserForm extends Component {
@@ -81,14 +82,14 @@ export class  UserForm extends Component {
                         );
                 case 4:
                     return(
-                        <Confirm
+                        <FormIncomeDetails
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
                             handleChange={this.handleChange}
                             values={values} 
                         />
                     );
-                case 5:
+
                     return <Success />; 
             }
     }

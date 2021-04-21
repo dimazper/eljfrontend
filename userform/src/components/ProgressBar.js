@@ -7,7 +7,7 @@ export class Progress extends Component {
     
     render() { 
         return ( 
-            <ProgressBar percent={75}>
+            <ProgressBar percent={25}>
   <Step>
     {({ accomplished, index }) => (
       <div
