@@ -125,13 +125,13 @@ export class FormPersonalDetails extends Component {
           value="no"
           control={<Radio color="primary" />}
           label="No"
-          labelPlacement="start"
+          labelPlacement="end"
         />
         <FormControlLabel
           value="yes"
           control={<Radio color="primary" />}
           label="Yes"
-          labelPlacement="start"
+          labelPlacement="end"
           onClick={() => this.setState({ showing2: !showing2 })}
         />
       </RadioGroup>
@@ -200,9 +200,70 @@ export class FormPersonalDetails extends Component {
                     </div> : null }
 
                         
-                        
+                    <p class="question">Are you on a work-related course or studying?</p>                
+
+<FormControl component="fieldset">
+<RadioGroup row aria-label="position" name="position" defaultValue="no" row>
+<FormControlLabel
+value="no"
+control={<Radio color="primary" />}
+label="No"
+labelPlacement="end"
+/>
+<FormControlLabel
+value="yes"
+control={<Radio color="primary" />}
+label="Yes"
+labelPlacement="end"
+/>
+</RadioGroup>
+
+</FormControl> <br></br>
+<p class="question">Are you doing activities arranged for you by Work and Income?</p>                
+
+<FormControl component="fieldset">
+<RadioGroup row aria-label="position" name="position" defaultValue="no" row>
+<FormControlLabel
+value="no"
+control={<Radio color="primary" />}
+label="No"
+labelPlacement="end"
+/>
+<FormControlLabel
+value="yes"
+control={<Radio color="primary" />}
+label="Yes"
+labelPlacement="end"
+/>
+</RadioGroup>
+
+</FormControl> <br></br>
+<p class="question">Are you applying for childcare assistance because of medical reasons?</p>                
+
+<FormControl component="fieldset">
+<RadioGroup row aria-label="position" name="position" defaultValue="no" row>
+<FormControlLabel
+value="no"
+control={<Radio color="primary" />}
+label="No"
+labelPlacement="end"
+/>
+<FormControlLabel
+value="yes"
+control={<Radio color="primary" />}
+label="Yes"
+labelPlacement="end"
+/>
+</RadioGroup>
+
+</FormControl> <br></br>
                        
-                    
+<RaisedButton
+                       label="Back" 
+                       primary={false}
+                       style={styles.button}
+                       onClick={this.back}
+                    />
                     <RaisedButton
                        label="Continue" 
                        primary={true}
