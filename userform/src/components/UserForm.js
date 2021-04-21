@@ -71,7 +71,7 @@ export class  UserForm extends Component {
                     );
                 case 3:
                     return(
-                        <FormDependentChildren
+                        <FormIncomeDetails
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
                             handleChange={this.handleChange}
@@ -80,6 +80,15 @@ export class  UserForm extends Component {
                     );
                 case 4:
                     return(
+                        <FormDependentChildren
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            values={values} 
+                        >
+                    );
+                case 5:
+                    return(
                         <Confirm
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
@@ -87,7 +96,7 @@ export class  UserForm extends Component {
                             values={values} 
                         />
                     );
-                case 5:
+                case 6:
                     return <Success />; 
             }
     }
