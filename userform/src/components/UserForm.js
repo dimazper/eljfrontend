@@ -3,6 +3,7 @@ import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import Confirm from './Confirm';
 import Success from './Success';
+import FormDependentChildren from './FormDependentChildren';
 
 
 export class  UserForm extends Component {
@@ -70,7 +71,7 @@ export class  UserForm extends Component {
                     );
                 case 3:
                     return(
-                        <Confirm
+                        <FormDependentChildren
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
                             handleChange={this.handleChange}
@@ -78,6 +79,15 @@ export class  UserForm extends Component {
                         />
                     );
                 case 4:
+                    return(
+                        <Confirm
+                            nextStep={this.nextStep}
+                            prevStep={this.prevStep}
+                            handleChange={this.handleChange}
+                            values={values} 
+                        />
+                    );
+                case 5:
                     return <Success />; 
             }
     }

@@ -42,6 +42,7 @@ export class FormUserDetails extends React.Component {
         showing2: false ,
         showing3: false,
         showing4: true,
+        showing5: false,
         namePrefer:'',
     };
 
@@ -56,7 +57,7 @@ export class FormUserDetails extends React.Component {
     
     render() { 
         const { values, handleChange } = this.props;
-        const { showing2,showing3 } = this.state;
+        const { showing2,showing3, showing5 } = this.state;
         const showfirst = values.firstName+" "+values.lastName;
         const showsecond = values.firstNameNOTsame+" "+values.lastNameNOTsame;
         const { classes } = this.props;
@@ -299,7 +300,7 @@ export class FormUserDetails extends React.Component {
                     </div> : null }
                     </div>  */}
            
-                    <br></br>
+                    {/* <br></br> */}
 
                     <p class="question">Have you ever been known by any other name?</p>
                     <div className={classes.root}> 
@@ -368,7 +369,7 @@ export class FormUserDetails extends React.Component {
                        defaultValue={values.nameOtherKnown}
                     /></div> : null }
                     </div>  */}
-                    <br></br>
+                    {/* <br></br> */}
         
                      <p class="question">What name would you like us to call you?</p>
                      <div className={classes.root}> 
@@ -436,10 +437,10 @@ export class FormUserDetails extends React.Component {
                     <p class="question">What is your date of birth? </p>
                     <FormGroup aria-label="position" coloumn> 
                     <TextField
-                        style={styles.input}
-                        hintText="DOB" //hfgfg
-                        onChange={handleChange('DOB')}
-                        defaultValue={values.DOB}
+                        type='date'
+                        hintText="your date of birth" //hfgfg
+                        onChange={handleChange('dob')}
+                        defaultValue={values.dob}
                         label="Date of birth, eg.5/04/1996"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -484,10 +485,59 @@ export class FormUserDetails extends React.Component {
                     </FormControl>
                     </FormGroup>
                 </div>
-                    <br></br>
+                    {/* <br></br> */}
 
                     <p class="question">Where do you live?</p>
                     <FormGroup aria-label="position" row>
+                    <TextField 
+                    style={styles.input}
+                       hintText="Flat/House number" //hfgfg
+                       floatingLabelText="Flat/House number"
+                       onChange={handleChange('flatNumber')}
+                       defaultValue={values.flatNumber}
+                       label="Flat/House number"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    <br></br>
+                    <TextField 
+                       hintText="Street Name" 
+                       floatingLabelText="Street Name"
+                       onChange={handleChange('streetName')}
+                       defaultValue={values.streetName}
+                       label="Street name"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                    />
+                    </FormGroup>
+                    <br></br>
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                    style={styles.input}
+                       hintText="Suburb" //hfgfg
+                       floatingLabelText="Suburb"
+                       onChange={handleChange('suburb')}
+                       defaultValue={values.suburb}
+                       label="Suburb"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    <br></br>
+                    <TextField 
+                       hintText="Town/City" 
+                       floatingLabelText="Town/City"
+                       onChange={handleChange('town')}
+                       defaultValue={values.town}
+                       label="Town/City"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                    />
+                    </FormGroup>
+                    <br></br>
+
+
+
+                    {/* <FormGroup aria-label="position" row>
                     <TextField 
                        hintText="Enter your flat number" //hfgfg
                        floatingLabelText="Flat/ House Number "
@@ -514,11 +564,98 @@ export class FormUserDetails extends React.Component {
                        onChange={handleChange('irdNumber')}
                        defaultValue={values.irdNumber}
                     />
-                    </FormGroup>
+                    </FormGroup> */}
                     <br></br> 
 
                     <p class="question">Is your mailing address different from where you live?</p>
-                    <div className='question'>   
+                    <div className={classes.root}> 
+                    <FormGroup aria-label="position" row>                  
+                    <FormControl component="fieldset" className={classes.formControl}>
+                        <RadioGroup
+                            className={classes.group}
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                        >
+                            <FormControlLabel
+                            value="No"
+                            control={<Radio color="primary" />}
+                            label="No"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                            value="Yes"
+                            control={<Radio color="primary" />}
+                            label="Yes"
+                            labelPlacement="end"
+                            />
+                    { showing3 ? 
+                    <div>  
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                    style={styles.input}
+                       hintText="1" //hfgfg
+                       floatingLabelText="1"
+                       onChange={handleChange('mailingAddress1')}
+                       defaultValue={values.mailingAddress1}
+                       label="1."
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    <br></br>
+                    <TextField 
+                       hintText="2" 
+                       floatingLabelText="2"
+                       onChange={handleChange('mailingAddress2')}
+                       defaultValue={values.mailingAddress2}
+                       label="2."
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                    />
+                    </FormGroup>
+                    </div> : null }
+                        </RadioGroup>
+                    </FormControl>
+                    </FormGroup>
+                    </div>
+
+
+                    <p class="question">How else can we contact you?</p>
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                    style={styles.input}
+                       hintText="Home phone" //hfgfg
+                       floatingLabelText="Home phone"
+                       onChange={handleChange('homePhone')}
+                       defaultValue={values.homePhone}
+                       label="Home phone"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    <br></br>
+                    <TextField 
+                       hintText="Mobile phone" 
+                       floatingLabelText="Mobile phone"
+                       onChange={handleChange('mobilePhone')}
+                       defaultValue={values.mobilePhone}
+                       label="Mobile phone"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                    />
+                    <br></br>
+                    <TextField 
+                       hintText="Other phone" 
+                       floatingLabelText="Other phone"
+                       onChange={handleChange('otherPhone')}
+                       defaultValue={values.otherPhone}
+                       label="Other phone"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                    />
+                    </FormGroup>
+
+
+
+                    {/* <div className='question'>   
                     <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
                         value="no"
                         label="Yes"
@@ -559,10 +696,56 @@ export class FormUserDetails extends React.Component {
                        defaultValue={values.clientNumber}
                     />
                     </FormGroup>
-                    <br></br> 
+                    <br></br>  */}
 
                     <p class="question">Do you agree to get emails from us?</p>
-                    <div className='question'>   <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                    <div className={classes.root}> 
+                    <FormGroup aria-label="position" row>                  
+                    <FormControl component="fieldset" className={classes.formControl}>
+                        <RadioGroup
+                            className={classes.group}
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                        >
+                            <FormControlLabel
+                            value="No"
+                            control={<Radio color="primary" />}
+                            label="No"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel
+                            value="Dont"
+                            control={<Radio color="primary" />}
+                            label="I don't have an email address"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                            value="Yes"
+                            control={<Radio color="primary" />}
+                            label="Yes"
+                            labelPlacement="end"
+                            />
+                    { showing3 ? 
+                    <div>  
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                    style={styles.input}
+                       hintText="Tell us your email address" //hfgfg
+                       floatingLabelText="Tell us your email address"
+                       onChange={handleChange('email')}
+                       defaultValue={values.email}
+                       label="Tell us your email address"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    </FormGroup>
+                    </div> : null }
+                        </RadioGroup>
+                    </FormControl>
+                    </FormGroup>
+                    </div>
+
+                    {/* <div className='question'>   <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                         value="yes"
                         label="Yes"
                         aria-label="position" row
@@ -575,10 +758,122 @@ export class FormUserDetails extends React.Component {
                        defaultValue={values.nameOtherKnown}
                     /></div> : null }
                     </div> 
-                    <br></br>  
+                    <br></br>   */}
 
                     <p class="question">Tick the group(s) you most identify with.</p>
-                    <FormGroup aria-label="position" row>
+                    <div className={classes.root}> 
+                <FormGroup aria-label="position" row>                  
+                    <FormControl component="fieldset" className={classes.formControl}>
+                        <RadioGroup
+                            aria-label="gender"
+                            name="gender2"
+                            className={classes.group}
+                            // value={this.state.value}
+                            // onChange={this.handleChange}
+                        >
+                            <FormControlLabel
+                            style={styles.input}
+                            value="Māori"
+                            control={<Radio color="primary" />}
+                            label="Māori"
+                            labelPlacement="end"
+                            onChange={handleChange('Title')}
+                            defaultValue={values.Mr}
+                            />
+                            <FormControlLabel
+                            value="New Zealand European"
+                            control={<Radio color="primary" />}
+                            label="New Zealand European"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel
+                            value="Other European"
+                            control={<Radio color="primary" />}
+                            label="Other European"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel
+                            value="Cook Island Māori"
+                            control={<Radio color="primary" />}
+                            label="Cook Island Māori"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel
+                            value="Niuean"
+                            control={<Radio color="primary" />}
+                            label="Niuean"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel
+                            style={styles.input}
+                            value="Tokelauan"
+                            control={<Radio color="primary" />}
+                            label="Tokelauan"
+                            labelPlacement="end"
+                            onChange={handleChange('Title')}
+                            defaultValue={values.Mr}
+                            />
+                            <FormControlLabel
+                            value="Samoan"
+                            control={<Radio color="primary" />}
+                            label="Samoan"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel
+                            value="Tongan"
+                            control={<Radio color="primary" />}
+                            label="Tongan"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel
+                            value="Indian"
+                            control={<Radio color="primary" />}
+                            label="Indian"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel
+                            value="Chinese"
+                            control={<Radio color="primary" />}
+                            label="Chinese"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel
+                            value="Don’t want to answer"
+                            control={<Radio color="primary" />}
+                            label="Don’t want to answer"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                            value="yes"
+                            control={<Radio color="primary" />}
+                            label="Other"
+                            labelPlacement="end"
+                            />
+                            <br></br>
+                            { showing3 ? 
+                    <div>  
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                    style={styles.input}
+                       hintText="Please write below" //hfgfg
+                       floatingLabelText="Please write below"
+                       onChange={handleChange('ethnicGroup')}
+                       defaultValue={values.ethnicGroup}
+                       label="Please write below"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    </FormGroup>
+                    </div> : null }
+                        </RadioGroup>
+                    </FormControl>
+                    </FormGroup>
+                </div>
+
+
+
+
+                    {/* <FormGroup aria-label="position" row>
         
                     <FormControlLabel
                         value="Maori"
@@ -669,7 +964,7 @@ export class FormUserDetails extends React.Component {
 
                         label="Don’t want to answer"
                         labelPlacement="end"
-                    />
+                    /> */}
                 {/* <FormControlLabel
                     value="Other"
                     control={<Checkbox color="primary" />}
@@ -679,7 +974,7 @@ export class FormUserDetails extends React.Component {
                     labelPlacement="end"
                 /> */}
 
-                <div className='question'>   
+                {/* <div className='question'>   
                 <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="start"
                         value="no"
                         label="Other"
@@ -695,10 +990,40 @@ export class FormUserDetails extends React.Component {
                     </div> : null }
                 </div>                
               </FormGroup>
-                <br></br>   
+                <br></br>    */}
 
-                <p class="question">Do you usually live in New Zealand?</p>                
-                    <FormGroup aria-label="position" row>     
+                <p class="question">Do you usually live in New Zealand?</p> 
+                <div className={classes.root}> 
+                <FormGroup aria-label="position" row>                  
+                    <FormControl component="fieldset" className={classes.formControl}>
+                        <RadioGroup
+                            aria-label="gender"
+                            name="gender2"
+                            className={classes.group}
+                            // value={this.state.value}
+                            // onChange={this.handleChange}
+                        >
+                            <FormControlLabel
+                            style={styles.input}
+                            value="No"
+                            control={<Radio color="primary" />}
+                            label="No"
+                            labelPlacement="end"
+                            onChange={handleChange('Title')}
+                            defaultValue={values.Mr}
+                            />
+                            <FormControlLabel
+                            value="Yes"
+                            control={<Radio color="primary" />}
+                            label="Yes"
+                            labelPlacement="end"
+                            />
+                        </RadioGroup>
+                    </FormControl>
+                    </FormGroup>
+                </div>
+
+                    {/* <FormGroup aria-label="position" row>     
                     <FormControlLabel
                     value="Yes"
                     control={<Checkbox color="primary" />}
@@ -714,7 +1039,126 @@ export class FormUserDetails extends React.Component {
                     label="No"
                     labelPlacement="end"
                     />
-                    </FormGroup>     
+                    </FormGroup>      */}
+
+
+                    <p class="question">What best describes your residence status in New Zealand? Tick only one box.</p>
+
+                    <div className={classes.root}> 
+                    <FormGroup aria-label="position" row>                  
+                    <FormControl component="fieldset" className={classes.formControl}>
+                        <RadioGroup
+                            className={classes.group}
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                        >
+                            <FormControlLabel
+                            value="nzCitizen"
+                            control={<Radio color="primary" />}
+                            label="New Zealand citizen by birth"
+                            labelPlacement="end"
+                            />
+                            <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="end"
+                            value="grantedCitizenship"
+                            control={<Radio color="primary" />}
+                            label="Granted New Zealand citizenship"
+                            labelPlacement="end"
+                            />
+                            { showing2 ? 
+                            <div>  
+                            <FormGroup aria-label="position" coloumn>
+                            <TextField 
+                            style={styles.input}
+                            hintText="Date citizenship granted" //hfgfg
+                            floatingLabelText="Date citizenship granted"
+                            onChange={handleChange('dateCitizenship')}
+                            defaultValue={values.dateCitizenship}
+                            label="Date citizenship granted"
+                                variant="outlined"
+                                id="mui-theme-provider-outlined-input"
+                                />
+                            </FormGroup>
+                            </div> : null }
+
+                            <FormControlLabel className='question' onClick={() => this.setState({ showing5: !showing5 })} control={<Checkbox color="primary"/>} labelPlacement="end"
+                            value="grantedResidency"
+                            control={<Radio color="primary" />}
+                            label="Granted permanent residency"
+                            labelPlacement="end"
+                            />
+                            { showing5 ? 
+                            <div>  
+                            <FormGroup aria-label="position" coloumn>
+                            <TextField 
+                            style={styles.input}
+                            hintText="Date permanent residence granted" //hfgfg
+                            floatingLabelText="Date permanent residence granted"
+                            onChange={handleChange('datePermanentResidence')}
+                            defaultValue={values.datePermanentResidence}
+                            label="Date permanent residence granted"
+                                variant="outlined"
+                                id="mui-theme-provider-outlined-input"
+                                />
+                            </FormGroup>
+                            </div> : null }
+
+                            <FormControlLabel className='question' onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary"/>} labelPlacement="end"
+                            value="Other"
+                            control={<Radio color="primary" />}
+                            label="Other"
+                            labelPlacement="end"
+                            />
+                            <br></br>
+                    { showing3 ? 
+                    <div>  
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                    style={styles.input}
+                    hintText="What is your residence status?" //hfgfg
+                    floatingLabelText="What is your residence status?"
+                    onChange={handleChange('residenceStatus')}
+                    defaultValue={values.residenceStatus}
+                    label="What is your residence status?"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    </FormGroup>
+                    </div> : null }
+                        </RadioGroup>
+                    </FormControl>
+                    </FormGroup>
+                    </div>
+
+                    <p class="question">When did you arrive in New Zealand? </p>
+                    <FormGroup aria-label="position" coloumn> 
+                    <TextField
+                        style={styles.input}
+                        hintText="date" //hfgfg
+                        onChange={handleChange('date')}
+                        defaultValue={values.date}
+                        label="Day/ Month/ Year"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    </FormGroup>
+                    <br></br>
+                    <p class="question">What country were you born in?</p>
+                    <FormGroup aria-label="position" coloumn>
+                    <TextField 
+                    style={styles.input}
+                       hintText="country" //hfgfg
+                       floatingLabelText="country"
+                       onChange={handleChange('country')}
+                       defaultValue={values.country}
+                       label="Enter the country"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    </FormGroup>
+                    <br></br>
+                    <br></br>
+
+            
                     
                     <RaisedButton
                        label="Continue" 
