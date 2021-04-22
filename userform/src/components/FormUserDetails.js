@@ -90,8 +90,9 @@ export class FormUserDetails extends React.Component {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <p class="question">Client Number</p>  
-                    <FormGroup aria-label="position" coloumn> 
+
+                    <p class="question">Client Number</p> 
+                    <FormGroup aria-label="position" coloumn>                   
                     <TextField
                         style={styles.input}
                         hintText="9 digit Number" //hfgfg
@@ -103,16 +104,16 @@ export class FormUserDetails extends React.Component {
                         id="mui-theme-provider-outlined-input"
                         />
                     </FormGroup>
-            
-                    <br></br>
 
-                    <Accordion/> 
 
-                    <p class="question">What is your full name?</p>                
-                    
+                    {/* <Accordion/>  */}
+
+                <br></br>                  
+                <p class="question">What is your full name?</p>  
                 <div className={classes.root}> 
-                <FormGroup aria-label="position" row>                  
+                <FormGroup aria-label="position" row>              
                     <FormControl component="fieldset" className={classes.formControl}>
+                    
                         <RadioGroup
                             aria-label="gender"
                             name="gender2"
@@ -188,19 +189,21 @@ export class FormUserDetails extends React.Component {
                     labelPlacement="end"
                     /> */}
 
-
+                    
                     <FormGroup aria-label="position" coloumn>
+                    <p class="question">First and middle names</p> 
                     <TextField 
                     style={styles.input}
                        hintText="Enter Your First Name" //hfgfg
                        floatingLabelText="What is your full name?"
                        onChange={handleChange('firstName')}
                        defaultValue={values.firstName}
-                       label="First and middle names?"
+                       label="First and middle names"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
                     <br></br>
+                    <p class="question">Surname or family name</p> 
                     <TextField 
                        hintText="Enter Your Last Name" 
                        floatingLabelText="Surname or family name"
@@ -238,19 +241,22 @@ export class FormUserDetails extends React.Component {
                             labelPlacement="end"
                             />
                     { showing2 ? 
-                    <div>  
+                    <div>
+                     
                     <FormGroup aria-label="position" coloumn>
+                    <p class="question">First and middle names</p> 
                     <TextField 
                     style={styles.input}
                        hintText="Enter Your First Name" //hfgfg
                        floatingLabelText="What is your full name?"
                        onChange={handleChange('firstNameNOTsame')}
                        defaultValue={values.firstNameNOTsame}
-                       label="First and middle names?"
+                       label="First and middle names"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
                     <br></br>
+                    <p class="question">Surname or family name</p> 
                     <TextField 
                        hintText="Enter Your Last Name" 
                        floatingLabelText="Surname or family name"
@@ -326,6 +332,7 @@ export class FormUserDetails extends React.Component {
                     { showing3 ? 
                     <div>  
                     <FormGroup aria-label="position" coloumn>
+                    <p class="question">Write them all out below</p> 
                     <TextField 
                     style={styles.input}
                        hintText="1" //hfgfg
@@ -392,17 +399,17 @@ export class FormUserDetails extends React.Component {
                             label="The same as birth certificate"
                             labelPlacement="end"
                             />
-                            <FormControlLabel
+                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="Other"
                             control={<Radio color="primary" />}
                             label="Other"
                             labelPlacement="end"
                             />
-                        </RadioGroup>
-                    </FormControl>
-                    </FormGroup>
-                </div>
+                        
+                { showing3 ?
+                <div>
                 <FormGroup aria-label="position" coloumn>
+                <p class="question">Write the full name</p> 
                     <TextField 
                     style={styles.input}
                        hintText="NameCall" //hfgfg
@@ -413,7 +420,11 @@ export class FormUserDetails extends React.Component {
                         id="mui-theme-provider-outlined-input"
                         />
                     </FormGroup>
-
+                        </div> : null }
+                        </RadioGroup>
+                    </FormControl>
+                    </FormGroup>                  
+                </div>
                      {/* <p onChange={() => this.state.namePrefer.value}></p>
                     <div className='question'>
                     <FormControlLabel
@@ -434,7 +445,7 @@ export class FormUserDetails extends React.Component {
                     </div> : null }
                     </div>     */}
                     <br></br>
-                    <p class="question">What is your date of birth? </p>
+                    <p class="question">What date were you born? </p>
                     <FormGroup aria-label="position" coloumn> 
                     <TextField
                         type='date'
@@ -487,8 +498,23 @@ export class FormUserDetails extends React.Component {
                 </div>
                     {/* <br></br> */}
 
+                    <p class="question">What is your Inland Revenue tax number?</p>
+                    <FormGroup aria-label="position" coloumn> 
+                    <TextField
+                        type='date'
+                        hintText="IR number" //hfgfg
+                        onChange={handleChange('IRnumber')}
+                        defaultValue={values.IRnumber}
+                        label="Enter your Inland Revenue tax number"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    </FormGroup>
+                    <br></br>
+
                     <p class="question">Where do you live?</p>
-                    <FormGroup aria-label="position" row>
+                    <FormGroup aria-label="position" coloumn>
+                    <p class="question">Flat/House number</p>
                     <TextField 
                     style={styles.input}
                        hintText="Flat/House number" //hfgfg
@@ -499,7 +525,7 @@ export class FormUserDetails extends React.Component {
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
-                    <br></br>
+                    <p class="question">Street Name</p>
                     <TextField 
                        hintText="Street Name" 
                        floatingLabelText="Street Name"
@@ -510,8 +536,8 @@ export class FormUserDetails extends React.Component {
                         id="mui-theme-provider-outlined-input"
                     />
                     </FormGroup>
-                    <br></br>
                     <FormGroup aria-label="position" coloumn>
+                    <p class="question">Suburb</p>
                     <TextField 
                     style={styles.input}
                        hintText="Suburb" //hfgfg
@@ -522,7 +548,7 @@ export class FormUserDetails extends React.Component {
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
-                    <br></br>
+                    <p class="question">Town/City</p>
                     <TextField 
                        hintText="Town/City" 
                        floatingLabelText="Town/City"
@@ -621,6 +647,7 @@ export class FormUserDetails extends React.Component {
 
                     <p class="question">How else can we contact you?</p>
                     <FormGroup aria-label="position" coloumn>
+                    <p class="question">Home phone</p>
                     <TextField 
                     style={styles.input}
                        hintText="Home phone" //hfgfg
@@ -631,7 +658,8 @@ export class FormUserDetails extends React.Component {
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
-                    <br></br>
+                    {/* <br></br> */}
+                    <p class="question">Mobile phone</p>
                     <TextField 
                        hintText="Mobile phone" 
                        floatingLabelText="Mobile phone"
@@ -641,7 +669,8 @@ export class FormUserDetails extends React.Component {
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                     />
-                    <br></br>
+                    {/* <br></br> */}
+                    <p class="question">Other phone</p>
                     <TextField 
                        hintText="Other phone" 
                        floatingLabelText="Other phone"
@@ -697,7 +726,7 @@ export class FormUserDetails extends React.Component {
                     />
                     </FormGroup>
                     <br></br>  */}
-
+                    <br></br>
                     <p class="question">Do you agree to get emails from us?</p>
                     <div className={classes.root}> 
                     <FormGroup aria-label="position" row>                  
@@ -774,7 +803,7 @@ export class FormUserDetails extends React.Component {
                             <FormControlLabel
                             style={styles.input}
                             value="Māori"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Māori"
                             labelPlacement="end"
                             onChange={handleChange('Title')}
@@ -782,32 +811,32 @@ export class FormUserDetails extends React.Component {
                             />
                             <FormControlLabel
                             value="New Zealand European"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="New Zealand European"
                             labelPlacement="end"
                             />
                             <FormControlLabel
                             value="Other European"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Other European"
                             labelPlacement="end"
                             />
                             <FormControlLabel
                             value="Cook Island Māori"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Cook Island Māori"
                             labelPlacement="end"
                             />
                             <FormControlLabel
                             value="Niuean"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Niuean"
                             labelPlacement="end"
                             />
                             <FormControlLabel
                             style={styles.input}
                             value="Tokelauan"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Tokelauan"
                             labelPlacement="end"
                             onChange={handleChange('Title')}
@@ -815,37 +844,37 @@ export class FormUserDetails extends React.Component {
                             />
                             <FormControlLabel
                             value="Samoan"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Samoan"
                             labelPlacement="end"
                             />
                             <FormControlLabel
                             value="Tongan"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Tongan"
                             labelPlacement="end"
                             />
                             <FormControlLabel
                             value="Indian"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Indian"
                             labelPlacement="end"
                             />
                             <FormControlLabel
                             value="Chinese"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Chinese"
                             labelPlacement="end"
                             />
                             <FormControlLabel
                             value="Don’t want to answer"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Don’t want to answer"
                             labelPlacement="end"
                             />
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="yes"
-                            control={<Radio color="primary" />}
+                            control={<Checkbox color="primary" />}
                             label="Other"
                             labelPlacement="end"
                             />
@@ -1108,7 +1137,6 @@ export class FormUserDetails extends React.Component {
                             label="Other"
                             labelPlacement="end"
                             />
-                            <br></br>
                     { showing3 ? 
                     <div>  
                     <FormGroup aria-label="position" coloumn>
@@ -1156,16 +1184,16 @@ export class FormUserDetails extends React.Component {
                         />
                     </FormGroup>
                     <br></br>
-                    <br></br>
-
-            
-                    
+                    <br></br>                   
                     <RaisedButton
-                       label="Continue" 
-                       primary={true}
+                       label="Continue"
+                    //    primary={true}
+                       backgroundColor= '#007bff'
+                       borderColor='#007bff'
                        style={styles.button}
                        onClick={this.continue}
-                    /><br/><br/>
+                       variant="contained"
+                    />
                     </div>
                     </FormControl><br></br>
                 </React.Fragment>
@@ -1173,6 +1201,7 @@ export class FormUserDetails extends React.Component {
         );
     }
 }
+
 
 const styles = theme => ({
     root: {

@@ -47,7 +47,7 @@ import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-
 import ReactPaginate from 'react-paginate';
 
 
-export class FormPersonalDetails extends Component {
+export class FormIncomeDetails extends Component {
     state = {
         showing2: false,
         showing3: false,
@@ -59,7 +59,12 @@ export class FormPersonalDetails extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
-    }
+    };
+
+    back = e => {
+        e.preventDefault();
+        this.props.prevStep();
+    }; 
 
     render() {
         const { values, handleChange } = this.props;
@@ -691,4 +696,4 @@ const styles = {
     }
 }
 
-export default FormPersonalDetails;
+export default FormIncomeDetails;

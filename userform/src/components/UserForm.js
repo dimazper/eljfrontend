@@ -80,15 +80,16 @@ export class  UserForm extends Component {
                                 values={values} 
                             />
                         );
-                case 4:
-                    return(
-                        <FormDependentChildren
-                            nextStep={this.nextStep}
-                            prevStep={this.prevStep}
-                            handleChange={this.handleChange}
-                            values={values} 
-                        />
-                    );
+                    case 4:
+                        return(
+                            <FormDependentChildren
+                                nextStep={this.nextStep}
+                                prevStep={this.prevStep}
+                                handleChange={this.handleChange}
+                                values={values} 
+                            />
+                        );
+                        
                     case 5:
                         return(
                             <Confirm
