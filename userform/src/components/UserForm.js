@@ -82,13 +82,22 @@ export class  UserForm extends Component {
                         );
                 case 4:
                     return(
-                        <FormIncomeDetails
+                        <FormDependentChildren
                             nextStep={this.nextStep}
                             prevStep={this.prevStep}
                             handleChange={this.handleChange}
                             values={values} 
                         />
                     );
+                    case 5:
+                        return(
+                            <Confirm
+                                nextStep={this.nextStep}
+                                prevStep={this.prevStep}
+                                handleChange={this.handleChange}
+                                values={values} 
+                            />
+                        );
 
                     return <Success />; 
             }
