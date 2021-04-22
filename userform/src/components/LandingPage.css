@@ -2,6 +2,11 @@
 body {
   margin: 0;
   margin-bottom: 50px;
+    background-color: rgb(255, 255, 255); /*Default bg, similar to the background's base color*/
+    background-image: url("../assets/bg.png");
+    background-position: right top; /*Positioning*/
+    background-repeat: no-repeat; /*Prevent showing multiple background images*/
+ 
 }
 
 ul.topnav {
@@ -92,10 +97,10 @@ body {
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 16px;
   text-align: left;
-  background-color: #f1f1f1;
+  background-color: #f1f1f100;
   width: 900px;
   box-sizing: inherit;
 }
