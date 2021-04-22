@@ -45,6 +45,11 @@ export class FormPersonalDetails extends Component {
         e.preventDefault();
         this.props.nextStep();
     }
+
+    back = e => {
+        e.preventDefault();
+        this.props.prevStep();
+    }; 
     
     render() { 
         const { values, handleChange } = this.props;
@@ -258,7 +263,7 @@ labelPlacement="end"
 
 </FormControl> <br></br>
                        
-<RaisedButton
+                    <RaisedButton
                        label="Back" 
                        primary={false}
                        style={styles.button}
