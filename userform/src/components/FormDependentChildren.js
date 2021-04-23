@@ -110,7 +110,7 @@ export class FormDependentChildren extends Component {
                        hintText="Full Name" //hfgfg
                        floatingLabelText="Full Name"
                        onChange={handleChange('Child1fullName')}
-                       defaultValue={values.child2child2FullName}
+                       defaultValue={values.child2FullName}
                        label="Full Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
