@@ -2,11 +2,14 @@
 body {
   margin: 0;
   margin-bottom: 50px;
-    background-color: rgb(255, 255, 255); /*Default bg, similar to the background's base color*/
-    background-image: url("../assets/bg.png");
-    background-position: right top; /*Positioning*/
-    background-repeat: no-repeat; /*Prevent showing multiple background images*/
- 
+  background-color: rgb(
+    255,
+    255,
+    255
+  ); /*Default bg, similar to the background's base color*/
+  background-image: url("../assets/bg.png");
+  background-position: right top; /*Positioning*/
+  background-repeat: no-repeat; /*Prevent showing multiple background images*/
 }
 
 ul.topnav {
@@ -160,7 +163,7 @@ body {
 
 .button1 {
   background-color: #1393a3;
-  color: black;
+  color: rgb(255, 255, 255);
   border: 2px solid #1393a3;
 }
 

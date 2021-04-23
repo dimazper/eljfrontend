@@ -8,8 +8,17 @@ import HeaderForm from './HeaderForm';
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
 // Import React Progress Bar
+import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
+import IconButton from '@material-ui/core/IconButton';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 
-export class FormUserDetails extends Component {
+
+export class Confirm extends Component {
     constructor(props)
     {
         super(props);
@@ -56,7 +65,8 @@ export class FormUserDetails extends Component {
     
     render() { 
         const { values: {clientNumber, title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, bio} } = this.props;
-        
+        const { classes } = this.props;
+
         return (  
             <MuiThemeProvider>
                 <HeaderForm/>
@@ -115,7 +125,14 @@ export class FormUserDetails extends Component {
 
                     </List>
                     <br/>
-                    <RaisedButton
+                    <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
+          Back 
+        </Button>
+
+        <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
+          Continue 
+        </Button>
+                    {/* <RaisedButton
                        label="Back" 
                        primary={false}
                        style={styles.button}
@@ -123,10 +140,11 @@ export class FormUserDetails extends Component {
                     />
                     <RaisedButton
                        label="Confirm & Continue" 
-                       primary={true}
+                    //    primary={true}
+                       backgroundColor= '#1cbaa1'
                        style={styles.button}
                        onClick={this.continue}
-                    />
+                    /> */}
                     
                 </React.Fragment>
             </MuiThemeProvider>
@@ -134,10 +152,23 @@ export class FormUserDetails extends Component {
     }
 }
 
+const stylesButton = theme => ({
+    margin: {
+      margin: theme.spacing.unit,
+    },
+    extendedIcon: {
+      marginRight: theme.spacing.unit,
+    },
+  });
+
 const styles = {
     button: {
-        margin: 15
+        margin: 15        
     }
 }
- 
-export default FormUserDetails;
+
+Confirm.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
+  
+  export default withStyles(styles)(Confirm);

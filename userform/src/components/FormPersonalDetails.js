@@ -30,6 +30,15 @@ import './LandingPage.css';
 
 import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import ReactPaginate from 'react-paginate';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
+import IconButton from '@material-ui/core/IconButton';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
+
 
 
 export class FormPersonalDetails extends Component {
@@ -56,6 +65,7 @@ export class FormPersonalDetails extends Component {
         const { showing2,showing3,showing4 } = this.state;
         const showfirst = values.firstName+" "+values.lastName;
         const showsecond = values.firstNameNOTsame+" "+values.lastNameNOTsame;
+        const { classes } = this.props;
 
 
         return (          
@@ -81,15 +91,15 @@ export class FormPersonalDetails extends Component {
                     {/* <BorderLinearProgress variant="determinate" value={10} /> */} 
                           
                     <div class="card">
-                    <h2>Tell us about your work, education and activies</h2>
+                    <h1>Tell us about your work, education and activies</h1>
                     <br></br>
                     <br></br>
                     <ProgressBar></ProgressBar>
                     <br></br>
                     <br></br>
                     
-
-                    <p class="question">Tell us the reason you or your partner (if you have one) are applying for childcare assistance. Tick all that apply</p>                
+                    <h3>Tell us the reason you or your partner (if you have one) are applying for childcare assistance. Tick all that apply</h3>
+                    {/* <p class="question">Tell us the reason you or your partner (if you have one) are applying for childcare assistance. Tick all that apply</p>                 */}
                     <FormGroup aria-label="position" column>     
                     <FormControlLabel
                     value="work"
@@ -122,7 +132,9 @@ export class FormPersonalDetails extends Component {
                     />
                     <TextareaAutosize aria-label="minimum height" rowsMin={3} placeholder="" />
                     </FormGroup>
-                    <p class="question">Are you working?</p>                
+                    <br></br>
+                    <h3>Are you working?</h3>
+                    {/* <p class="question">Are you working?</p>                 */}
 
                     <FormControl component="fieldset">
       <RadioGroup row aria-label="position" name="position" defaultValue="no" row>
@@ -203,28 +215,9 @@ export class FormPersonalDetails extends Component {
                        id="mui-theme-provider-outlined-input"
                     />  
                     </div> : null }
-
-                        
-                    <p class="question">Are you on a work-related course or studying?</p>                
-
-<FormControl component="fieldset">
-<RadioGroup row aria-label="position" name="position" defaultValue="no" row>
-<FormControlLabel
-value="no"
-control={<Radio color="primary" />}
-label="No"
-labelPlacement="end"
-/>
-<FormControlLabel
-value="yes"
-control={<Radio color="primary" />}
-label="Yes"
-labelPlacement="end"
-/>
-</RadioGroup>
-
-</FormControl> <br></br>
-<p class="question">Are you doing activities arranged for you by Work and Income?</p>                
+                    <br></br>
+                    <h3>Are you on a work-related course or studying?</h3>
+                    {/* <p class="question">Are you on a work-related course or studying?</p>                 */}
 
 <FormControl component="fieldset">
 <RadioGroup row aria-label="position" name="position" defaultValue="no" row>
@@ -243,7 +236,9 @@ labelPlacement="end"
 </RadioGroup>
 
 </FormControl> <br></br>
-<p class="question">Are you applying for childcare assistance because of medical reasons?</p>                
+
+<h3>Are you on a work-related course or studying?</h3>
+{/* <p class="question">Are you doing activities arranged for you by Work and Income?</p>                 */}
 
 <FormControl component="fieldset">
 <RadioGroup row aria-label="position" name="position" defaultValue="no" row>
@@ -262,19 +257,49 @@ labelPlacement="end"
 </RadioGroup>
 
 </FormControl> <br></br>
-                       
-                    <RaisedButton
+<h3>Are you on a work-related course or studying?</h3>
+{/* <p class="question">Are you applying for childcare assistance because of medical reasons?</p>                 */}
+
+<FormControl component="fieldset">
+<RadioGroup row aria-label="position" name="position" defaultValue="no" row>
+<FormControlLabel
+value="no"
+control={<Radio color="primary" />}
+label="No"
+labelPlacement="end"
+/>
+<FormControlLabel
+value="yes"
+control={<Radio color="primary" />}
+label="Yes"
+labelPlacement="end"
+/>
+</RadioGroup>
+
+</FormControl> 
+<br></br>
+<br></br>
+<Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
+          Back 
+        </Button>
+
+        <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
+          Continue 
+        </Button>
+
+                    {/* <RaisedButton
                        label="Back" 
-                       primary={false}
+                       primary={false}       
                        style={styles.button}
                        onClick={this.back}
                     />
                     <RaisedButton
                        label="Continue" 
-                       primary={true}
+                    //    primary={true}
+                       backgroundColor= '#1cbaa1'
                        style={styles.button}
                        onClick={this.continue}
-                    /><br/><br/>
+                    /><br/><br/> */}
                     </div>
                     </FormControl><br></br>
                 </React.Fragment>
@@ -283,10 +308,24 @@ labelPlacement="end"
     }
 }
 
+const stylesButton = theme => ({
+    margin: {
+      margin: theme.spacing.unit,
+    },
+    extendedIcon: {
+      marginRight: theme.spacing.unit,
+    },
+  });
+
 const styles = {
     button: {
         margin: 15        
     }
 }
- 
-export default FormPersonalDetails;
+
+FormPersonalDetails.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
+  
+  export default withStyles(styles)(FormPersonalDetails);
+// export default FormPersonalDetails;

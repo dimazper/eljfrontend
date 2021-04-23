@@ -3,7 +3,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
@@ -25,7 +24,6 @@ import Progress from './progress'
 import BorderLinearProgress from '@material-ui/core/LinearProgress';
 import DatePicker from 'react-bootstrap';
 import HeaderForm from './HeaderForm';
-// Import React Progress Bar
 // import "react-step-progress-bar/styles.css";
 // import { ProgressBar, Step } from "react-step-progress-bar";
 // Import React Progress Bar
@@ -35,6 +33,13 @@ import './LandingPage.css';
 
 import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import ReactPaginate from 'react-paginate';
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
+import IconButton from '@material-ui/core/IconButton';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
 
 
 export class FormUserDetails extends React.Component {
@@ -82,7 +87,7 @@ export class FormUserDetails extends React.Component {
                     {/* <BorderLinearProgress variant="determinate" value={10} /> */} 
                           
                     <div class="card">
-                    <h2>Tell us about yourself </h2>
+                    <h1>Tell us about yourself </h1>
                     <br></br>
                     <br></br>
                     <ProgressBar></ProgressBar>
@@ -91,7 +96,8 @@ export class FormUserDetails extends React.Component {
                     <br></br>
                     <br></br>
 
-                    <p class="question">Client Number</p> 
+                    <h3>Client number</h3>
+                    {/* <p class="question">Client Number</p>  */}
                     <FormGroup aria-label="position" coloumn>                   
                     <TextField
                         style={styles.input}
@@ -108,12 +114,12 @@ export class FormUserDetails extends React.Component {
 
                     {/* <Accordion/>  */}
 
-                <br></br>                  
-                <p class="question">What is your full name?</p>  
+                <br></br> 
+                <h3>What is your full name?</h3>                 
+                {/* <p class="question">What is your full name?</p>   */}
                 <div className={classes.root}> 
                 <FormGroup aria-label="position" row>              
-                    <FormControl component="fieldset" className={classes.formControl}>
-                    
+                    <FormControl component="fieldset" className={classes.formControl}>               
                         <RadioGroup
                             aria-label="gender"
                             name="gender2"
@@ -154,10 +160,7 @@ export class FormUserDetails extends React.Component {
                             label="Other"
                             labelPlacement="end"
                             />
-                        </RadioGroup>
-                    </FormControl>
-                    </FormGroup>
-                </div>
+                        
 
                     {/* <FormControlLabel                  
                     value="mr"
@@ -214,11 +217,16 @@ export class FormUserDetails extends React.Component {
                         id="mui-theme-provider-outlined-input"
                     />
                     </FormGroup>
+                    </RadioGroup>
+                    </FormControl>
+                    </FormGroup>
+                </div>
                     <br></br>
                     {/* end of question 1 */}
 
                     {/* question 2 */}
-                    <p class="question">Is the name of your birth certificate the same as above?</p>
+                    <h3>Is the name of your birth certificate the same as above?</h3>  
+                    {/* <p class="question">Is the name of your birth certificate the same as above?</p> */}
 
                     <div className={classes.root}> 
                     <FormGroup aria-label="position" row>                  
@@ -307,8 +315,8 @@ export class FormUserDetails extends React.Component {
                     </div>  */}
            
                     {/* <br></br> */}
-
-                    <p class="question">Have you ever been known by any other name?</p>
+                    <h3>Have you ever been known by any other name?</h3> 
+                    {/* <p class="question">Have you ever been known by any other name?</p> */}
                     <div className={classes.root}> 
                     <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -377,8 +385,8 @@ export class FormUserDetails extends React.Component {
                     /></div> : null }
                     </div>  */}
                     {/* <br></br> */}
-        
-                     <p class="question">What name would you like us to call you?</p>
+                    <h3>What name would you like us to call you?</h3>
+                     {/* <p class="question">What name would you like us to call you?</p> */}
                      <div className={classes.root}> 
                 <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -445,7 +453,8 @@ export class FormUserDetails extends React.Component {
                     </div> : null }
                     </div>     */}
                     <br></br>
-                    <p class="question">What date were you born? </p>
+                    <h3>What date were you born? </h3>
+                    {/* <p class="question">What date were you born? </p> */}
                     <FormGroup aria-label="position" coloumn> 
                     <TextField
                         type='date'
@@ -459,7 +468,8 @@ export class FormUserDetails extends React.Component {
                     </FormGroup>
             
                     <br></br>
-                    <p class="question">Are you? </p>
+                    <h3>Are you? </h3>
+                    {/* <p class="question">Are you? </p> */}
                     <div className={classes.root}> 
                 <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -497,8 +507,8 @@ export class FormUserDetails extends React.Component {
                     </FormGroup>
                 </div>
                     {/* <br></br> */}
-
-                    <p class="question">What is your Inland Revenue tax number?</p>
+                    <h3>What is your Inland Revenue tax number?</h3>
+                    {/* <p class="question">What is your Inland Revenue tax number?</p> */}
                     <FormGroup aria-label="position" coloumn> 
                     <TextField
                         type='date'
@@ -511,8 +521,8 @@ export class FormUserDetails extends React.Component {
                         />
                     </FormGroup>
                     <br></br>
-
-                    <p class="question">Where do you live?</p>
+                    <h3>Where do you live?</h3>
+                    {/* <p class="question">Where do you live?</p> */}
                     <FormGroup aria-label="position" coloumn>
                     <p class="question">Flat/House number</p>
                     <TextField 
@@ -592,8 +602,8 @@ export class FormUserDetails extends React.Component {
                     />
                     </FormGroup> */}
                     <br></br> 
-
-                    <p class="question">Is your mailing address different from where you live?</p>
+                    <h3>Is your mailing address different from where you live?</h3>
+                    {/* <p class="question">Is your mailing address different from where you live?</p> */}
                     <div className={classes.root}> 
                     <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -644,8 +654,8 @@ export class FormUserDetails extends React.Component {
                     </FormGroup>
                     </div>
 
-
-                    <p class="question">How else can we contact you?</p>
+                    <h3>How else can we contact you?</h3>
+                    {/* <p class="question">How else can we contact you?</p> */}
                     <FormGroup aria-label="position" coloumn>
                     <p class="question">Home phone</p>
                     <TextField 
@@ -727,7 +737,8 @@ export class FormUserDetails extends React.Component {
                     </FormGroup>
                     <br></br>  */}
                     <br></br>
-                    <p class="question">Do you agree to get emails from us?</p>
+                    <h3>Do you agree to get emails from us?</h3>
+                    {/* <p class="question">Do you agree to get emails from us?</p> */}
                     <div className={classes.root}> 
                     <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -788,8 +799,8 @@ export class FormUserDetails extends React.Component {
                     /></div> : null }
                     </div> 
                     <br></br>   */}
-
-                    <p class="question">Tick the group(s) you most identify with.</p>
+                    <h3>Tick the group(s) you most identify with.</h3>
+                    {/* <p class="question">Tick the group(s) you most identify with.</p> */}
                     <div className={classes.root}> 
                 <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -1020,8 +1031,8 @@ export class FormUserDetails extends React.Component {
                 </div>                
               </FormGroup>
                 <br></br>    */}
-
-                <p class="question">Do you usually live in New Zealand?</p> 
+                <h3>Do you usually live in New Zealand?</h3>
+                {/* <p class="question">Do you usually live in New Zealand?</p>  */}
                 <div className={classes.root}> 
                 <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -1070,8 +1081,8 @@ export class FormUserDetails extends React.Component {
                     />
                     </FormGroup>      */}
 
-
-                    <p class="question">What best describes your residence status in New Zealand? Tick only one box.</p>
+                    <h3>What best describes your residence status in New Zealand? Tick only one box.</h3>
+                    {/* <p class="question">What best describes your residence status in New Zealand? Tick only one box.</p> */}
 
                     <div className={classes.root}> 
                     <FormGroup aria-label="position" row>                  
@@ -1156,8 +1167,8 @@ export class FormUserDetails extends React.Component {
                     </FormControl>
                     </FormGroup>
                     </div>
-
-                    <p class="question">When did you arrive in New Zealand? </p>
+                    <h3>When did you arrive in New Zealand? </h3>
+                    {/* <p class="question">When did you arrive in New Zealand? </p> */}
                     <FormGroup aria-label="position" coloumn> 
                     <TextField
                         style={styles.input}
@@ -1170,7 +1181,8 @@ export class FormUserDetails extends React.Component {
                         />
                     </FormGroup>
                     <br></br>
-                    <p class="question">What country were you born in?</p>
+                    <h3>What country were you born in? </h3>
+                    {/* <p class="question">What country were you born in?</p> */}
                     <FormGroup aria-label="position" coloumn>
                     <TextField 
                     style={styles.input}
@@ -1184,16 +1196,19 @@ export class FormUserDetails extends React.Component {
                         />
                     </FormGroup>
                     <br></br>
-                    <br></br>                   
-                    <RaisedButton
+                    <br></br> 
+                    <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
+          Continue 
+        </Button>                  
+                    {/* <RaisedButton
                        label="Continue"
                     //    primary={true}
-                       backgroundColor= '#007bff'
+                       backgroundColor= '#1cbaa1'
                        borderColor='#007bff'
                        style={styles.button}
                        onClick={this.continue}
                        variant="contained"
-                    />
+                    /> */}
                     </div>
                     </FormControl><br></br>
                 </React.Fragment>
@@ -1201,6 +1216,15 @@ export class FormUserDetails extends React.Component {
         );
     }
 }
+
+const stylesButton = theme => ({
+    margin: {
+      margin: theme.spacing.unit,
+    },
+    extendedIcon: {
+      marginRight: theme.spacing.unit,
+    },
+  });
 
 
 const styles = theme => ({
@@ -1220,6 +1244,8 @@ const styles = theme => ({
 //         margin: 15        
 //     },
 // }
+
+
 
 FormUserDetails.propTypes = {
     classes: PropTypes.object.isRequired,

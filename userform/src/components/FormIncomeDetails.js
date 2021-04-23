@@ -45,6 +45,13 @@ import Paper from '@material-ui/core/Paper';
 
 import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import ReactPaginate from 'react-paginate';
+import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
+import IconButton from '@material-ui/core/IconButton';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
+
 
 
 export class FormIncomeDetails extends Component {
@@ -71,6 +78,7 @@ export class FormIncomeDetails extends Component {
         const { showing2, showing3, showing4 } = this.state;
         const showfirst = values.firstName + " " + values.lastName;
         const showsecond = values.firstNameNOTsame + " " + values.lastNameNOTsame;
+        const { classes } = this.props;
 
 
         return (
@@ -96,7 +104,7 @@ export class FormIncomeDetails extends Component {
                         {/* <BorderLinearProgress variant="determinate" value={10} /> */}
 
                         <div class="card">
-                            <h2>Tell us about your income and assets</h2>
+                            <h1>Tell us about your income and assets</h1>
                             <br></br>
                             <br></br>
                             <ProgressBar></ProgressBar>
@@ -106,8 +114,8 @@ export class FormIncomeDetails extends Component {
 
                             </div></div>
 
-
-                            <p class="question">Do you expect to get income from any of the following sources in the next 52 weeks?</p><br></br>
+                            <h3>Do you expect to get income from any of the following sources in the next 52 weeks?</h3>
+                            {/* <p class="question">Do you expect to get income from any of the following sources in the next 52 weeks?</p><br></br> */}
 
                             <FormControl component="fieldset">
                                 <FormLabel component="legend">Wages or salary</FormLabel>
@@ -667,10 +675,15 @@ export class FormIncomeDetails extends Component {
 </Grid>
 
 </Grid><br></br>
-
-
                             <br></br>
-                            <RaisedButton
+                            <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
+          Back 
+        </Button>
+
+        <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
+          Continue 
+        </Button>
+                            {/* <RaisedButton
                                 label="Back"
                                 primary={false}
                                 style={styles.button}
@@ -678,10 +691,11 @@ export class FormIncomeDetails extends Component {
                             />
                             <RaisedButton
                                 label="Continue"
-                                primary={true}
+                                // primary={true}
+                                backgroundColor= '#1cbaa1'
                                 style={styles.button}
                                 onClick={this.continue}
-                            /><br /><br />
+                            /><br /><br /> */}
                         </div>
                     </FormControl><br></br>
                 </React.Fragment>
@@ -690,10 +704,23 @@ export class FormIncomeDetails extends Component {
     }
 }
 
+const stylesButton = theme => ({
+    margin: {
+      margin: theme.spacing.unit,
+    },
+    extendedIcon: {
+      marginRight: theme.spacing.unit,
+    },
+  });
+
 const styles = {
     button: {
-        margin: 15
+        margin: 15        
     }
 }
 
-export default FormIncomeDetails;
+FormIncomeDetails.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
+  
+  export default withStyles(styles)(FormIncomeDetails);

@@ -35,6 +35,13 @@ import './LandingPage.css';
 
 import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import ReactPaginate from 'react-paginate';
+import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
+import IconButton from '@material-ui/core/IconButton';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
+
 
 
 export class FormDependentChildren extends Component {
@@ -83,15 +90,16 @@ export class FormDependentChildren extends Component {
                     {/* <BorderLinearProgress variant="determinate" value={10} /> */} 
                           
                     <div class="card">
-                    <h2>Tell us about your dependent children</h2>
+                    <h1>Tell us about your dependent children</h1>
                     <br></br>
                     <br></br>
                     <ProgressBar></ProgressBar>
                     <br></br>
                     <br></br>
                     
-
-                    <p class="question">Who are the dependent children in your care?</p>
+{/*                 
+                    <p class="question">Who are the dependent children in your care?</p> */}
+                    <h3>Who are the dependent children in your care?</h3>
                     <p3 class="question">Child 1</p3> 
                     <br></br>
                     <br></br>
@@ -183,7 +191,8 @@ export class FormDependentChildren extends Component {
                     </FormGroup>
                     <br></br>
 
-                    <p class="question">Which children receive 20 hours ECE from any childcare service?</p>
+                    <h3>Which children receive 20 hours ECE from any childcare service?</h3>
+                    {/* <p class="question">Which children receive 20 hours ECE from any childcare service?</p> */}
                     <div className={classes.root}> 
                     <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -331,8 +340,8 @@ export class FormDependentChildren extends Component {
                     </FormControl>
                     </FormGroup>
                     </div>
-
-                    <p class="question">Which children do you wish to get Childcare Subsidy for?</p>
+                    <h3>Which children do you wish to get Childcare Subsidy for?</h3>
+                    {/* <p class="question">Which children do you wish to get Childcare Subsidy for?</p> */}
                     <div className={classes.root}> 
                     <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -388,8 +397,8 @@ export class FormDependentChildren extends Component {
                     </FormGroup>
                     </div>
 
-
-                    <p class="question">Which children do you wish to get OSCAR Subsidy for?</p>
+                    <h3>Which children do you wish to get OSCAR Subsidy for?</h3>
+                    {/* <p class="question">Which children do you wish to get OSCAR Subsidy for?</p> */}
                     <div className={classes.root}> 
                     <FormGroup aria-label="position" row>                  
                     <FormControl component="fieldset" className={classes.formControl}>
@@ -445,7 +454,14 @@ export class FormDependentChildren extends Component {
                     </FormGroup>
                     </div>
                     <br/>
-                    <RaisedButton
+                    <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
+          Back 
+        </Button>
+
+        <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
+          Continue 
+        </Button>
+                    {/* <RaisedButton
                        label="Back" 
                        primary={false}
                        style={style.button}
@@ -453,10 +469,11 @@ export class FormDependentChildren extends Component {
                     />
                     <RaisedButton
                        label="Continue" 
-                       primary={true}
+                      //  primary={true}
+                       backgroundColor= '#1cbaa1'
                        style={style.button}
                        onClick={this.continue}
-                    />
+                    /> */}
                     <br/><br/>
                     </div>
                     </FormControl><br></br>
@@ -466,23 +483,33 @@ export class FormDependentChildren extends Component {
     }
 }
 
-const style = {
-    button: {
-        margin: 15        
-    }
+const stylesButton = theme => ({
+  margin: {
+    margin: theme.spacing.unit,
+  },
+  extendedIcon: {
+    marginRight: theme.spacing.unit,
+  },
+});
+
+const styles = {
+  button: {
+      margin: 15        
+  }
 }
 
-const styles = theme => ({
-    root: {
-      display: 'flex',
-    },
-    formControl: {
-      margin: theme.spacing.unit * 3,
-    },
-    group: {
-      margin: `${theme.spacing.unit}px 0`,
-    },
-  });
+
+// const styles = theme => ({
+//     root: {
+//       display: 'flex',
+//     },
+//     formControl: {
+//       margin: theme.spacing.unit * 3,
+//     },
+//     group: {
+//       margin: `${theme.spacing.unit}px 0`,
+//     },
+//   });
 
   FormDependentChildren.propTypes = {
     classes: PropTypes.object.isRequired,
