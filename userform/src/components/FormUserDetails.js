@@ -24,7 +24,6 @@ import Progress from './progress'
 import BorderLinearProgress from '@material-ui/core/LinearProgress';
 import DatePicker from 'react-bootstrap';
 import HeaderForm from './HeaderForm';
-// Import React Progress Bar
 // import "react-step-progress-bar/styles.css";
 // import { ProgressBar, Step } from "react-step-progress-bar";
 // Import React Progress Bar
