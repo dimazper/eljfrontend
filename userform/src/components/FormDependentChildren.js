@@ -123,11 +123,12 @@ export class FormDependentChildren extends Component {
                     <p class="question">Date of birth</p>                 
                     <TextField 
                     style={styles.input}
-                       hintText="Date of birth" //hfgfg
-                       floatingLabelText="Date of birth"
+                       hintText="Date of birth1" //hfgfg
+                       floatingLabelText="Date of birth2"
                        onChange={handleChange('Child1DOB')}
                        defaultValue={values.Child1DOB}
-                       label="Day/ Month/ Year"
+                       label=""
+                       type='date'
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
@@ -170,10 +171,11 @@ export class FormDependentChildren extends Component {
                     <TextField 
                     style={styles.input}
                        hintText="Date of birth" //hfgfg
-                       floatingLabelText="Date of birth"
+                       floatingLabelText=""
                        onChange={handleChange('Child2DOB')}
                        defaultValue={values.Child2DOB}
-                       label="Day/ Month/ Year"
+                       label=""
+                       type='date'
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
@@ -265,7 +267,8 @@ export class FormDependentChildren extends Component {
                        floatingLabelText="What date did the 20 Hours ECE start?"
                        onChange={handleChange('date')}
                        defaultValue={values.date}
-                       label="Day/ Month/ Year"
+                       label=""
+                       type='date'
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
@@ -326,7 +329,8 @@ export class FormDependentChildren extends Component {
                        floatingLabelText="What date did the 20 Hours ECE start?"
                        onChange={handleChange('date')}
                        defaultValue={values.date}
-                       label="Day/ Month/ Year"
+                       label=""
+                       type='date'
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
