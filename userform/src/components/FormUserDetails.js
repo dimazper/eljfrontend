@@ -127,32 +127,40 @@ export class FormUserDetails extends React.Component {
                             control={<Radio color="primary" />}
                             label="Mr"
                             labelPlacement="end"
-                            onChange={handleChange('Title')}
-                            defaultValue={values.Mr}
+                            onChange={handleChange('title')}
+                            defaultValue={values.title}
                             />
                             <FormControlLabel
                             value="Mrs"
                             control={<Radio color="primary" />}
                             label="Mrs"
                             labelPlacement="end"
+                            onChange={handleChange('title')}
+                            defaultValue={values.title}
                             />
                             <FormControlLabel
                             value="Ms"
                             control={<Radio color="primary" />}
                             label="Ms"
                             labelPlacement="end"
+                            onChange={handleChange('title')}
+                            defaultValue={values.title}
                             />
                             <FormControlLabel
                             value="Miss"
                             control={<Radio color="primary" />}
                             label="Miss"
                             labelPlacement="end"
+                            onChange={handleChange('title')}
+                            defaultValue={values.title}
                             />
                             <FormControlLabel
                             value="other"
                             control={<Radio color="primary" />}
                             label="Other"
                             labelPlacement="end"
+                            onChange={handleChange('title')}
+                            defaultValue={values.title}
                             />
                         </RadioGroup>
                     </FormControl>
@@ -449,10 +457,10 @@ export class FormUserDetails extends React.Component {
                     <FormGroup aria-label="position" coloumn> 
                     <TextField
                         type='date'
-                        hintText="your date of birth" //hfgfg
+                        hintText="" //hfgfg
                         onChange={handleChange('dob')}
                         defaultValue={values.dob}
-                        label="Date of birth, eg.5/04/1996"
+                        label=""
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
@@ -473,24 +481,24 @@ export class FormUserDetails extends React.Component {
                             control={<Radio color="primary" />}
                             label="Male"
                             labelPlacement="end"
-                            onChange={handleChange('Male')}
-                            defaultValue={values.Male}
+                            onChange={handleChange('gender')}
+                            defaultValue={values.gender}
                             />
                             <FormControlLabel
                             value="Female"
                             control={<Radio color="primary" />}
                             label="Female"
                             labelPlacement="end"
-                            onChange={handleChange('Female')}
-                            defaultValue={values.Female}
+                            onChange={handleChange('gender')}
+                            defaultValue={values.gender}
                             />
                             <FormControlLabel
                             value="Gender Diverse"
                             control={<Radio color="primary" />}
                             label="Gender Diverse"
                             labelPlacement="end"
-                            onChange={handleChange('GenderDiverse')}
-                            defaultValue={values.GenderDiverse}
+                            onChange={handleChange('gender')}
+                            defaultValue={values.gender}
                             />
                         </RadioGroup>
                     </FormControl>
@@ -501,10 +509,10 @@ export class FormUserDetails extends React.Component {
                     <p class="question">What is your Inland Revenue tax number?</p>
                     <FormGroup aria-label="position" coloumn> 
                     <TextField
-                        type='date'
+                        type='text'
                         hintText="IR number" //hfgfg
-                        onChange={handleChange('IRnumber')}
-                        defaultValue={values.IRnumber}
+                        onChange={handleChange('irdNumber')}
+                        defaultValue={values.irdNumber}
                         label="Enter your Inland Revenue tax number"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -519,8 +527,8 @@ export class FormUserDetails extends React.Component {
                     style={styles.input}
                        hintText="Flat/House number" //hfgfg
                        floatingLabelText="Flat/House number"
-                       onChange={handleChange('flatNumber')}
-                       defaultValue={values.flatNumber}
+                       onChange={handleChange('flatHouseNum')}
+                       defaultValue={values.flatHouseNum}
                        label="Flat/House number"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -621,9 +629,9 @@ export class FormUserDetails extends React.Component {
                     style={styles.input}
                        hintText="1" //hfgfg
                        floatingLabelText="1"
-                       onChange={handleChange('mailingAddress1')}
-                       defaultValue={values.mailingAddress1}
-                       label="1."
+                       onChange={handleChange('mailingAddr')}
+                       defaultValue={values.mailingAddr}
+                       label=""
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
@@ -631,7 +639,7 @@ export class FormUserDetails extends React.Component {
                     <TextField 
                        hintText="2" 
                        floatingLabelText="2"
-                       onChange={handleChange('mailingAddress2')}
+                       onChange={handleChange('mailingAddress2')} //no database field for this just chose no
                        defaultValue={values.mailingAddress2}
                        label="2."
                         variant="outlined"
@@ -663,8 +671,8 @@ export class FormUserDetails extends React.Component {
                     <TextField 
                        hintText="Mobile phone" 
                        floatingLabelText="Mobile phone"
-                       onChange={handleChange('mobilePhone')}
-                       defaultValue={values.mobilePhone}
+                       onChange={handleChange('mobPhone')}
+                       defaultValue={values.mobPhone}
                        label="Mobile phone"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -759,7 +767,7 @@ export class FormUserDetails extends React.Component {
                     <FormGroup aria-label="position" coloumn>
                     <TextField 
                     style={styles.input}
-                       hintText="Tell us your email address" //hfgfg
+                       hintText="Tell us your email address" //email doesnt exist in database - need to add
                        floatingLabelText="Tell us your email address"
                        onChange={handleChange('email')}
                        defaultValue={values.email}
@@ -806,8 +814,7 @@ export class FormUserDetails extends React.Component {
                             control={<Checkbox color="primary" />}
                             label="Māori"
                             labelPlacement="end"
-                            onChange={handleChange('Title')}
-                            defaultValue={values.Mr}
+                            
                             />
                             <FormControlLabel
                             value="New Zealand European"
@@ -839,8 +846,7 @@ export class FormUserDetails extends React.Component {
                             control={<Checkbox color="primary" />}
                             label="Tokelauan"
                             labelPlacement="end"
-                            onChange={handleChange('Title')}
-                            defaultValue={values.Mr}
+                            
                             />
                             <FormControlLabel
                             value="Samoan"
@@ -886,8 +892,8 @@ export class FormUserDetails extends React.Component {
                     style={styles.input}
                        hintText="Please write below" //hfgfg
                        floatingLabelText="Please write below"
-                       onChange={handleChange('ethnicGroup')}
-                       defaultValue={values.ethnicGroup}
+                       onChange={handleChange('ethnicity')}
+                       defaultValue={values.ethnicity}
                        label="Please write below"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -1038,14 +1044,17 @@ export class FormUserDetails extends React.Component {
                             control={<Radio color="primary" />}
                             label="No"
                             labelPlacement="end"
-                            onChange={handleChange('Title')}
-                            defaultValue={values.Mr}
+                            onChange={handleChange('usuallyNZ')}
+                            defaultValue={values.usuallyNZ}
+                            
                             />
                             <FormControlLabel
                             value="Yes"
                             control={<Radio color="primary" />}
                             label="Yes"
                             labelPlacement="end"
+                            onChange={handleChange('usuallyNZ')}
+                            defaultValue={values.usuallyNZ}
                             />
                         </RadioGroup>
                     </FormControl>
@@ -1082,26 +1091,31 @@ export class FormUserDetails extends React.Component {
                             onChange={this.handleChange}
                         >
                             <FormControlLabel
-                            value="nzCitizen"
+                            value="NZ Citizen"
                             control={<Radio color="primary" />}
                             label="New Zealand citizen by birth"
                             labelPlacement="end"
+                            onChange={handleChange('residenceStatus')}
+                            defaultValue={values.residenceStatus}
                             />
                             <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="end"
-                            value="grantedCitizenship"
+                            value="Granted Citizenship"
                             control={<Radio color="primary" />}
                             label="Granted New Zealand citizenship"
                             labelPlacement="end"
+                            onChange={handleChange('residenceStatus')}
+                            defaultValue={values.residenceStatus}
                             />
                             { showing2 ? 
                             <div>  
                             <FormGroup aria-label="position" coloumn>
                             <TextField 
                             style={styles.input}
+                            type='date'
                             hintText="Date citizenship granted" //hfgfg
                             floatingLabelText="Date citizenship granted"
-                            onChange={handleChange('dateCitizenship')}
-                            defaultValue={values.dateCitizenship}
+                            onChange={handleChange('dateGranted')}
+                            defaultValue={values.dateGranted}
                             label="Date citizenship granted"
                                 variant="outlined"
                                 id="mui-theme-provider-outlined-input"
@@ -1120,10 +1134,11 @@ export class FormUserDetails extends React.Component {
                             <FormGroup aria-label="position" coloumn>
                             <TextField 
                             style={styles.input}
+                            type='date'
                             hintText="Date permanent residence granted" //hfgfg
                             floatingLabelText="Date permanent residence granted"
-                            onChange={handleChange('datePermanentResidence')}
-                            defaultValue={values.datePermanentResidence}
+                            onChange={handleChange('dateGranted')}
+                            defaultValue={values.dateGranted}
                             label="Date permanent residence granted"
                                 variant="outlined"
                                 id="mui-theme-provider-outlined-input"
@@ -1161,10 +1176,11 @@ export class FormUserDetails extends React.Component {
                     <FormGroup aria-label="position" coloumn> 
                     <TextField
                         style={styles.input}
-                        hintText="date" //hfgfg
-                        onChange={handleChange('date')}
-                        defaultValue={values.date}
-                        label="Day/ Month/ Year"
+                        type='date'
+                        hintText="" //hfgfg
+                        onChange={handleChange('dateArrived')}
+                        defaultValue={values.dateArrived}
+                        label=""
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
@@ -1176,8 +1192,8 @@ export class FormUserDetails extends React.Component {
                     style={styles.input}
                        hintText="country" //hfgfg
                        floatingLabelText="country"
-                       onChange={handleChange('country')}
-                       defaultValue={values.country}
+                       onChange={handleChange('countryOfBirth')}
+                       defaultValue={values.countryOfBirth}
                        label="Enter the country"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
