@@ -106,27 +106,32 @@ export class FormPersonalDetails extends Component {
                     control={<Checkbox color="primary" />}
                     label="Work"
                     labelPlacement="end"
-                    onChange={handleChange('title')}
-                    defaultValue={values.title}
+                    onChange={handleChange('ccAssistanceReason')}
+                    defaultValue={values.ccAssistanceReason}
                     />
                     <FormControlLabel
                     value="work-related"
                     control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                    onChange={handleChange('ccAssistanceReason')}
+                    defaultValue={values.ccAssistanceReason}
+
                     label="Work-related course or studying"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="activies"
                     control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                    onChange={handleChange('ccAssistanceReason')}
+                    defaultValue={values.ccAssistanceReason}
+
                     label="Doing activities arranged by Work and Income"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="another"
                     control={<Checkbox color="primary" />}
-                    onChange={handleChange('title')}
+                    onChange={handleChange('ccAssistanceReason')}
+                    defaultValue={values.ccAssistanceReason}
                     label="another reason"
                     labelPlacement="end"
                     />
@@ -143,12 +148,18 @@ export class FormPersonalDetails extends Component {
           control={<Radio color="primary" />}
           label="No"
           labelPlacement="end"
+          onChange={handleChange('isWorking')}
+          defaultValue={values.isWorking}
+
+
         />
         <FormControlLabel
           value="yes"
           control={<Radio color="primary" />}
           label="Yes"
           labelPlacement="end"
+          onChange={handleChange('isWorking')}
+          defaultValue={values.isWorking}
           onClick={() => this.setState({ showing2: !showing2 })}
         />
       </RadioGroup>
@@ -163,8 +174,8 @@ export class FormPersonalDetails extends Component {
                     <TextField 
                        hintText="Employers name" //hfgfg
                        floatingLabelText="Employers name"
-                       onChange={handleChange('firstName')}
-                       defaultValue={values.firstName}
+                       onChange={handleChange('employerName')}
+                       defaultValue={values.employerName}
                        label="Employers name"
                        variant="outlined"
                        id="mui-theme-provider-outlined-input"
@@ -173,14 +184,17 @@ export class FormPersonalDetails extends Component {
               
                     <FormGroup aria-label="position" column>     
 
-                <TextareaAutosize aria-label="minimum height" rowsMin={3} placeholder="" />
+                <TextareaAutosize aria-label="minimum height" rowsMin={3} placeholder="" 
+                onChange={handleChange('employerAddr')}
+                defaultValue={values.employerAddr}
+                />
                         </FormGroup>
                         <p>Employer's phone number:</p>
                     {/* <FormGroup aria-label="position" row> */}
                     <TextField 
         
-                       onChange={handleChange('firstName')}
-                       defaultValue={values.firstName}
+                       onChange={handleChange('employerPhone')}
+                       defaultValue={values.employerPhone}
                        label="phone number"
                        variant="outlined"
                        id="mui-theme-provider-outlined-input"
@@ -189,8 +203,8 @@ export class FormPersonalDetails extends Component {
                     <p>Employer's email / fax :</p>
                     {/* <FormGroup aria-label="position" row> */}
                     <TextField 
-                       onChange={handleChange('firstName')}
-                       defaultValue={values.firstName}
+                       onChange={handleChange('employerFaxEmail')}
+                       defaultValue={values.employerFaxEmail}
                        label="email / fax "
                        variant="outlined"
                        id="mui-theme-provider-outlined-input"
@@ -199,8 +213,8 @@ export class FormPersonalDetails extends Component {
                     <p>How many hours a week, <u>including lunch hours</u>, do you spend at work?</p>
                     {/* <FormGroup aria-label="position" row> */}
                     <TextField 
-                       onChange={handleChange('firstName')}
-                       defaultValue={values.firstName}
+                       onChange={handleChange('hoursPerWeek')}
+                       defaultValue={values.hoursPerWeek}
                        label="hours at work"
                        variant="outlined"
                        id="mui-theme-provider-outlined-input"
@@ -208,8 +222,8 @@ export class FormPersonalDetails extends Component {
                     <p>How many hours a week do you spend travelling <u>from the childcare service to work and returning</u>?</p>
                     {/* <FormGroup aria-label="position" row> */}
                     <TextField 
-                       onChange={handleChange('firstName')}
-                       defaultValue={values.firstName}
+                       onChange={handleChange('hoursTravel')}
+                       defaultValue={values.hoursTravel}
                        label="hours travelling"
                        variant="outlined"
                        id="mui-theme-provider-outlined-input"
@@ -226,6 +240,7 @@ value="no"
 control={<Radio color="primary" />}
 label="No"
 labelPlacement="end"
+
 />
 <FormControlLabel
 value="yes"
