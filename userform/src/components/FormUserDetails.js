@@ -646,15 +646,7 @@ export class FormUserDetails extends React.Component {
                         id="mui-theme-provider-outlined-input"
                         />
                     <br></br>
-                    <TextField 
-                       hintText="2" 
-                       floatingLabelText="2"
-                       onChange={handleChange('mailingAddress2')} //no database field for this just chose no
-                       defaultValue={values.mailingAddress2}
-                       label="2."
-                        variant="outlined"
-                        id="mui-theme-provider-outlined-input"
-                    />
+                    
                     </FormGroup>
                     </div> : null }
                         </RadioGroup>
