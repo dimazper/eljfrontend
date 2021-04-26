@@ -109,8 +109,10 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Full Name" //hfgfg
                        floatingLabelText="Full Name"
+          
                        onChange={handleChange('childFullName_1')}
                        defaultValue={values.childFullName_1}
+
                        label="Full Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
