@@ -668,6 +668,7 @@ export class FormUserDetails extends React.Component {
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
+
                     </FormGroup>
                     </div> : null }
                         </RadioGroup>
@@ -840,9 +841,9 @@ export class FormUserDetails extends React.Component {
                         >
                             <FormControlLabel
                             style={styles.input}
-                            value="Māori"
+                            value="Māori"
                             control={<Checkbox color="primary" />}
-                            label="Māori"
+                            label="Māori"
                             labelPlacement="end"
                             onChange={handleChange('ethnicGroup')}
                             defaultValue={values.ethnicGroup}
@@ -865,9 +866,9 @@ export class FormUserDetails extends React.Component {
                             defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
-                            value="Cook Island Māori"
+                            value="Cook Island Māori"
                             control={<Checkbox color="primary" />}
-                            label="Cook Island Māori"
+                            label="Cook Island Māori"
                             labelPlacement="end"
                             onChange={handleChange('ethnicGroup')}
                             defaultValue={values.ethnicGroup}
@@ -989,11 +990,11 @@ export class FormUserDetails extends React.Component {
                         labelPlacement="end"
                     />
                     <FormControlLabel
-                        value="Cook Island Māori"
+                        value="Cook Island Māori"
                         control={<Checkbox color="primary" />}
                         onChange={handleChange('title')}
 
-                        label="Cook Island Māori"
+                        label="Cook Island Māori"
                         labelPlacement="end"
                     />
 

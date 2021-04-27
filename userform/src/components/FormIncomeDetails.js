@@ -127,10 +127,12 @@ export class FormIncomeDetails extends Component {
                                         labelPlacement="end"
                                     />
                                     <FormControlLabel
-                                        value="yes"
+                                        value="incomeWagesSalary"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('jointPartnerWhere1')}
+                                        defaultValue={values.incomeWagesSalary}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br>
@@ -140,8 +142,8 @@ export class FormIncomeDetails extends Component {
                                 <Grid item xs={4}>
                                     <FormLabel component="legend">Its value</FormLabel><br></br>
                                     <TextField
-                                        onChange={handleChange('firstName')}
-                                        defaultValue={values.firstName}
+                                        onChange={handleChange('jointPartnerYou1')}
+                                        defaultValue={values.jointPartnerYou1}
                                         variant="outlined"
                                         id="mui-theme-provider-outlined-input"
                                     />
@@ -153,7 +155,7 @@ export class FormIncomeDetails extends Component {
                                     <Select
                                         labelId="demo-simple-select-outlined-label"
                                         id="demo-simple-select-outlined"
-                                        onChange={handleChange}
+                                        onChange={handleChange('jointPartnerFreq1')}
                                         label="How often do you expect the payment?"
                                     >
                                         <MenuItem value="">
@@ -254,10 +256,12 @@ export class FormIncomeDetails extends Component {
                                         labelPlacement="end"
                                     />
                                     <FormControlLabel
-                                        value="jointly"
+                                        value="incomeInsurance"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('jointPartnerWhere2')}
+                                        defaultValue={values.incomeInsurance}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><Grid container spacing={24}>
@@ -266,8 +270,8 @@ export class FormIncomeDetails extends Component {
 <Grid item xs={4}>
     <FormLabel component="legend">Its value</FormLabel><br></br>
     <TextField
-        onChange={handleChange('firstName')}
-        defaultValue={values.firstName}
+        onChange={handleChange('jointPartnerWith2')}
+        defaultValue={values.jointPartnerWith2}
         variant="outlined"
         id="mui-theme-provider-outlined-input"
     />
@@ -279,7 +283,7 @@ export class FormIncomeDetails extends Component {
     <Select
         labelId="demo-simple-select-outlined-label"
         id="demo-simple-select-outlined"
-        onChange={handleChange}
+        onChange={handleChange('jointPartnerFreq2')}
         label="How often do you expect the payment?"
     >
         <MenuItem value="">
@@ -649,8 +653,8 @@ export class FormIncomeDetails extends Component {
 <Grid item xs={4}>
     <FormLabel component="legend">Type of payment</FormLabel><br></br>
     <TextField
-        onChange={handleChange('firstName')}
-        defaultValue={values.firstName}
+        onChange={handleChange('other52weeksType1')}
+        defaultValue={values.other52weeksType1}
         variant="outlined"
         id="mui-theme-provider-outlined-input"
     />
@@ -658,8 +662,8 @@ export class FormIncomeDetails extends Component {
 <Grid item xs={4}>
     <FormLabel component="legend">Where will it come from?</FormLabel><br></br>
     <TextField
-        onChange={handleChange('firstName')}
-        defaultValue={values.firstName}
+        onChange={handleChange('other52weeksWhere1')}
+        defaultValue={values.other52weeksWhere1}
         variant="outlined"
         id="mui-theme-provider-outlined-input"
     />
@@ -667,8 +671,8 @@ export class FormIncomeDetails extends Component {
 <Grid item xs={4}>
     <FormLabel component="legend">Its value</FormLabel><br></br>
     <TextField
-        onChange={handleChange('firstName')}
-        defaultValue={values.firstName}
+        onChange={handleChange('other52weeksValue1')}
+        defaultValue={values.other52weeksValue1}
         variant="outlined"
         id="mui-theme-provider-outlined-input"
     />

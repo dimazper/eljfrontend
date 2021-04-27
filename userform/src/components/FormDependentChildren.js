@@ -109,8 +109,10 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Full Name" //hfgfg
                        floatingLabelText="Full Name"
-                       onChange={handleChange('Child1fullName')}
-                       defaultValue={values.child2FullName}
+          
+                       onChange={handleChange('childFullName_1')}
+                       defaultValue={values.childFullName_1}
+
                        label="Full Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -125,8 +127,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Date of birth1" //hfgfg
                        floatingLabelText="Date of birth2"
-                       onChange={handleChange('Child1DOB')}
-                       defaultValue={values.Child1DOB}
+                       onChange={handleChange('childDOB_1')}
+                       defaultValue={values.childDOB_1}
                        label=""
                        type='date'
                         variant="outlined"
@@ -137,8 +139,8 @@ export class FormDependentChildren extends Component {
                     <TextField 
                        hintText="Relationship" 
                        floatingLabelText="Relationship"
-                       onChange={handleChange('child1Relationship')}
-                       defaultValue={values.child1Relationship}
+                       onChange={handleChange('childRelationToYou_1')}
+                       defaultValue={values.childRelationToYou_1}
                        label="Relationship to you"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -156,8 +158,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Full Name" //hfgfg
                        floatingLabelText="Full Name"
-                       onChange={handleChange('child2FullName')}
-                       defaultValue={values.child2FullName}
+                       onChange={handleChange('childFullName_2')}
+                       defaultValue={values.childFullName_2}
                        label="Full Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -172,8 +174,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Date of birth" //hfgfg
                        floatingLabelText=""
-                       onChange={handleChange('Child2DOB')}
-                       defaultValue={values.Child2DOB}
+                       onChange={handleChange('childDOB_2')}
+                       defaultValue={values.childDOB_2}
                        label=""
                        type='date'
                         variant="outlined"
@@ -184,8 +186,8 @@ export class FormDependentChildren extends Component {
                     <TextField 
                        hintText="Relationship" 
                        floatingLabelText="Relationship"
-                       onChange={handleChange('child2Relationship')}
-                       defaultValue={values.child2Relationship}
+                       onChange={handleChange('childRelationToYou_2')}
+                       defaultValue={values.childRelationToYou_2}
                        label="Relationship to you"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -220,8 +222,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Child's Name" //hfgfg
                        floatingLabelText="Child's Name"
-                       onChange={handleChange('ECEChild1Name')}
-                       defaultValue={values.ECEChild1Name}
+                       onChange={handleChange('Child_ECE_ChildName_1')}
+                       defaultValue={values.Child_ECE_ChildName_1}
                        label="Child's Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -235,8 +237,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="childcare service/s" //hfgfg
                        floatingLabelText="childcare service/s"
-                       onChange={handleChange('childcareService')}
-                       defaultValue={values.childcareService}
+                       onChange={handleChange('Child_ECE_Provider_1')}
+                       defaultValue={values.Child_ECE_Provider_1}
                        label="childcare service/s"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -250,8 +252,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="How many hours are received per week in total?" //hfgfg
                        floatingLabelText="How many hours are received per week in total?"
-                       onChange={handleChange('hours')}
-                       defaultValue={values.hours}
+                       onChange={handleChange('Child_ECE_WeekTotal_1')}
+                       defaultValue={values.Child_ECE_WeekTotal_1}
                        label="How many hours are received per week in total?"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -265,8 +267,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="What date did the 20 Hours ECE start?" //hfgfg
                        floatingLabelText="What date did the 20 Hours ECE start?"
-                       onChange={handleChange('date')}
-                       defaultValue={values.date}
+                       onChange={handleChange('Child_ECE_StartDate_1')}
+                       defaultValue={values.Child_ECE_StartDate_1}
                        label=""
                        type='date'
                         variant="outlined"
@@ -282,8 +284,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Child's Name" //hfgfg
                        floatingLabelText="Child's Name"
-                       onChange={handleChange('ECEChild1Name')}
-                       defaultValue={values.ECEChild1Name}
+                       onChange={handleChange('Child_ECE_ChildName_2')}
+                       defaultValue={values.Child_ECE_ChildName_2}
                        label="Child's Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -297,8 +299,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="childcare service/s" //hfgfg
                        floatingLabelText="childcare service/s"
-                       onChange={handleChange('childcareService')}
-                       defaultValue={values.childcareService}
+                       onChange={handleChange('Child_ECE_Provider_2')}
+                       defaultValue={values.Child_ECE_Provider_2}
                        label="childcare service/s"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -312,8 +314,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="How many hours are received per week in total?" //hfgfg
                        floatingLabelText="How many hours are received per week in total?"
-                       onChange={handleChange('hours')}
-                       defaultValue={values.hours}
+                       onChange={handleChange('Child_ECE_WeekTotal_2')}
+                       defaultValue={values.Child_ECE_WeekTotal_2}
                        label="How many hours are received per week in total?"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -327,8 +329,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="What date did the 20 Hours ECE start?" //hfgfg
                        floatingLabelText="What date did the 20 Hours ECE start?"
-                       onChange={handleChange('date')}
-                       defaultValue={values.date}
+                       onChange={handleChange('Child_ECE_StartDate_2')}
+                       defaultValue={values.Child_ECE_StartDate_2}
                        label=""
                        type='date'
                         variant="outlined"
@@ -371,8 +373,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Child's Name" //hfgfg
                        floatingLabelText="Child's Name"
-                       onChange={handleChange('subsidyChild1Name')}
-                       defaultValue={values.subsidyChild1Name}
+                       onChange={handleChange('whichChildCCS_1')}
+                       defaultValue={values.whichChildCCS_1}
                        label="Child's Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -387,8 +389,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Child's Name" //hfgfg
                        floatingLabelText="Child's Name"
-                       onChange={handleChange('subsidyChild2Name')}
-                       defaultValue={values.subsidyChild2Name}
+                       onChange={handleChange('whichChildCCS_2')}
+                       defaultValue={values.whichChildCCS_2}
                        label="Child's Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -428,8 +430,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Child's Name" //hfgfg
                        floatingLabelText="Child's Name"
-                       onChange={handleChange('oscarChild1Name')}
-                       defaultValue={values.oscarChild1Name}
+                       onChange={handleChange('whichChildOSCAR_1')}
+                       defaultValue={values.whichChildOSCAR_1}
                        label="Child's Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -444,8 +446,8 @@ export class FormDependentChildren extends Component {
                     style={styles.input}
                        hintText="Child's Name" //hfgfg
                        floatingLabelText="Child's Name"
-                       onChange={handleChange('oscarChild2Name')}
-                       defaultValue={values.oscarChild2Name}
+                       onChange={handleChange('whichChildOSCAR_2')}
+                       defaultValue={values.whichChildOSCAR_2}
                        label="Child's Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
