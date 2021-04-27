@@ -43,7 +43,6 @@ export class Confirm extends Component {
             townCity:'',
             mailaddress:'',
             mailingAddr:'',
-            mailingAddress2:'',
             homePhone:'',
             mobPhone:'',
             otherPhone:'',
@@ -109,7 +108,8 @@ export class Confirm extends Component {
                 <HeaderForm/>
                 <React.Fragment>
                     {/* <AppBar title="Confirm User Data" /> */}
-                    <List>
+                    <div class="cardReview">
+                    <List>                    
                     <ListItem
                         primaryText="Client Number"
                         secondaryText={ clientNumber }
@@ -188,12 +188,8 @@ export class Confirm extends Component {
                         secondaryText={ mailaddress }
                         />
                         <ListItem
-                        primaryText="First mailing address (if different from where you live)"
+                        primaryText="Mailing address (if different from where you live)"
                         secondaryText={ mailingAddr }
-                        />
-                        <ListItem
-                        primaryText="Second mailing address (if different from where you live)"
-                        secondaryText={ mailingAddress2 }
                         />
                         <ListItem
                         primaryText="Home phone"
@@ -217,9 +213,6 @@ export class Confirm extends Component {
                         />
                         <ListItem
                         primaryText="the group(s) you most identify with"
-                        secondaryText={ ethnicGroup, ethnicGroup }
-                        />
-                        <ListItem
                         secondaryText={ ethnicGroup }
                         />
                         <ListItem
@@ -249,8 +242,10 @@ export class Confirm extends Component {
                         <ListItem
                         primaryText="Country of birth"
                         secondaryText={ countryOfBirth }
-                        />
+                        />                        
                     </List>
+                    </div>
+                    
                     
                     <br/>
 
