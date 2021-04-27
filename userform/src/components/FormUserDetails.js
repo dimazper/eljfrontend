@@ -664,12 +664,11 @@ export class FormUserDetails extends React.Component {
                        floatingLabelText="1"
                        onChange={handleChange('mailingAddr')}
                        defaultValue={values.mailingAddr}
-                       label="1."
+                       label="Mailing address"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
-                    <br></br>
-                    
+
                     </FormGroup>
                     </div> : null }
                         </RadioGroup>
@@ -842,9 +841,9 @@ export class FormUserDetails extends React.Component {
                         >
                             <FormControlLabel
                             style={styles.input}
-                            value="Māori"
+                            value="Māori"
                             control={<Checkbox color="primary" />}
-                            label="Māori"
+                            label="Māori"
                             labelPlacement="end"
                             onChange={handleChange('ethnicGroup')}
                             defaultValue={values.ethnicGroup}
@@ -867,9 +866,9 @@ export class FormUserDetails extends React.Component {
                             defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
-                            value="Cook Island Māori"
+                            value="Cook Island Māori"
                             control={<Checkbox color="primary" />}
-                            label="Cook Island Māori"
+                            label="Cook Island Māori"
                             labelPlacement="end"
                             onChange={handleChange('ethnicGroup')}
                             defaultValue={values.ethnicGroup}
@@ -991,11 +990,11 @@ export class FormUserDetails extends React.Component {
                         labelPlacement="end"
                     />
                     <FormControlLabel
-                        value="Cook Island Māori"
+                        value="Cook Island Māori"
                         control={<Checkbox color="primary" />}
                         onChange={handleChange('title')}
 
-                        label="Cook Island Māori"
+                        label="Cook Island Māori"
                         labelPlacement="end"
                     />
 
