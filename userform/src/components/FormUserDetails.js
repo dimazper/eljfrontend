@@ -241,20 +241,28 @@ export class FormUserDetails extends React.Component {
                     <FormControl component="fieldset" className={classes.formControl}>
                         <RadioGroup
                             className={classes.group}
-                            value={this.state.value}
-                            onChange={this.handleChange}
+                            aria-label="gender"
+                            name="gender2"
+                            // className={classes.group}
+                            // value={this.state.value}
+                            // onChange={this.handleChange}
                         >
                             <FormControlLabel
-                            value="No"
-                            control={<Radio color="primary" />}
-                            label="No"
-                            labelPlacement="end"
-                            />
-                            <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="end"
+                            style={styles.input}
                             value="Yes"
                             control={<Radio color="primary" />}
                             label="Yes"
                             labelPlacement="end"
+                            onChange={handleChange('nameOnBirthCert')}
+                            defaultValue={values.nameOnBirthCert}
+                            />
+                            <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="end"
+                            value="No"
+                            control={<Radio color="primary" />}
+                            label="No"
+                            labelPlacement="end"
+                            onChange={handleChange('nameOnBirthCert')}
+                            defaultValue={values.nameOnBirthCert}
                             />
                     { showing2 ? 
                     <div>
@@ -338,12 +346,16 @@ export class FormUserDetails extends React.Component {
                             control={<Radio color="primary" />}
                             label="No"
                             labelPlacement="end"
+                            onChange={handleChange('knownByOtherName')}
+                            defaultValue={values.knownByOtherName}
                             />
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="Yes"
                             control={<Radio color="primary" />}
                             label="Yes"
                             labelPlacement="end"
+                            onChange={handleChange('knownByOtherName')}
+                            defaultValue={values.knownByOtherName}
                             />
                     { showing3 ? 
                     <div>  
@@ -404,22 +416,28 @@ export class FormUserDetails extends React.Component {
                             onChange={this.handleChange}
                         >
                             <FormControlLabel
-                            value="FullName"
+                            value="The same as Full Name"
                             control={<Radio color="primary" />}
                             label="The same as Full Name"
                             labelPlacement="end"
+                            onChange={handleChange('nameToCall')}
+                            defaultValue={values.nameToCall}
                             />
                             <FormControlLabel
-                            value="NameOnBirthCertificate"
+                            value="The same as birth certificate"
                             control={<Radio color="primary" />}
                             label="The same as birth certificate"
                             labelPlacement="end"
+                            onChange={handleChange('nameToCall')}
+                            defaultValue={values.nameToCall}
                             />
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="Other"
                             control={<Radio color="primary" />}
                             label="Other"
                             labelPlacement="end"
+                            onChange={handleChange('nameToCall')}
+                            defaultValue={values.nameToCall}
                             />
                         
                 { showing3 ?
@@ -570,8 +588,8 @@ export class FormUserDetails extends React.Component {
                     <TextField 
                        hintText="Town/City" 
                        floatingLabelText="Town/City"
-                       onChange={handleChange('town')}
-                       defaultValue={values.town}
+                       onChange={handleChange('townCity')}
+                       defaultValue={values.townCity}
                        label="Town/City"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -625,23 +643,28 @@ export class FormUserDetails extends React.Component {
                             control={<Radio color="primary" />}
                             label="No"
                             labelPlacement="end"
+                            onChange={handleChange('mailaddress')}
+                            defaultValue={values.mailaddress}
                             />
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="Yes"
                             control={<Radio color="primary" />}
                             label="Yes"
                             labelPlacement="end"
+                            onChange={handleChange('mailaddress')}
+                            defaultValue={values.mailaddress}
                             />
                     { showing3 ? 
                     <div>  
                     <FormGroup aria-label="position" coloumn>
+                    <p class="question">Tell us your mailing address</p>
                     <TextField 
                     style={styles.input}
                        hintText="1" //hfgfg
                        floatingLabelText="1"
                        onChange={handleChange('mailingAddr')}
                        defaultValue={values.mailingAddr}
-                       label=""
+                       label="1."
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                         />
@@ -744,26 +767,32 @@ export class FormUserDetails extends React.Component {
                     <FormControl component="fieldset" className={classes.formControl}>
                         <RadioGroup
                             className={classes.group}
-                            value={this.state.value}
-                            onChange={this.handleChange}
+                            // value={this.state.value}
+                            // onChange={this.handleChange}
                         >
                             <FormControlLabel
                             value="No"
                             control={<Radio color="primary" />}
                             label="No"
                             labelPlacement="end"
+                            onChange={handleChange('email')}
+                            defaultValue={values.email}
                             />
                             <FormControlLabel
-                            value="Dont"
+                            value="I don't have an email address"
                             control={<Radio color="primary" />}
                             label="I don't have an email address"
                             labelPlacement="end"
+                            onChange={handleChange('email')}
+                            defaultValue={values.email}
                             />
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="Yes"
                             control={<Radio color="primary" />}
                             label="Yes"
                             labelPlacement="end"
+                            onChange={handleChange('email')}
+                            defaultValue={values.email}
                             />
                     { showing3 ? 
                     <div>  
@@ -772,8 +801,8 @@ export class FormUserDetails extends React.Component {
                     style={styles.input}
                        hintText="Tell us your email address" //email doesnt exist in database - need to add
                        floatingLabelText="Tell us your email address"
-                       onChange={handleChange('email')}
-                       defaultValue={values.email}
+                       onChange={handleChange('getEmails')}
+                       defaultValue={values.getEmails}
                        label="Tell us your email address"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -817,6 +846,8 @@ export class FormUserDetails extends React.Component {
                             control={<Checkbox color="primary" />}
                             label="Māori"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             
                             />
                             <FormControlLabel
@@ -824,24 +855,32 @@ export class FormUserDetails extends React.Component {
                             control={<Checkbox color="primary" />}
                             label="New Zealand European"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
                             value="Other European"
                             control={<Checkbox color="primary" />}
                             label="Other European"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
                             value="Cook Island Māori"
                             control={<Checkbox color="primary" />}
                             label="Cook Island Māori"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
                             value="Niuean"
                             control={<Checkbox color="primary" />}
                             label="Niuean"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
                             style={styles.input}
@@ -849,6 +888,8 @@ export class FormUserDetails extends React.Component {
                             control={<Checkbox color="primary" />}
                             label="Tokelauan"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             
                             />
                             <FormControlLabel
@@ -856,36 +897,48 @@ export class FormUserDetails extends React.Component {
                             control={<Checkbox color="primary" />}
                             label="Samoan"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
                             value="Tongan"
                             control={<Checkbox color="primary" />}
                             label="Tongan"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
                             value="Indian"
                             control={<Checkbox color="primary" />}
                             label="Indian"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
                             value="Chinese"
                             control={<Checkbox color="primary" />}
                             label="Chinese"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel
                             value="Don’t want to answer"
                             control={<Checkbox color="primary" />}
                             label="Don’t want to answer"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
-                            value="yes"
+                            value="Other"
                             control={<Checkbox color="primary" />}
                             label="Other"
                             labelPlacement="end"
+                            onChange={handleChange('ethnicGroup')}
+                            defaultValue={values.ethnicGroup}
                             />
                             <br></br>
                             { showing3 ? 
@@ -1127,10 +1180,12 @@ export class FormUserDetails extends React.Component {
                             </div> : null }
 
                             <FormControlLabel className='question' onClick={() => this.setState({ showing5: !showing5 })} control={<Checkbox color="primary"/>} labelPlacement="end"
-                            value="grantedResidency"
+                            value="Granted permanent residency"
                             control={<Radio color="primary" />}
                             label="Granted permanent residency"
                             labelPlacement="end"
+                            onChange={handleChange('residenceStatus')}
+                            defaultValue={values.residenceStatus}
                             />
                             { showing5 ? 
                             <div>  
@@ -1154,6 +1209,8 @@ export class FormUserDetails extends React.Component {
                             control={<Radio color="primary" />}
                             label="Other"
                             labelPlacement="end"
+                            onChange={handleChange('residenceStatus')}
+                            defaultValue={values.residenceStatus}
                             />
                     { showing3 ? 
                     <div>  
@@ -1204,10 +1261,33 @@ export class FormUserDetails extends React.Component {
                         />
                     </FormGroup>
                     <br></br>
-                    <br></br> 
-                    <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
+                    <br></br>
+
+        {/* <Fab
+          variant="extended"
+          size="medium"
+          color="primary"
+          aria-label="Add"
+          className={classes.margin}
+          onClick={this.back} 
+          style={styles.button}
+        >
+          Back
+        </Fab> */}
+        <Fab
+          variant="extended"
+          size="medium"
+          color="primary"
+          aria-label="Add"
+          className={classes.margin}
+          onClick={this.continue} 
+          style={styles.button}
+        >
+          Continue
+        </Fab>
+                    {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
           Continue 
-        </Button>                  
+        </Button>                   */}
                     {/* <RaisedButton
                        label="Continue"
                     //    primary={true}
@@ -1235,23 +1315,23 @@ const stylesButton = theme => ({
   });
 
 
-const styles = theme => ({
-    root: {
-      display: 'flex',
-    },
-    formControl: {
-      margin: theme.spacing.unit * 3,
-    },
-    group: {
-      margin: `${theme.spacing.unit}px 0`,
-    },
-  });
-
-// const styles = {
-//     button: {
-//         margin: 15        
+// const styles = theme => ({
+//     root: {
+//       display: 'flex',
 //     },
-// }
+//     formControl: {
+//       margin: theme.spacing.unit * 3,
+//     },
+//     group: {
+//       margin: `${theme.spacing.unit}px 0`,
+//     },
+//   });
+
+const styles = {
+    button: {
+        margin: 15        
+    },
+}
 
 
 
