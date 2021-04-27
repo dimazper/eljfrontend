@@ -24,7 +24,39 @@ export class Confirm extends Component {
         super(props);
         this.state= {
             clientNumber:'',
+            title:'',
             firstName: '',
+            lastName: '',
+            nameOnBirthCert:'',
+            firstNameNOTsame:'',
+            lastNameNOTsame:'',
+            knownByOtherName:'',
+            nameOtherKnown:'',
+            nameToCall:'',
+            namePrefer:'',
+            dob:'',
+            gender:'',
+            irdNumber:'',
+            flatHouseNum:'',
+            streetName:'',
+            suburb:'',
+            townCity:'',
+            mailaddress:'',
+            mailingAddr:'',
+            mailingAddress2:'',
+            homePhone:'',
+            mobPhone:'',
+            otherPhone:'',
+            email:'',
+            getEmails:'',
+            ethnicGroup:'',
+            ethnicity:'',
+            usuallyNZ:'',
+            residenceStatus:'',
+            dateGranted:'',
+            residenceStatus:'',
+            dateArrived:'',
+            countryOfBirth:'',
         }
     }
 
@@ -64,7 +96,12 @@ export class Confirm extends Component {
     }; 
     
     render() { 
-        const { values: {clientNumber, title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, bio} } = this.props;
+        const { values: {clientNumber, title, firstName, lastName, nameOnBirthCert, 
+            firstNameNOTsame, lastNameNOTsame, knownByOtherName, nameOtherKnown, nameToCall, namePrefer, 
+            dob, gender, irdNumber, flatHouseNum, streetName, suburb, townCity, mailaddress, mailingAddr, mailingAddress2,
+            homePhone, mobPhone, otherPhone, email, getEmails, ethnicGroup, ethnicity, usuallyNZ, residenceStatus, dateGranted, 
+            dateArrived, countryOfBirth 
+         } } = this.props;
         const { classes } = this.props;
 
         return (  
@@ -89,6 +126,10 @@ export class Confirm extends Component {
                         primaryText="Last Name"
                         secondaryText={ lastName }
                         />
+                        <ListItem
+                        primaryText="Name on birth certificate the same as above"
+                        secondaryText={ nameOnBirthCert }
+                        />
                         
                         <ListItem
                         primaryText="First name (not same as birth certificate)"
@@ -98,40 +139,148 @@ export class Confirm extends Component {
                         primaryText="Last name (not same as birth certificate)"
                         secondaryText={ lastNameNOTsame }
                         />
+                        <ListItem
+                        primaryText="Have you ever been known by any other name?"
+                        secondaryText={ knownByOtherName }
+                        />
                          <ListItem
                         primaryText="Other name(s) known by"
                         secondaryText={ nameOtherKnown }
                         />
+                        <ListItem
+                        primaryText="What name would you like us to call you?"
+                        secondaryText={ nameToCall }
+                        />
                          <ListItem
-                        primaryText="Preferred"
+                        primaryText="Preferred name"
                         secondaryText={ namePrefer }
                         />
                         <ListItem
-                        primaryText="Email"
+                        primaryText="Date of birth"
+                        secondaryText={ dob }
+                        />
+                        <ListItem
+                        primaryText="Gender"
+                        secondaryText={ gender }
+                        />
+                        <ListItem
+                        primaryText="Inland Revenue tax number"
+                        secondaryText={ irdNumber }
+                        />
+                        <ListItem
+                        primaryText="Flat/ House Number"
+                        secondaryText={ flatHouseNum }
+                        />
+                        <ListItem
+                        primaryText="Street Name"
+                        secondaryText={ streetName }
+                        />
+                        <ListItem
+                        primaryText="Suburb"
+                        secondaryText={ suburb }
+                        />
+                        <ListItem
+                        primaryText="Town/City"
+                        secondaryText={ townCity }
+                        />
+                        <ListItem
+                        primaryText="Is your mailing address different from where you live?"
+                        secondaryText={ mailaddress }
+                        />
+                        <ListItem
+                        primaryText="First mailing address (if different from where you live)"
+                        secondaryText={ mailingAddr }
+                        />
+                        <ListItem
+                        primaryText="Second mailing address (if different from where you live)"
+                        secondaryText={ mailingAddress2 }
+                        />
+                        <ListItem
+                        primaryText="Home phone"
+                        secondaryText={ homePhone }
+                        />
+                        <ListItem
+                        primaryText="Mobile phone"
+                        secondaryText={ mobPhone }
+                        />
+                        <ListItem
+                        primaryText="Other phone"
+                        secondaryText={ otherPhone }
+                        />
+                        <ListItem
+                        primaryText="Do you agree to get emails from us?"
                         secondaryText={ email }
                         />
                         <ListItem
-                        primaryText="Occupation"
-                        secondaryText={ occupation }
+                        primaryText="Email address"
+                        secondaryText={ getEmails }
                         />
                         <ListItem
-                        primaryText="City"
-                        secondaryText={ city }
+                        primaryText="the group(s) you most identify with"
+                        secondaryText={ ethnicGroup, ethnicGroup }
                         />
                         <ListItem
-                        primaryText="Bio"
-                        secondaryText={ bio }
+                        secondaryText={ ethnicGroup }
                         />
-
+                        <ListItem
+                        primaryText="the group(s) you most identify with (if you opt for other)"
+                        secondaryText={ ethnicity }
+                        />
+                        <ListItem
+                        primaryText="Do you usually live in New Zealand?"
+                        secondaryText={ usuallyNZ }
+                        />
+                        <ListItem
+                        primaryText="Residence status"
+                        secondaryText={ residenceStatus }
+                        />
+                        <ListItem
+                        primaryText="Date granted"
+                        secondaryText={ dateGranted }
+                        />
+                        <ListItem
+                        primaryText="What is your residence status (if you opt for other)?"
+                        secondaryText={ residenceStatus }
+                        />
+                        <ListItem
+                        primaryText="The date you arrived in New Zealand"
+                        secondaryText={ dateArrived }
+                        />
+                        <ListItem
+                        primaryText="Country of birth"
+                        secondaryText={ countryOfBirth }
+                        />
                     </List>
+                    
                     <br/>
-                    <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
+
+        <Fab
+          variant="extended"
+          size="medium"
+          color="primary"
+          aria-label="Add"
+          className={classes.margin}
+          onClick={this.back} style={styles.button}
+        >
+          Back
+        </Fab>
+        <Fab
+          variant="extended"
+          size="medium"
+          color="primary"
+          aria-label="Add"
+          className={classes.margin}
+          onClick={this.continue} style={styles.button}
+        >
+          Continue
+        </Fab>
+                    {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
           Back 
         </Button>
 
         <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
           Continue 
-        </Button>
+        </Button> */}
                     {/* <RaisedButton
                        label="Back" 
                        primary={false}

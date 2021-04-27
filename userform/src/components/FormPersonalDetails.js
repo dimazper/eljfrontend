@@ -279,13 +279,33 @@ labelPlacement="end"
 </FormControl> 
 <br></br>
 <br></br>
-<Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
+{/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
           Back 
-        </Button>
+        </Button> */}
 
-        <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
+        {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
           Continue 
-        </Button>
+        </Button> */}
+        <Fab
+          variant="extended"
+          size="medium"
+          color="primary"
+          aria-label="Add"
+          className={classes.margin}
+          onClick={this.back} style={styles.button}
+        >
+          Back
+        </Fab>
+        <Fab
+          variant="extended"
+          size="medium"
+          color="primary"
+          aria-label="Add"
+          className={classes.margin}
+          onClick={this.continue} style={styles.button}
+        >
+          Continue
+        </Fab>
 
                     {/* <RaisedButton
                        label="Back" 
