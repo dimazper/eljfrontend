@@ -14,6 +14,7 @@ import FetchUser from './components/FetchUser';
 import SuperReview from './SuperReview';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Profile from './components/Profile';
 // import Table from './components/Table';
 
 
@@ -34,6 +35,7 @@ const rootElement = document.getElementById('root');
           <Route path='/elslanding' component={ElsLandingPage} />
           <Route path='/fetchuser' component={FetchUser} />
           <Route path='/review' component={SuperReview} />
+          <Route path='/profile' component={Profile} />
           <Route path='/placeholder' component={Placeholder} />
           {/* <Route path='/table' component={Table} /> */}
           
