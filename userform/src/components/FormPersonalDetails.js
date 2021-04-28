@@ -240,6 +240,8 @@ value="no"
 control={<Radio color="primary" />}
 label="No"
 labelPlacement="end"
+onChange={handleChange('workRelatedCourse')}
+defaultValue={values.workRelatedCourse}
 
 />
 <FormControlLabel
@@ -247,12 +249,15 @@ value="yes"
 control={<Radio color="primary" />}
 label="Yes"
 labelPlacement="end"
+onChange={handleChange('workRelatedCourse')}
+defaultValue={values.workRelatedCourse}
 />
 </RadioGroup>
 
 </FormControl> <br></br>
 
-<h3>Are you on a work-related course or studying?</h3>
+<h3>Are you doing activities arranged for you by Work and Income?
+</h3>
 {/* <p class="question">Are you doing activities arranged for you by Work and Income?</p>                 */}
 
 <FormControl component="fieldset">
@@ -262,17 +267,21 @@ value="no"
 control={<Radio color="primary" />}
 label="No"
 labelPlacement="end"
+onChange={handleChange('activities')}
+defaultValue={values.activities}
 />
 <FormControlLabel
 value="yes"
 control={<Radio color="primary" />}
 label="Yes"
 labelPlacement="end"
+onChange={handleChange('activities')}
+defaultValue={values.activities}
 />
 </RadioGroup>
 
 </FormControl> <br></br>
-<h3>Are you on a work-related course or studying?</h3>
+<h3>Are you applying for childcare assistance because of medical reasons?</h3>
 {/* <p class="question">Are you applying for childcare assistance because of medical reasons?</p>                 */}
 
 <FormControl component="fieldset">
@@ -282,12 +291,16 @@ value="no"
 control={<Radio color="primary" />}
 label="No"
 labelPlacement="end"
+onChange={handleChange('medicalReason')}
+defaultValue={values.medicalReason}
 />
 <FormControlLabel
 value="yes"
 control={<Radio color="primary" />}
 label="Yes"
 labelPlacement="end"
+onChange={handleChange('medicalReason')}
+defaultValue={values.medicalReason}
 />
 </RadioGroup>
 
@@ -319,7 +332,7 @@ labelPlacement="end"
           className={classes.margin}
           onClick={this.continue} style={styles.button}
         >
-          Continue
+          Next
         </Fab>
 
                     {/* <RaisedButton

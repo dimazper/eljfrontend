@@ -125,6 +125,8 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('jointPartnerWhere1')}
+                                        defaultValue={values.incomeWagesSalary}
                                     />
                                     <FormControlLabel
                                         value="incomeWagesSalary"
@@ -149,22 +151,23 @@ export class FormIncomeDetails extends Component {
                                     />
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <FormLabel component="legend">How often do you expect the payment?       </FormLabel>
+                                    <FormLabel component="legend">How often do you expect the payment?</FormLabel>
 
                                     <InputLabel id="demo-simple-select-outlined-label"></InputLabel>
                                     <Select
                                         labelId="demo-simple-select-outlined-label"
                                         id="demo-simple-select-outlined"
                                         onChange={handleChange('jointPartnerFreq1')}
+                                        defaultValue={values.jointPartnerFreq1}
                                         label="How often do you expect the payment?"
                                     >
                                         <MenuItem value="">
                                             <em>               </em>
                                         </MenuItem>
-                                        <MenuItem value={10}>Weekly</MenuItem>
-                                        <MenuItem value={20}>Fortnightly</MenuItem>
-                                        <MenuItem value={30}>Monthly</MenuItem>
-                                        <MenuItem value={30}>One-off</MenuItem>
+                                        <MenuItem value={'Weekly'}>Weekly</MenuItem>
+                                        <MenuItem value={'Fortnightly'}>Fortnightly</MenuItem>
+                                        <MenuItem value={'Monthly'}>Monthly</MenuItem>
+                                        <MenuItem value={'One-off'}>One-off</MenuItem>
 
                                     </Select>
 
@@ -180,12 +183,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('paidParentalLeave')}
+                                        defaultValue={values.paidParentalLeave}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('paidParentalLeave')}
+                                        defaultValue={values.paidParentalLeave}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -197,12 +204,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('terminationPay')}
+                                        defaultValue={values.terminationPay}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('terminationPay')}
+                                        defaultValue={values.terminationPay}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -214,12 +225,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('redundancyPay')}
+                                        defaultValue={values.redundancyPay}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('redundancyPay')}
+                                        defaultValue={values.redundancyPay}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -231,12 +246,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('acc')}
+                                        defaultValue={values.acc}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('acc')}
+                                        defaultValue={values.acc}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -248,12 +267,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeInsurance')}
+                                        defaultValue={values.incomeInsurance}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeInsurance')}
+                                        defaultValue={values.incomeInsurance}
                                     />
                                     <FormControlLabel
                                         value="incomeInsurance"
@@ -309,18 +332,24 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeBusiness')}
+                                        defaultValue={values.incomeBusiness}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeBusiness')}
+                                        defaultValue={values.incomeBusiness}
                                     />
                                     <FormControlLabel
                                         value="jointly"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeBusiness')}
+                                        defaultValue={values.incomeBusiness}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -332,18 +361,24 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeSelfEmpContract')}
+                                        defaultValue={values.incomeSelfEmpContract}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeSelfEmpContract')}
+                                        defaultValue={values.incomeSelfEmpContract}
                                     />
                                     <FormControlLabel
                                         value="jointly"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeSelfEmpContract')}
+                                        defaultValue={values.incomeSelfEmpContract}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -355,18 +390,24 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeInterest')}
+                                        defaultValue={values.incomeInterest}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeInterest')}
+                                        defaultValue={values.incomeInterest}
                                     />
                                     <FormControlLabel
                                         value="jointly"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeInterest')}
+                                        defaultValue={values.incomeInterest}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -378,18 +419,24 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeDividends')}
+                                        defaultValue={values.incomeDividends}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeDividends')}
+                                        defaultValue={values.incomeDividends}
                                     />
                                     <FormControlLabel
                                         value="jointly"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeDividends')}
+                                        defaultValue={values.incomeDividends}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -401,18 +448,24 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeRental')}
+                                        defaultValue={values.incomeRental}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeRental')}
+                                        defaultValue={values.incomeRental}
                                     />
                                     <FormControlLabel
                                         value="jointly"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeRental')}
+                                        defaultValue={values.incomeRental}
                                     />
 
                                 </RadioGroup>
@@ -425,18 +478,24 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeFlatmates')}
+                                        defaultValue={values.incomeFlatmates}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeFlatmates')}
+                                        defaultValue={values.incomeFlatmates}
                                     />
                                     <FormControlLabel
                                         value="jointly"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeFlatmates')}
+                                        defaultValue={values.incomeFlatmates}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -448,12 +507,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeChildSup')}
+                                        defaultValue={values.incomeChildSup}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeChildSup')}
+                                        defaultValue={values.incomeChildSup}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -465,12 +528,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeOtherForChild')}
+                                        defaultValue={values.incomeOtherForChild}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeOtherForChild')}
+                                        defaultValue={values.incomeOtherForChild}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -482,12 +549,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeMaintenance')}
+                                        defaultValue={values.incomeMaintenance}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeMaintenance')}
+                                        defaultValue={values.incomeMaintenance}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -499,12 +570,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeFormerPartner')}
+                                        defaultValue={values.incomeFormerPartner}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeFormerPartner')}
+                                        defaultValue={values.incomeFormerPartner}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -516,12 +591,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeStudentAllowance')}
+                                        defaultValue={values.incomeStudentAllowance}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeStudentAllowance')}
+                                        defaultValue={values.incomeStudentAllowance}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -533,12 +612,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeOverseasPension')}
+                                        defaultValue={values.incomeOverseasPension}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeOverseasPension')}
+                                        defaultValue={values.incomeOverseasPension}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -550,12 +633,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeSuper')}
+                                        defaultValue={values.incomeSuper}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeSuper')}
+                                        defaultValue={values.incomeSuper}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -567,18 +654,24 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeEstate')}
+                                        defaultValue={values.incomeEstate}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeEstate')}
+                                        defaultValue={values.incomeEstate}
                                     />
                                     <FormControlLabel
                                         value="jointly"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeEstate')}
+                                        defaultValue={values.incomeEstate}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -590,18 +683,24 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeTrusts')}
+                                        defaultValue={values.incomeTrusts}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeTrusts')}
+                                        defaultValue={values.incomeTrusts}
                                     />
                                     <FormControlLabel
                                         value="jointly"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeTrusts')}
+                                        defaultValue={values.incomeTrusts}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -613,18 +712,24 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeOther')}
+                                        defaultValue={values.incomeOther}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeOther')}
+                                        defaultValue={values.incomeOther}
                                     />
                                     <FormControlLabel
                                         value="jointly"
                                         control={<Radio color="primary" />}
                                         label="Jointly with partner"
                                         labelPlacement="end"
+                                        onChange={handleChange('incomeOther')}
+                                        defaultValue={values.incomeOther}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
@@ -637,12 +742,16 @@ export class FormIncomeDetails extends Component {
                                         control={<Radio color="primary" />}
                                         label="No"
                                         labelPlacement="end"
+                                        onChange={handleChange('otherTypeOfPayment')}
+                                        defaultValue={values.otherTypeOfPayment}
                                     />
                                     <FormControlLabel
                                         value="yes"
                                         control={<Radio color="primary" />}
                                         label="Yes"
                                         labelPlacement="end"
+                                        onChange={handleChange('otherTypeOfPayment')}
+                                        defaultValue={values.otherTypeOfPayment}
                                     />
                                 </RadioGroup>
                             </FormControl>
@@ -698,7 +807,7 @@ export class FormIncomeDetails extends Component {
           className={classes.margin}
           onClick={this.continue} style={styles.button}
         >
-          Continue
+          Next
         </Fab>
 
 
