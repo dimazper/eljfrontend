@@ -26,11 +26,11 @@ export class Header extends Component {
         return (  
             <div class="row">
                <ul class="topnav">
-                  <li><a class="active" href="#home">Home</a></li>
-                  <li><img width="80" height="70" src={parent} alt="parent" /></li>
-                  <li><a href="#news">Childcare Assistance Application</a></li>                
-                  <li><a href="#contact">Oscar Subsidy</a></li>
+                  <li><a class="active" href="/login">Home</a></li>
                   <li class="right"><a href="/login">Log Out</a></li>
+
+                  <li class="right"><a href="/profile">Profile</a></li>
+
                </ul>             
             </div>
         );
