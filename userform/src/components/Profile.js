@@ -13,6 +13,8 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
 import FormLabel from '@material-ui/core/FormLabel';
 import InputLabel from '@material-ui/core/InputLabel';
+import axios from 'axios';
+
 
 
 
@@ -24,11 +26,26 @@ export class Profile extends Component {
     {
         super(props);
         this.state = {
+            ccs: [],
             clientNumber: '',
         }
     }
     handleChange = input => e => {
         this.setState({[input]: e.target.value});
+    }
+    componentDidMount() {
+  
+        let data ;
+  
+        axios.get('http://34.230.74.44:8000/parent/',
+        {headers: {'authorization': 'Token 5f1c57dbbe2dbaabe6f8ada1c7f3c0e6dd2e2a35'}})
+        .then(res => {
+            data = res.data;
+            this.setState({
+                ccs : data    
+            });
+        })
+        .catch(err => {})
     }
 
     render() { 
@@ -38,6 +55,10 @@ export class Profile extends Component {
             <MuiThemeProvider>
                 <HeaderForm/> 
                 <React.Fragment>
+                <div>
+            {this.state.ccs.map((ccs) =>  (
+            <div key={ccs}>
+  
                     <h1 class='yourProfile'> Your profile </h1>
                    <div class='cardProfile'>
                        
@@ -51,7 +72,7 @@ export class Profile extends Component {
                         style={styles.input}
                         hintText="Client Number" //hfgfg
                         floatingLabelText="Client Number"
-                        label="Client Number"
+                        label={ccs.clientNumber}
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                     /> 
@@ -62,20 +83,21 @@ export class Profile extends Component {
                    <Grid item xs={4}>
                        <p>Title</p>
                     </Grid>
+                    <p>{ccs.title}</p>
 
                     <Select
                                         labelId="demo-simple-select-outlined-label"
                                         id="demo-simple-select-outlined"
                                         label="How often do you expect the payment?"
-                                    >
-                                        <MenuItem value="">
-                                            <em>               </em>
+                                    ><p>{ccs.title}</p>
+                                        <MenuItem value="" label={ccs.title}>
+                                            <em>{ccs.title}</em>
                                         </MenuItem>
                                         <MenuItem value={10}>Mr</MenuItem>
                                         <MenuItem value={20}>Mrs</MenuItem>
                                         <MenuItem value={30}>Ms</MenuItem>
-                                        <MenuItem value={30}>Miss</MenuItem>
-                                        <MenuItem value={30}>Other</MenuItem>
+                                        <MenuItem value={40}>Miss</MenuItem>
+                                        <MenuItem value={50}>Other</MenuItem>
 
 
                                     </Select>
@@ -91,7 +113,7 @@ export class Profile extends Component {
                         style={styles.input}
                         hintText="First Name" //hfgfg
                         floatingLabelText="First Name"
-                        label="First Name"
+                        label={ccs.firstName}
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                     /> 
@@ -105,7 +127,7 @@ export class Profile extends Component {
                         style={styles.input}
                         hintText="Last Name" //hfgfg
                         floatingLabelText="Last Name"
-                        label="Last Name"
+                        label={ccs.lastName}
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                     /> 
@@ -122,7 +144,7 @@ export class Profile extends Component {
                         style={styles.input}
                         hintText="First Name" //hfgfg
                         floatingLabelText="First Name"
-                        label="First Name"
+                        label={ccs.firstNameNOTsame}
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                     /> 
@@ -138,7 +160,7 @@ export class Profile extends Component {
                         style={styles.input}
                         hintText="Last Name" //hfgfg
                         floatingLabelText="Last Name"
-                        label="Last Name"
+                        label={ccs.lastNameNOTsame}
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                     /> 
@@ -154,7 +176,7 @@ export class Profile extends Component {
                         style={styles.input}
                         hintText="Other known name" //hfgfg
                         floatingLabelText="Other known name"
-                        label="Other known name"
+                        label={ccs.nameOtherKnown}
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                     /> 
@@ -170,7 +192,7 @@ export class Profile extends Component {
                         style={styles.input}
                         hintText="Preferred Name" //hfgfg
                         floatingLabelText="Preferred Name"
-                        label="Preferred Name"
+                        label={ccs.namePrefer}
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                     /> 
@@ -182,7 +204,7 @@ export class Profile extends Component {
                        <p>Date of birth</p>
                     </Grid>
 
-                    <p> 1 / 02 / 1982 </p>
+                    <p> {ccs.dob} </p>
                     
 
                     </Grid><br></br>
@@ -191,14 +213,14 @@ export class Profile extends Component {
                    <Grid item xs={4}>
                        <p>Gender</p>
                     </Grid>
-
+                    <p>{ccs.gender}</p>
                     <Select
                                         labelId="demo-simple-select-outlined-label"
                                         id="demo-simple-select-outlined"
                                         label="How often do you expect the payment?"
                                     >
                                         <MenuItem value="">
-                                            <em>               </em>
+                                            <em>{ccs.gender}</em>
                                         </MenuItem>
                                         <MenuItem value={10}>Male</MenuItem>
                                         <MenuItem value={20}>Female</MenuItem>
@@ -219,7 +241,7 @@ export class Profile extends Component {
                         style={styles.input}
                         hintText="IRD Number" //hfgfg
                         floatingLabelText="IRD Number"
-                        label="IRD Number"
+                        label={ccs.irdNumber}
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
                     /> 
@@ -234,6 +256,12 @@ export class Profile extends Component {
 
 
                        </div>
+                                 
+            </div>
+            
+            )
+        )}
+      </div>
                 </React.Fragment>
             </MuiThemeProvider>
         );
