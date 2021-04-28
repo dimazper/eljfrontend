@@ -45,6 +45,9 @@ export class  UserForm extends Component {
         countryOfBirth:'',
         ccAssistanceReason:'',
         isWorking:'',
+        workRelatedCourse:'',
+        activities:'',
+        medicalReason:'',
         employerName:'',
         employerAddr:'',
         employerPhone:'',
@@ -92,6 +95,7 @@ export class  UserForm extends Component {
         incomeEstate:'',
         incomeTrusts:'',
         incomeOther:'',
+        otherTypeOfPayment:'',
         jointPartnerWhere1:'',
         jointPartnerWith1:'',
         jointPartnerYou1:'',
@@ -133,6 +137,7 @@ export class  UserForm extends Component {
         childFullName_2:'',
         childDOB_2: '',
         childRelationToYou_2:'',
+        childReceive20Hrs:'',
         childFullName_3:'',
         childDOB_3:'',
         childRelationToYou_3:'',
@@ -280,7 +285,10 @@ export class  UserForm extends Component {
         p_other52weeksValue4 :'',
         p_other52weeksType5 :'',
         p_other52weeksWhere5 :'',
-        p_other52weeksValue5 :''
+        p_other52weeksValue5 :'',
+        childareSubsidy :'',
+        oscarSubsidy:'',
+        paidParentalLeave:'',
      }
 
      // Proceed to next step
@@ -341,6 +349,9 @@ export class  UserForm extends Component {
             countryOfBirth,
             ccAssistanceReason,
             isWorking,
+            workRelatedCourse,
+            activities,
+            medicalReason,
             employerName,
             employerAddr,
             employerPhone,
@@ -388,6 +399,7 @@ export class  UserForm extends Component {
             incomeEstate,
             incomeTrusts,
             incomeOther,
+            otherTypeOfPayment,
             jointPartnerWhere1,
             jointPartnerWith1,
             jointPartnerYou1,
@@ -429,6 +441,7 @@ export class  UserForm extends Component {
             childFullName_2,
             childDOB_2,
             childRelationToYou_2,
+            childReceive20Hrs,
             childFullName_3,
             childDOB_3,
             childRelationToYou_3,
@@ -576,7 +589,10 @@ export class  UserForm extends Component {
             p_other52weeksValue4 ,
             p_other52weeksType5 ,
             p_other52weeksWhere5 ,
-            p_other52weeksValue5
+            p_other52weeksValue5,
+            childareSubsidy,
+            oscarSubsidy,
+            paidParentalLeave,
         
         
         } = this.state;
@@ -615,6 +631,9 @@ export class  UserForm extends Component {
             countryOfBirth,
             ccAssistanceReason,
             isWorking,
+            workRelatedCourse,
+            activities,
+            medicalReason,
             employerName,
             employerAddr,
             employerPhone,
@@ -663,6 +682,7 @@ export class  UserForm extends Component {
             incomeEstate,
             incomeTrusts,
             incomeOther,
+            otherTypeOfPayment,
             jointPartnerWhere1,
             jointPartnerWith1,
             jointPartnerYou1,
@@ -702,8 +722,9 @@ export class  UserForm extends Component {
             childDOB_1,
             childRelationToYou_1,
             childFullName_2,
-            childDOB_2: '',
+            childDOB_2,
             childRelationToYou_2,
+            childReceive20Hrs,
             childFullName_3,
             childDOB_3,
             childRelationToYou_3,
@@ -852,7 +873,10 @@ export class  UserForm extends Component {
             p_other52weeksValue4 ,
             p_other52weeksType5 ,
             p_other52weeksWhere5 ,
-            p_other52weeksValue5
+            p_other52weeksValue5,
+            childareSubsidy,
+            oscarSubsidy,
+            paidParentalLeave,
         
         } 
         

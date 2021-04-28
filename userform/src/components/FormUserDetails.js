@@ -1282,7 +1282,7 @@ export class FormUserDetails extends React.Component {
           onClick={this.continue} 
           style={styles.button}
         >
-          Continue
+          Next
         </Fab>
                     {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
           Continue 

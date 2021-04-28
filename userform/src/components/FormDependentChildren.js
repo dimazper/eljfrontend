@@ -208,8 +208,10 @@ export class FormDependentChildren extends Component {
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="no"
                             control={<Radio color="primary" />}
-                            label="None of my children"
+                            label="None of my childrenne of my children"
                             labelPlacement="end"
+                            onChange={handleChange('childReceive20Hrs')}
+                            defaultValue={values.childReceive20Hrs}
                             />
                                <br></br>
                                
@@ -357,10 +359,12 @@ export class FormDependentChildren extends Component {
                             onChange={this.handleChange}
                         >
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
-                            value="no"
+                            value="None of my children"
                             control={<Radio color="primary" />}
                             label="None of my children"
                             labelPlacement="end"
+                            onChange={handleChange('childareSubsidy')}
+                            defaultValue={values.childareSubsidy}
                             />
                                <br></br>
                                
@@ -414,10 +418,12 @@ export class FormDependentChildren extends Component {
                             onChange={this.handleChange}
                         >
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
-                            value="no"
+                            value="None of my children"
                             control={<Radio color="primary" />}
                             label="None of my children"
                             labelPlacement="end"
+                            onChange={handleChange('oscarSubsidy')}
+                            defaultValue={values.oscarSubsidy}
                             />
                                <br></br>
                                
@@ -478,7 +484,7 @@ export class FormDependentChildren extends Component {
           className={classes.margin}
           onClick={this.continue} style={styles.button}
         >
-          Continue
+          Next
         </Fab>
 
 
