@@ -6,6 +6,7 @@ import FormIncomeDetails from './FormIncomeDetails';
 import Confirm from './Confirm';
 import Success from './Success';
 import FormDependentChildren from './FormDependentChildren';
+import Confirmation from './Confirmation';
 
 
 export class  UserForm extends Component {
@@ -304,6 +305,31 @@ export class  UserForm extends Component {
         const { step } = this.state;
         this.setState({
             step: step - 1
+        });
+    }
+
+    editStepSection1 = () => {
+        const { step } = this.state;
+        this.setState({
+            step: step -4
+        });
+    }
+    editStepSection2 = () => {
+        const { step } = this.state;
+        this.setState({
+            step: step -3
+        });
+    }
+    editStepSection3 = () => {
+        const { step } = this.state;
+        this.setState({
+            step: step -2
+        });
+    }
+    editStepSection4 = () => {
+        const { step } = this.state;
+        this.setState({
+            step: step -1
         });
     }
 
@@ -922,10 +948,28 @@ export class  UserForm extends Component {
                             <Confirm
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
+                                editStepSection1={this.editStepSection1}
+                                editStepSection2={this.editStepSection2}
+                                editStepSection3={this.editStepSection3}
+                                editStepSection4={this.editStepSection4}
                                 handleChange={this.handleChange}
                                 values={values} 
                             />
                         );
+
+                     case 6:
+                            return(
+                                <Confirmation
+                                    nextStep={this.nextStep}
+                                    prevStep={this.prevStep}
+                                    editStepSection1={this.editStepSection1}
+                                    editStepSection2={this.editStepSection2}
+                                    editStepSection3={this.editStepSection3}
+                                    editStepSection4={this.editStepSection4}
+                                    handleChange={this.handleChange}
+                                    values={values} 
+                                />
+                            );
 
                     return <Success />; 
             }
