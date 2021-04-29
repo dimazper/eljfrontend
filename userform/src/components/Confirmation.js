@@ -567,317 +567,22 @@ export class Confirm extends Component {
                     
                     <List> 
                     <div class="cardReview">
-                    <h1>Arotake</h1>
-                    <h2>Review</h2>
-                    <h2 class="confirm">Personal Details</h2>
+                    <h1>Te haamauraa</h1>
+                    <h2>Confirmation</h2>
+                    {/* <h2>Personal Details</h2> */}
                     <ListItem
-                        primaryText="Client Number"
-                        secondaryText={ clientNumber }
-                        />
-                    <ListItem
-                        primaryText="Title"
-                        secondaryText={ title }
-                        />
-                        <ListItem
-                        primaryText="First Name"
-                        secondaryText={ firstName }
-                        />
-                        <ListItem
-                        primaryText="Last Name"
-                        secondaryText={ lastName }
-                        />
-                        <ListItem
-                        primaryText="Name on birth certificate the same as above"
-                        secondaryText={ nameOnBirthCert }
-                        />
-                        
-                        <ListItem
-                        primaryText="First name (not same as birth certificate)"
-                        secondaryText={ firstNameNOTsame }
-                        />
-                         <ListItem
-                        primaryText="Last name (not same as birth certificate)"
-                        secondaryText={ lastNameNOTsame }
-                        />
-                        <ListItem
-                        primaryText="Have you ever been known by any other name?"
-                        secondaryText={ knownByOtherName }
-                        />
-                         <ListItem
-                        primaryText="Other name(s) known by"
-                        secondaryText={ nameOtherKnown }
-                        />
-                        <ListItem
-                        primaryText="What name would you like us to call you?"
-                        secondaryText={ nameToCall }
-                        />
-                         <ListItem
-                        primaryText="Preferred name"
-                        secondaryText={ namePrefer }
-                        />
-                        <ListItem
-                        primaryText="Date of birth"
-                        secondaryText={ dob }
-                        />
-                        <ListItem
-                        primaryText="Gender"
-                        secondaryText={ gender }
-                        />
-                        <ListItem
-                        primaryText="Inland Revenue tax number"
-                        secondaryText={ irdNumber }
-                        />
-                        <ListItem
-                        primaryText="Flat/ House Number"
-                        secondaryText={ flatHouseNum }
-                        />
-                        <ListItem
-                        primaryText="Street Name"
-                        secondaryText={ streetName }
-                        />
-                        <ListItem
-                        primaryText="Suburb"
-                        secondaryText={ suburb }
-                        />
-                        <ListItem
-                        primaryText="Town/City"
-                        secondaryText={ townCity }
-                        />
-                        <ListItem
-                        primaryText="Is your mailing address different from where you live?"
-                        secondaryText={ mailaddress }
-                        />
-                        <ListItem
-                        primaryText="Mailing address (if different from where you live)"
-                        secondaryText={ mailingAddr }
-                        />
-                        <ListItem
-                        primaryText="Home phone"
-                        secondaryText={ homePhone }
-                        />
-                        <ListItem
-                        primaryText="Mobile phone"
-                        secondaryText={ mobPhone }
-                        />
-                        <ListItem
-                        primaryText="Other phone"
-                        secondaryText={ otherPhone }
-                        />
-                        <ListItem
-                        primaryText="Do you agree to get emails from us?"
-                        secondaryText={ email }
-                        />
-                        <ListItem
-                        primaryText="Email address"
+                        primaryText="A confirmation email has been sent to:"
                         secondaryText={ getEmails }
                         />
-                        <ListItem
-                        primaryText="the group(s) you most identify with"
-                        secondaryText={ ethnicGroup }
+                    <ListItem
+                        primaryText="Your reference number is:"
+                        secondaryText={ clientNumber }
                         />
-                        <ListItem
-                        primaryText="the group(s) you most identify with (if you opt for other)"
-                        secondaryText={ ethnicity }
-                        />
-                        <ListItem
-                        primaryText="Do you usually live in New Zealand?"
-                        secondaryText={ usuallyNZ }
-                        />
-                        <ListItem
-                        primaryText="Residence status"
-                        secondaryText={ residenceStatus }
-                        />
-                        <ListItem
-                        primaryText="Date granted"
-                        secondaryText={ dateGranted }
-                        />
-                        <ListItem
-                        primaryText="What is your residence status (if you opt for other)?"
-                        secondaryText={ residenceStatus }
-                        />
-                        <ListItem
-                        primaryText="The date you arrived in New Zealand"
-                        secondaryText={ dateArrived }
-                        />
-                        <ListItem
-                        primaryText="Country of birth"
-                        secondaryText={ countryOfBirth }
-                        /> 
-                        <Fab
-                        variant="extended"
-                        size="medium"
-                        color="primary"
-                        aria-label="Add"
-                        className={classes.margin}
-                        onClick={this.editSection1} style={styles.button}
-                        >
-                        Edit
-                        </Fab>
-                        </div>
-                        
-                        </List>
 
-                        
-                        <List>
-                        <div class="cardReview"> 
-                        <h2 class="confirm">Work, education and activities</h2>       
-                        <ListItem
-                        primaryText="Tell us the reason you or your partner (if you have one) are applying for childcare assistance. Tick all that apply"
-                        secondaryText={ ccAssistanceReason }
-                        /> 
-                        <ListItem
-                        primaryText="Are you working?"
-                        secondaryText={ isWorking }
-                        /> 
-                        <ListItem
-                        primaryText="Are you on a work-related course or studying?"
-                        secondaryText={ workRelatedCourse }
-                        />   
-                        <ListItem
-                        primaryText="Are you doing activities arranged for you by Work and Income?"
-                        secondaryText={ activities }
-                        /> 
-                        <ListItem
-                        primaryText="Are you applying for childcare assistance because of medical reasons?"
-                        secondaryText={ medicalReason }
-                        />
-                        <Fab
-                        variant="extended"
-                        size="medium"
-                        color="primary"
-                        aria-label="Add"
-                        className={classes.margin}
-                        onClick={this.editSection2} style={styles.button}
-                        >
-                        Edit
-                        </Fab>
-                        </div>
-                        </List>
-                        
-
-                        
-                        <List>
-                        <div class="cardReview">
-                        <h2 class="confirm">Income and assets</h2> 
-                        <ListItem
-                        primaryText="Wages or salary"
-                        secondaryText={ incomeWagesSalary }
-                        />
-                        <ListItem
-                        primaryText="Its value"
-                        secondaryText={ jointPartnerYou1 }
-                        />
-                        <ListItem
-                        primaryText="How often do you expect the payment?"
-                        secondaryText={ jointPartnerFreq1 }
-                        />  
-                        <ListItem
-                        primaryText="Paid parental leave"
-                        secondaryText={ paidParentalLeave }
-                        />  
-                        <ListItem
-                        primaryText="Termination pay"
-                        secondaryText={ terminationPay }
-                        /> 
-                        <ListItem
-                        primaryText="Redundancy pay"
-                        secondaryText={ redundancyPay }
-                        /> 
-                        <ListItem
-                        primaryText="Accident compensation (eg ACC)"
-                        secondaryText={ acc }
-                        />  
-                        <ListItem
-                        primaryText="Income insurance (replacement protection)"
-                        secondaryText={ incomeInsurance }
-                        /> 
-                        <ListItem
-                        primaryText="Its value"
-                        secondaryText={ jointPartnerWith2 }
-                        />  
-                        <ListItem
-                        primaryText="How often do you expect the payment?"
-                        secondaryText={ jointPartnerFreq2 }
-                        /> 
-                        <ListItem
-                        primaryText="Farm or business income"
-                        secondaryText={ incomeBusiness }
-                        />  
-                        <ListItem
-                        primaryText="Payments from self employment or contract work"
-                        secondaryText={ incomeSelfEmpContract }
-                        /> 
-                        <ListItem
-                        primaryText="Interest from savings, investments or bonds"
-                        secondaryText={ incomeInterest }
-                        /> 
-                        <ListItem
-                        primaryText="Dividends from shares, unit trusts, or managed funds"
-                        secondaryText={ incomeDividends }
-                        />   
-                        <ListItem
-                        primaryText="Income from rents"
-                        secondaryText={ incomeRental }
-                        />  
-                        <ListItem
-                        primaryText="Payments from boarders or flatmates"
-                        secondaryText={ incomeFlatmates }
-                        />  
-                        <ListItem
-                        primaryText="Child support payments"
-                        secondaryText={ incomeChildSup }
-                        />  
-                        <ListItem
-                        primaryText="Other income for a child"
-                        secondaryText={ incomeOtherForChild }
-                        />  
-                        <ListItem
-                        primaryText="Maintenance payments"
-                        secondaryText={ incomeMaintenance }
-                        /> 
-                        <ListItem
-                        primaryText="Payments from a former partner"
-                        secondaryText={ incomeFormerPartner }
-                        />  
-                         <ListItem
-                        primaryText="Student Allowance, scholarship, or Student Loan living cost payments"
-                        secondaryText={ incomeStudentAllowance }
-                        />
-                        <ListItem
-                        primaryText="Overseas pension, benefit or allowance payments"
-                        secondaryText={ incomeOverseasPension }
-                        />
-                        <ListItem
-                        primaryText="Other superannuation or retirement scheme income (government or private)"
-                        secondaryText={ incomeSuper }
-                        />  
-                        <ListItem
-                        primaryText="Income from an estate, if you've inherited money"
-                        secondaryText={ incomeEstate }
-                        />  
-                        <ListItem
-                        primaryText="Income from trusts"
-                        secondaryText={ incomeTrusts }
-                        />  
-                        <ListItem
-                        primaryText="Other"
-                        secondaryText={ incomeOther }
-                        /> 
-                        <ListItem
-                        primaryText="Will you get other types of payment apart from money in the next 52 weeks?"
-                        secondaryText={ otherTypeOfPayment }
-                        />
-                        <ListItem
-                        primaryText="Type of payment"
-                        secondaryText={ other52weeksType1 }
-                        /> 
-                        <ListItem
-                        primaryText="Where will it come from?"
-                        secondaryText={ other52weeksWhere1 }
-                        />  
-                        <ListItem
-                        primaryText="Its value"
-                        secondaryText={ other52weeksValue1 }
+                    <ListItem
+                        primaryText="If you have applied for Childcare and Oscar Subsidy, your application has now been sent to ELS and MSD.
+                        You don't need to do anything else. ELS or MSD might contact you to discuss your application. ELS or MSD will notify you once your application
+                        has been processed "
                         />
                         <Fab
                         variant="extended"
@@ -887,117 +592,22 @@ export class Confirm extends Component {
                         className={classes.margin}
                         onClick={this.editSection3} style={styles.button}
                         >
-                        Edit
+                        Print
                         </Fab>
-                        </div> 
+                        </div>
                         </List>
-                         
+                        
 
                         
-                        <List>  
-                        <div class="cardReview"> 
-                        <h2 class="confirm">Dependent Children</h2>                     
-                        <ListItem
-                        primaryText="Child 1's full name"
-                        secondaryText={ childFullName_1 }
-                        /> 
-                        <ListItem
-                        primaryText="Date of birth"
-                        secondaryText={ childDOB_1 }
-                        />
-                        <ListItem
-                        primaryText="Relationship to you"
-                        secondaryText={ childRelationToYou_1 }
-                        /> 
-                        <ListItem
-                        primaryText="Child 2's full name"
-                        secondaryText={ childFullName_2 }
-                        />  
-                        <ListItem
-                        primaryText="Date of birth"
-                        secondaryText={ childDOB_2 }
-                        /> 
-                        <ListItem
-                        primaryText="Relationship to you"
-                        secondaryText={ childRelationToYou_2 }
-                        /> 
-                        <ListItem
-                        primaryText="children receive 20 hours ECE from any childcare service?"
-                        secondaryText={ childReceive20Hrs }
-                        />
-                        <ListItem
-                        primaryText="Child 1's name (receives 20 hours ECE)"
-                        secondaryText={ Child_ECE_ChildName_1 }
-                        /> 
-                        <ListItem
-                        primaryText="Which childcare service/s does the child get 20 Hours ECE from?"
-                        secondaryText={ Child_ECE_Provider_1 }
-                        /> 
-                        <ListItem
-                        primaryText="How many hours are received per week in total?"
-                        secondaryText={ Child_ECE_WeekTotal_1 }
-                        /> 
-                        <ListItem
-                        primaryText="What date did the 20 Hours ECE start?"
-                        secondaryText={ Child_ECE_StartDate_1 }
-                        />  
-                        <ListItem
-                        primaryText="Child 2's name (receives 20 hours ECE)"
-                        secondaryText={ Child_ECE_ChildName_2 }
-                        /> 
-                        <ListItem
-                        primaryText="Which childcare service/s does the child get 20 Hours ECE from?"
-                        secondaryText={ Child_ECE_Provider_2 }
-                        /> 
-                        <ListItem
-                        primaryText="How many hours are received per week in total?"
-                        secondaryText={ Child_ECE_WeekTotal_2 }
-                        /> 
-                        <ListItem
-                        primaryText="What date did the 20 Hours ECE start?"
-                        secondaryText={ Child_ECE_StartDate_2 }
-                        />
-                        <ListItem
-                        primaryText="Which children do you wish to get Childcare Subsidy for?"
-                        secondaryText={ childareSubsidy }
-                        /> 
-                        <ListItem
-                        primaryText="Child 1's Name (Childcare Subsidy)"
-                        secondaryText={ whichChildCCS_1 }
-                        />   
-                        <ListItem
-                        primaryText="Child 2's Name (Childcare Subsidy)"
-                        secondaryText={ whichChildCCS_2 }
-                        /> 
-                        <ListItem
-                        primaryText="Which children do you wish to get OSCAR Subsidy for?"
-                        secondaryText={ oscarSubsidy }
-                        /> 
-                        <ListItem
-                        primaryText="Child 1's name (Oscar Subsidy)"
-                        secondaryText={ whichChildOSCAR_1 }
-                        /> 
-                        <ListItem
-                        primaryText="Child 2's name (Oscar Subsidy)"
-                        secondaryText={ whichChildOSCAR_2 }
-                        /> 
-                        <Fab
-                        variant="extended"
-                        size="medium"
-                        color="primary"
-                        aria-label="Add"
-                        className={classes.margin}
-                        onClick={this.editSection4} style={styles.button}
-                        >
-                        Edit
-                        </Fab>
-                         </div> 
-                        </List>
+                        
+
+                        
+                        
                                                                                                                                                                       
                     
                     <br/>
 
-        <Fab
+        {/* <Fab
           variant="extended"
           size="medium"
           color="primary"
@@ -1016,7 +626,7 @@ export class Confirm extends Component {
           onClick={this.continue} style={styles.button}
         >
           Next
-        </Fab>
+        </Fab> */}
                     {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
           Back 
         </Button>

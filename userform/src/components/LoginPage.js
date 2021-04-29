@@ -5,6 +5,7 @@ import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import HeaderForm from './HeaderForm';
+import Fab from '@material-ui/core/Fab';
 // import { UserForm } from './components/UserForm';
 
 export class LoginPage extends Component {
@@ -44,6 +45,7 @@ export class LoginPage extends Component {
                 <HeaderForm/> 
                 <React.Fragment>
                     {/* <AppBar title="Login page" /> */}
+                    <div class="card">
                     <div class="row">
                         <p><br/></p>
                         <p>Please enter your login name and password</p>
@@ -63,13 +65,25 @@ export class LoginPage extends Component {
                                 onChange = {(event,newValue) => this.setState({password:newValue})}
                             />
                             <br/>
-                            <RaisedButton label="Login" primary={true} style={style} 
-                            onClick={this.routeChange}/>
+                            {/* <RaisedButton label="Login" primary={true} style={style} 
+                            onClick={this.routeChange}/> */}
+
+                            <Fab
+                                    variant="extended"
+                                    size="medium"
+                                    color="primary"
+                                    aria-label="Add"
+                                    
+                                    onClick={this.routeChange} style={style}
+                                    >
+                                    Login
+                                    </Fab>
                             {/* <p>Login name:</p><input></input><br></br>
                             <p>Password:</p><input></input><p>  </p> */}
                             {/* <Link to="/userform"><button> Login </button></Link> */}
                         </div>
                     </div> 
+                    </div>
                 </React.Fragment>
             </MuiThemeProvider>
         );
