@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 import { styled } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Header from "./Header";
+import { List, ListItem } from 'material-ui/List';
+import Fab from '@material-ui/core/Fab';
 
 const MyButton = styled(Button)({
   background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -30,34 +32,71 @@ export class Placeholder extends Component {
         e.preventDefault();
         this.props.prevStep();
     }; 
+
+    routeChange=()=> {window.location.href='/login';}
     
     render() { 
         return (  
             <MuiThemeProvider>
             <Header/>
                 <React.Fragment>
-                    
+                <List> 
+                <div class="cardReview">
                     <div class="row">
                         <p><br/></p>
-                        <p>Lorum ipsum, information about early learning</p>
-                        <p><br/></p>
-
-                        <div class="column">
-                            <p>You are eligible for the subsidy</p>
-                            <FontAwesomeIcon color='green' icon={faCheckCircle}/>
-
+                        <p>Use this application to apply for: <br></br>
+<br></br>• Childcare Subsidy – Payments that help families with the cost of pre-school childcare
+<br></br>• OSCAR Subsidy – Payments for children who are at school and are under 14 years (or under 18 if you get a Child Disability Allowance for them).<br></br>
+<br></br>If you need more information go to workandincome.govt.nz and search on Childcare or call us on 0800 559 009.
+We suggest you read these instructions before you fill in the application, so you get a feel for what’s needed.<br></br><br></br>
+Work and Income may be able to help with assistance towards childcare costs if: <br></br>• you’re the main caregiver of the child, and
+<br></br>• your family is on a low or middle income, and
+<br></br>• you’re a New Zealand citizen or permanent resident, and
+<br></br>• your child has at least three hours of care a week.
+<br></br><br></br>The childcare assistance available to you will depend on your individual situation and the type of childcare your child is enrolled in.
+If you have a 3 or 4 year old child, they may be able to get up to 20 hours of early childhood education (20 Hours ECE) funded by the Government. It will depend on the type of childcare service your child attends and whether they offer 20 hours ECE.</p>                      
                         </div>
-                        <div class="column"><br/>
-                        <Link to='/login'><RaisedButton
-                       label=" Apply "></RaisedButton></Link>
-                    
                         </div>
-                    </div>                 
+                        <div class="cardReview">
+                        <div class="row">
+                            <h3>You are eligible for the subsidy <FontAwesomeIcon color='green' icon={faCheckCircle}/></h3>
+                            <p>
+                            <br></br>Apply now - before your child starts the programme.
+                            <br></br><br></br>So you can get a subsidy from the day your child starts the programme, you need to apply before your child’s first day. This is especially important for school holidays.
+                            S02 – NOV 2021
+                            </p>
+                            
+                        </div>
+                        </div>
+
+                        <div class="cardReview">
+                        <div class="row"><br/>
+                        <Fab
+                                    variant="extended"
+                                    size="extralarge"
+                                    color="primary"
+                                    aria-label="Add"
+                                    onClick={this.routeChange} style={style}
+                                    >
+                                    Apply
+                                    </Fab>
+
+
+                        {/* <Link to='/login'><RaisedButton
+                       label=" Apply "></RaisedButton></Link>                    */}
+                        </div>
+                    </div> 
+                    </List>                
                 </React.Fragment>
                 
             </MuiThemeProvider>
         );
     }
 }
+
+const style = {
+    margin: 15,
+   };
+
 
 export default Placeholder;

@@ -567,8 +567,8 @@ export class Confirm extends Component {
                     
                     <List> 
                     <div class="cardReview">
-                    <h1>Arotake</h1>
-                    <h2>Review</h2>
+                    <h1>Review</h1>
+                    {/* <h2>Review</h2> */}
                     <h2 class="confirm">Personal Details</h2>
                     <ListItem
                         primaryText="Client Number"
@@ -1015,7 +1015,7 @@ export class Confirm extends Component {
           className={classes.margin}
           onClick={this.continue} style={styles.button}
         >
-          Next
+          Submit
         </Fab>
                     {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
           Back 
