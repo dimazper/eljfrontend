@@ -12,6 +12,7 @@ import apply from "./apply_images.png"
 import { Link } from 'react-router-dom';
 import { faChild } from '@fortawesome/free-solid-svg-icons';
 import Header from "./Header";
+import Fab from '@material-ui/core/Fab';
 
 
 // landing page
@@ -28,6 +29,9 @@ export class LandingPage extends Component {
            ]
         }
      }
+
+     routeChange=()=> {window.location.href='/userform';}
+   
 
      createTableDataInProgress() {
         return this.state.users.map((user, index) => {
@@ -68,11 +72,13 @@ export class LandingPage extends Component {
      render() {
         return (
            
-<div class="row">
+<div class="coloumn">
    <Header/>
+   <br></br>
+   <br></br>
    <h1 id='title'>Childcare Assistance Application <FontAwesomeIcon color='blue' icon={faChild}/></h1>             
       <div class="column">
-         <div class="card">
+         <div class="cardLanding">
             <h3>New Application</h3>
                <p>Use this application to apply for:</p>
                      <p>Childcare Subsidy - Payments that help families with the cost of pre-school 
@@ -80,21 +86,45 @@ export class LandingPage extends Component {
                <p>Oscar Subsidy - Payments for children who are at school and are under 14 years (or under
                      18 if you get a Child Disability Allowance for them)    </p>
 
-            <Link to="/userform"><button class="button button1">Apply Now</button></Link>
+            {/* <Link to="/userform"> */}
+               {/* <button class="button button1">Apply Now</button> */}
+               <Fab
+               variant="extended"
+               size="large"
+               color="primary"
+               aria-label="Add"
+               onClick={this.routeChange}
+               style={styles.button}  
+               >
+               Apply
+               </Fab>            
+            {/* </Link> */}
+            <br></br> 
          </div>
       </div>
 
       <div class="column">
-         <div class="card">
+         <div class="cardLanding">
             <h3>In Progress</h3>
                <p>Application: 2
                   (ELS Supervisor)
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>                 
                </p>
          </div>
       </div>
   
   <div class="column">
-    <div class="card">
+    <div class="cardLanding">
       <h3>Completed</h3>
       <p>0 completed applications</p>
       {/* <table id='users'>
@@ -103,6 +133,15 @@ export class LandingPage extends Component {
                     {this.createTableDataCompleted()}
                  </tbody>
               </table> */}
+      <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>      
       <p></p>
     </div>
   </div>
@@ -113,5 +152,10 @@ export class LandingPage extends Component {
      }
 }
 
+const styles = {
+   button: {
+       margin: 15        
+   }
+}
  
 export default LandingPage;

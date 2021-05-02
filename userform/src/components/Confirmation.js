@@ -567,8 +567,8 @@ export class Confirm extends Component {
                     
                     <List> 
                     <div class="cardReview">
-                    <h1>Te haamauraa</h1>
-                    <h2>Confirmation</h2>
+                    <h1>Confirmation</h1>
+                    {/* <h2>Confirmation</h2> */}
                     {/* <h2>Personal Details</h2> */}
                     <ListItem
                         primaryText="A confirmation email has been sent to:"

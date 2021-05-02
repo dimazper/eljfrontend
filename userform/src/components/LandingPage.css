@@ -110,6 +110,17 @@ body {
   box-sizing: inherit;
 }
 
+.cardLanding {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 20px;
+  text-align: center;
+  background-color: #e2e2e2ee;
+  width: 500px;
+  margin-left: 20px;
+  box-sizing: inherit;
+  margin-top: 20px;
+}
+
 .confirm {
   text-align: left;
   padding: 16px;
@@ -212,7 +223,7 @@ body {
   float: right;
 }
 div {
-  text-align: left;
+  text-align: center;
   margin-left: 40;
   padding-left: 40;
 }
