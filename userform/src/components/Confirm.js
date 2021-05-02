@@ -188,7 +188,7 @@ export class Confirm extends Component {
             partnerFullName:'',
             partnerDOB:'',
             relationshipStatus:'',
-            childareSubsidy:'',
+            childcareSubsidy:'',
             oscarSubsidy:'',
             paidParentalLeave:'',
             terminationPay:'',
@@ -365,7 +365,7 @@ export class Confirm extends Component {
     whichChildOSCAR_2: this.props.values.whichChildOSCAR_2,
     whichChildOSCAR_3: this.props.values.whichChildOSCAR_3,
     whichChildOSCAR_4: this.props.values.whichChildOSCAR_4,
-    childareSubsidy: this.props.values.childareSubsidy,
+    childcareSubsidy: this.props.values.childcareSubsidy,
     oscarSubsidy: this.props.values.oscarSubsidy,
     paidParentalLeave: this.props.values.paidParentalLeave,
     terminationPay: this.props.values.terminationPay,
@@ -552,7 +552,7 @@ export class Confirm extends Component {
             partnerFullName,
             partnerDOB,
             relationshipStatus,
-            childareSubsidy,
+            childcareSubsidy,
             oscarSubsidy,
             paidParentalLeave,
              
@@ -959,7 +959,7 @@ export class Confirm extends Component {
                         />
                         <ListItem
                         primaryText="Which children do you wish to get Childcare Subsidy for?"
-                        secondaryText={ childareSubsidy }
+                        secondaryText={ childcareSubsidy }
                         /> 
                         <ListItem
                         primaryText="Child 1's Name (Childcare Subsidy)"
