@@ -287,7 +287,7 @@ export class  UserForm extends Component {
         p_other52weeksType5 :'',
         p_other52weeksWhere5 :'',
         p_other52weeksValue5 :'',
-        childareSubsidy :'',
+        childcareSubsidy :'',
         oscarSubsidy:'',
         paidParentalLeave:'',
      }
@@ -616,7 +616,7 @@ export class  UserForm extends Component {
             p_other52weeksType5 ,
             p_other52weeksWhere5 ,
             p_other52weeksValue5,
-            childareSubsidy,
+            childcareSubsidy,
             oscarSubsidy,
             paidParentalLeave,
         
@@ -900,7 +900,7 @@ export class  UserForm extends Component {
             p_other52weeksType5 ,
             p_other52weeksWhere5 ,
             p_other52weeksValue5,
-            childareSubsidy,
+            childcareSubsidy,
             oscarSubsidy,
             paidParentalLeave,
         
