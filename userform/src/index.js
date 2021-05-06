@@ -7,6 +7,7 @@ import {Placeholder} from './components/Placeholder'
 import LoginPage from './components/LoginPage'
 import reportWebVitals from './reportWebVitals';
 import UserForm from './components/UserForm';
+
 import LandingPage from './components/LandingPage';
 import ElsUserForm from './components/ElsUserForm';
 import ElsLandingPage from './components/ElsLandingPage';
@@ -31,6 +32,7 @@ const rootElement = document.getElementById('root');
           <Route path='/login' component={LoginPage} />
           <Route path='/landing' component={LandingPage} />
           <Route path='/userform' component={UserForm} />
+          <Route path='/elsuserform' component={ElsUserForm} />
           <Route path='/els' component={ElsUserForm} />
           <Route path='/elslanding' component={ElsLandingPage} />
           <Route path='/fetchuser' component={FetchUser} />

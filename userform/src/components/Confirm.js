@@ -210,7 +210,7 @@ export class Confirm extends Component {
             lastName: this.props.values.lastName,
             nameOnBirthCert: this.props.values.nameOnBirthCert,
             firstNameNOTsame: this.props.values.firstNameNOTsame,
-            clientNumber: this.props.values.lastNameNOTsame,
+            lastNameNOTsame: this.props.values.lastNameNOTsame,
             knownByOtherName: this.props.values.knownByOtherName,
             nameOtherKnown: this.props.values.nameOtherKnown,
             nameToCall: this.props.values.nameToCall,
