@@ -145,6 +145,27 @@ body {
   width: 900px;
   box-sizing: inherit;
 }
+
+.yourSuperform {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 15px;
+  margin-left: 200px;
+  text-align: left;
+  background-color: #f1f1f100;
+  width: 900px;
+  box-sizing: inherit;
+}
+
+.cardSuperform {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 10px;
+  margin-left: 200px;
+  text-align: left;
+  background-color: #f1f1f17c;
+  width: 900px;
+  box-sizing: inherit;
+  
+}
 .cardReview {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 30px;

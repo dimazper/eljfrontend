@@ -3,6 +3,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import { List, ListItem } from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton';
+import HeaderForm from './HeaderForm';
+import Fab from '@material-ui/core/Fab';
+
 
 export class FormUserDetails extends Component {
     continue = e => {
@@ -16,72 +19,42 @@ export class FormUserDetails extends Component {
     }; 
     
     render() { 
-        const { values: {title, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, bio} } = this.props;
+        const { values: {title, id,clientNumber, getEmails, Child_ece_Email_1, firstName, lastName, firstNameNOTsame, lastNameNOTsame, nameOtherKnown, namePrefer, email, occupation, city, bio} } = this.props;
         return (  
             <MuiThemeProvider>
+                <HeaderForm/>
                 <React.Fragment>
-                    <AppBar title="Confirm User Data" />
-                    <List>
+                <List> 
+                    <div class="cardReview">
+                    <h1>Confirmation</h1>
+                    {/* <h2>Confirmation</h2> */}
+                    {/* <h2>Personal Details</h2> */}
                     <ListItem
-                        primaryText="Title"
-                        secondaryText={ title }
+                        primaryText="A confirmation email has been sent to:"
+                        secondaryText={ Child_ece_Email_1 }
                         />
-                        <ListItem
-                        primaryText="First Name"
-                        secondaryText={ firstName }
-                        />
-                        <ListItem
-                        primaryText="Last Name"
-                        secondaryText={ lastName }
-                        />
-                        
-                        <ListItem
-                        primaryText="First name (not same as birth certificate)"
-                        secondaryText={ firstNameNOTsame }
-                        />
-                         <ListItem
-                        primaryText="Last name (not same as birth certificate)"
-                        secondaryText={ lastNameNOTsame }
-                        />
-                         <ListItem
-                        primaryText="Other name(s) known by"
-                        secondaryText={ nameOtherKnown }
-                        />
-                         <ListItem
-                        primaryText="Preferred"
-                        secondaryText={ namePrefer }
-                        />
-                        <ListItem
-                        primaryText="Email"
-                        secondaryText={ email }
-                        />
-                        <ListItem
-                        primaryText="Occupation"
-                        secondaryText={ occupation }
-                        />
-                        <ListItem
-                        primaryText="City"
-                        secondaryText={ city }
-                        />
-                        <ListItem
-                        primaryText="Bio"
-                        secondaryText={ bio }
+                    <ListItem
+                        primaryText="Your reference number is:"
+                        secondaryText={ id }
                         />
 
-                    </List>
-                    <br/>
-                    <RaisedButton
-                       label="Back" 
-                       primary={false}
-                       style={styles.button}
-                       onClick={this.back}
-                    />
-                    <RaisedButton
-                       label="Confirm & Continue" 
-                       primary={true}
-                       style={styles.button}
-                       onClick={this.continue}
-                    />
+                    <ListItem
+                        primaryText="If you have applied for Childcare and Oscar Subsidy, your application has now been sent to ELS and MSD.
+                        You don't need to do anything else. ELS or MSD might contact you to discuss your application. ELS or MSD will notify you once your application
+                        has been processed "
+                        />
+                        <Fab
+                        variant="extended"
+                        size="medium"
+                        color="primary"
+                        aria-label="Add"
+                        // className={classes.margin}
+                        onClick={this.editSection3} style={styles.button}
+                        >
+                        Print
+                        </Fab>
+                        </div>
+                        </List>
                     
                 </React.Fragment>
             </MuiThemeProvider>
