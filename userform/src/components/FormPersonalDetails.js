@@ -38,6 +38,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
+import Leaves from '../assets/bg.png';
 
 
 
@@ -89,6 +90,10 @@ export class FormPersonalDetails extends Component {
                     <FormControl component="fieldset">
       
                     {/* <BorderLinearProgress variant="determinate" value={10} /> */} 
+
+                    <div class="cardLeaves">
+                    <img src={Leaves} width="300" height="350" alt="Person"/>
+                    </div>
                           
                     <div class="card">
                     <h1>Tell us about your work, education and activies</h1>
@@ -314,6 +319,9 @@ defaultValue={values.medicalReason}
         {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
           Continue 
         </Button> */}
+        {/* <FormGroup aria-label="position" row>  */}
+        <div class="column">
+        <div class="cardButtonLeft">
         <Fab
           variant="extended"
           size="medium"
@@ -324,6 +332,18 @@ defaultValue={values.medicalReason}
         >
           Back
         </Fab>
+        </div>      
+        </div>
+
+        <div class="column">
+        <div class="ButtonLeft">
+        </div>
+        </div>
+
+
+
+        <div class="column">
+        <div class="cardButtonRight">
         <Fab
           variant="extended"
           size="medium"
@@ -334,6 +354,9 @@ defaultValue={values.medicalReason}
         >
           Next
         </Fab>
+        </div>
+        </div>
+        {/* </FormGroup> */}
 
                     {/* <RaisedButton
                        label="Back" 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, uses } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import TextField from '@material-ui/core/TextField';
@@ -25,6 +25,7 @@ import Progress from './progress'
 import BorderLinearProgress from '@material-ui/core/LinearProgress';
 import DatePicker from 'react-bootstrap';
 import HeaderForm from './HeaderForm';
+import ComboBox from './ComboBox';
 // Import React Progress Bar
 // import "react-step-progress-bar/styles.css";
 // import { ProgressBar, Step } from "react-step-progress-bar";
@@ -41,7 +42,8 @@ import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
-
+import Leaves from '../assets/bg.png';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 
 
 export class FormDependentChildren extends Component {
@@ -49,8 +51,8 @@ export class FormDependentChildren extends Component {
         showing2: false ,
         showing3: true,
         showing4: true,
-        namePrefer:''
-    
+        namePrefer:'',
+        selectedEce: []
     };
 
     continue = e => {
@@ -62,15 +64,37 @@ export class FormDependentChildren extends Component {
         e.preventDefault();
         this.props.prevStep();
     }; 
-    
+
+    onSelectedEceChange = (event, values) => {
+      this.setState({
+        selectedEce: values,
+      }, () => {
+        // This will output an array of objects
+        // given by Autocompelte options property.
+        // this.props.setState({
+        //   Child_ece_Org_Name_1: this.state.selectedEce.Child_ece_Org_Name_1,
+        // })
+        console.log(this.state.selectedEce.Child_ece_Org_Name_1);
+      });
+    }
+
     render() { 
         const { values, handleChange } = this.props;
         const { showing2,showing3,showing4 } = this.state;
         const showfirst = values.firstName+" "+values.lastName;
         const showsecond = values.firstNameNOTsame+" "+values.lastNameNOTsame;
         const { classes } = this.props;
-
-
+        const school = [
+          { Child_ece_Id_1: 55509, Child_ece_CCS_OSCAR_1: 234576548,
+          Child_ece_Org_Name_1:'Best Start', Child_ece_Email_1:'kelly.abraham@best-start.org', Child_ece_Telephone_1: '068710841', Child_ece_Mobile_1: '068565798', 
+          Child_ece_Twenty_Hrs_1:'Yes', Child_ece_HoldingAbsenceFee_1:'No'
+          },
+          { Child_ece_Id_1: 25384, Child_ece_CCS_OSCAR_1: 123654378,
+          Child_ece_Org_Name_1:'Lollipops', Child_ece_Email_1:'michelle.cribb@eeg.co.nz', Child_ece_Telephone_1: '093651640', Child_ece_Mobile_1:'093778700', 
+          Child_ece_Twenty_Hrs_1:'Yes', Child_ece_HoldingAbsenceFee_1:'No'
+          },          
+        ];
+        
         return (          
             <MuiThemeProvider id='title'> 
                 <HeaderForm/>                        
@@ -88,7 +112,11 @@ export class FormDependentChildren extends Component {
                     <FormControl component="fieldset">
       
                     {/* <BorderLinearProgress variant="determinate" value={10} /> */} 
-                          
+
+                    <div class="cardLeaves">
+                    <img src={Leaves} width="300" height="350" alt="Person"/>
+                    </div>
+
                     <div class="card">
                     <h1>Tell us about your dependent children</h1>
                     <br></br>
@@ -182,6 +210,7 @@ export class FormDependentChildren extends Component {
                         id="mui-theme-provider-outlined-input"
                         />
                     <br></br>
+                    
                     <p class="question">Relationship to you</p>  
                     <TextField 
                        hintText="Relationship" 
@@ -225,7 +254,7 @@ export class FormDependentChildren extends Component {
                        hintText="Child's Name" //hfgfg
                        floatingLabelText="Child's Name"
                        onChange={handleChange('Child_ECE_ChildName_1')}
-                       defaultValue={values.Child_ECE_ChildName_1}
+                       defaultValue={values.Child_ECE_ChildName_1 }
                        label="Child's Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
@@ -235,7 +264,34 @@ export class FormDependentChildren extends Component {
 
                   <p class="question">Which childcare service/s does the child get 20 Hours ECE from?</p>
                     <FormGroup aria-label="position" coloumn>
-                    <TextField 
+                    
+                    {/* <ComboBox
+                    onChange={handleChange('Child_ece_Org_Name_1')}
+                    defaultValue={values.Child_ece_Org_Name_1 }             
+                    /> */}
+                    
+                    <Autocomplete
+                      id="combo-box-demo"
+                      options={school}
+                      getOptionLabel={(option) => option.Child_ece_Org_Name_1}
+                      defaultValue={school.find(v => v.Child_ece_Org_Name_1 == values.Child_ece_Org_Name_1)}
+                      onChange={this.onSelectedEceChange}
+                      value={this.state.selectedEce.Child_ece_Org_Name_1}
+                      onSelect={
+                        handleChange('Child_ece_Org_Name_1')
+                      }
+                      style={{ width: 300 }}
+                      renderInput={(params) => <TextField {...params} label="List of Childcare Services" variant="outlined" 
+                      />}
+                      
+                      
+                      
+                      // onChange={handleChange('Child_ece_Email_1')}
+                      // defaultValue={values.Child_ece_Email_1}                     
+                    />
+
+
+                    {/* <TextField 
                     style={styles.input}
                        hintText="childcare service/s" //hfgfg
                        floatingLabelText="childcare service/s"
@@ -244,7 +300,7 @@ export class FormDependentChildren extends Component {
                        label="childcare service/s"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
-                        />
+                        /> */}
                     <br></br>
                   </FormGroup>
 
@@ -466,7 +522,9 @@ export class FormDependentChildren extends Component {
                     </FormGroup>
                     </div>
                     <br/>
-          <Fab
+                    <div class="column">
+        <div class="cardButtonLeft">
+        <Fab
           variant="extended"
           size="medium"
           color="primary"
@@ -476,6 +534,18 @@ export class FormDependentChildren extends Component {
         >
           Back
         </Fab>
+        </div>      
+        </div>
+
+        <div class="column">
+        <div class="ButtonLeft">
+        </div>
+        </div>
+
+
+
+        <div class="column">
+        <div class="cardButtonRight">
         <Fab
           variant="extended"
           size="medium"
@@ -486,6 +556,8 @@ export class FormDependentChildren extends Component {
         >
           Next
         </Fab>
+        </div>
+        </div>
 
 
                     {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
@@ -531,6 +603,8 @@ const styles = {
       margin: 15        
   }
 }
+
+
 
 
 // const styles = theme => ({

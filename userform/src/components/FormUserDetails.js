@@ -40,6 +40,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
+import Leaves from '../assets/bg.png';
 
 
 export class FormUserDetails extends React.Component {
@@ -70,8 +71,9 @@ export class FormUserDetails extends React.Component {
         
         return (          
             <MuiThemeProvider id='title'> 
-                <HeaderForm/>                        
+                <HeaderForm/>                    
             <React.Fragment>
+            
 
                 {/* <ProgressBar
                     percent={10}
@@ -85,7 +87,11 @@ export class FormUserDetails extends React.Component {
                     <FormControl component="fieldset">
       
                     {/* <BorderLinearProgress variant="determinate" value={10} /> */} 
-                          
+                    
+                    <div class="cardLeaves">
+                    <img src={Leaves} width="300" height="350" alt="Person"/>
+                    </div>   
+
                     <div class="card">
                     <h1>Tell us about yourself </h1>
                     <br></br>
@@ -1273,6 +1279,19 @@ export class FormUserDetails extends React.Component {
         >
           Back
         </Fab> */}
+        <div class="column">
+        <div class="cardButtonRight">
+        </div>
+        </div>
+
+        <div class="column">
+        <div class="cardButtonRight">
+        </div>
+        </div>
+
+
+        <div class="column">
+        <div class="cardButtonRight">
         <Fab
           variant="extended"
           size="medium"
@@ -1284,6 +1303,8 @@ export class FormUserDetails extends React.Component {
         >
           Next
         </Fab>
+        </div>
+        </div>
                     {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.continue} style={styles.button}>
           Continue 
         </Button>                   */}

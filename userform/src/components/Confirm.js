@@ -16,6 +16,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Leaves from '../assets/bg.png';
+
 
 
 export class Confirm extends Component {
@@ -192,6 +194,29 @@ export class Confirm extends Component {
             oscarSubsidy:'',
             paidParentalLeave:'',
             terminationPay:'',
+            Child_ece_Id_1:'',
+            Child_ece_CCS_OSCAR_1:'',
+            Child_ece_Org_Name_1:'',
+            Child_ece_Email_1:'',
+            Child_ece_Telephone_1:'',
+            Child_ece_Mobile_1:'',
+            Child_ece_Twenty_Hrs_1:'',
+            Child_ece_HoldingAbsenceFee_1:'',
+            Child_ece_hrs_care_1:'',
+            Child_ece_hourly_fee_1:'',
+            Child_ece_total_weekly_fee_1:'',
+            Child_ece_Id_2:'',
+            Child_ece_CCS_OSCAR_2:'',
+            Child_ece_Org_Name_2:'',
+            Child_ece_Email_2:'',
+            Child_ece_Telephone_2:'',
+            Child_ece_Mobile_2:'',
+            Child_ece_Twenty_Hrs_2:'',
+            Child_ece_HoldingAbsenceFee_2:'',
+            Child_ece_hrs_care_2:'',
+            Child_ece_hourly_fee_2:'',
+            Child_ece_total_weekly_fee_2:'',
+
             
         }
     }
@@ -369,8 +394,29 @@ export class Confirm extends Component {
     oscarSubsidy: this.props.values.oscarSubsidy,
     paidParentalLeave: this.props.values.paidParentalLeave,
     terminationPay: this.props.values.terminationPay,
-            
-
+    Child_ece_Id_1: this.props.values.Child_ece_Id_1,
+    Child_ece_CCS_OSCAR_1: this.props.values.Child_ece_CCS_OSCAR_1,
+    Child_ece_Org_Name_1: this.props.values.Child_ece_Org_Name_1,
+    Child_ece_Email_1: this.props.values.Child_ece_Email_1,
+    Child_ece_Telephone_1: this.props.values.Child_ece_Telephone_1,
+    Child_ece_Mobile_1: this.props.values.Child_ece_Mobile_1,
+    Child_ece_Twenty_Hrs_1: this.props.values.Child_ece_Twenty_Hrs_1,
+    Child_ece_HoldingAbsenceFee_1: this.props.values.Child_ece_HoldingAbsenceFee_1,
+    Child_ece_hrs_care_1: this.props.values.Child_ece_hrs_care_1,
+    Child_ece_hourly_fee_1: this.props.values.Child_ece_hourly_fee_1,
+    Child_ece_total_weekly_fee_1: this.props.values.Child_ece_total_weekly_fee_1,
+    Child_ece_Id_2: this.props.values.Child_ece_Id_2,
+    Child_ece_CCS_OSCAR_2: this.props.values.Child_ece_CCS_OSCAR_2,
+    Child_ece_Org_Name_2: this.props.values.Child_ece_Org_Name_2,
+    Child_ece_Email_2: this.props.values.Child_ece_Email_2,
+    Child_ece_Telephone_2: this.props.values.Child_ece_Telephone_2,
+    Child_ece_Mobile_2: this.props.values.Child_ece_Mobile_2,
+    Child_ece_Twenty_Hrs_2: this.props.values.Child_ece_Twenty_Hrs_2,
+    Child_ece_HoldingAbsenceFee_2: this.props.values.Child_ece_HoldingAbsenceFee_2,
+    Child_ece_hrs_care_2: this.props.values.Child_ece_hrs_care_2,
+    Child_ece_hourly_fee_2: this.props.values.Child_ece_hourly_fee_2,
+    Child_ece_total_weekly_fee_2: this.props.values.Child_ece_total_weekly_fee_2,
+    
         }
         axios({
             method: 'post',
@@ -555,6 +601,29 @@ export class Confirm extends Component {
             childcareSubsidy,
             oscarSubsidy,
             paidParentalLeave,
+            Child_ece_Id_1,
+            Child_ece_CCS_OSCAR_1,
+            Child_ece_Org_Name_1,
+            Child_ece_Email_1,
+            Child_ece_Telephone_1,
+            Child_ece_Mobile_1,
+            Child_ece_Twenty_Hrs_1,
+            Child_ece_HoldingAbsenceFee_1,
+            Child_ece_hrs_care_1,
+            Child_ece_hourly_fee_1,
+            Child_ece_total_weekly_fee_1,
+            Child_ece_Id_2,
+            Child_ece_CCS_OSCAR_2,
+            Child_ece_Org_Name_2,
+            Child_ece_Email_2,
+            Child_ece_Telephone_2,
+            Child_ece_Mobile_2,
+            Child_ece_Twenty_Hrs_2,
+            Child_ece_HoldingAbsenceFee_2,
+            Child_ece_hrs_care_2,
+            Child_ece_hourly_fee_2,
+            Child_ece_total_weekly_fee_2,
+
              
          } } = this.props;
         const { classes } = this.props;
@@ -564,9 +633,13 @@ export class Confirm extends Component {
                 <HeaderForm/>
                 <React.Fragment>
                     {/* <AppBar title="Confirm User Data" /> */}
+
+                    <div class="cardLeaves">
+                    <img src={Leaves} width="300" height="350" alt="Person"/>
+                    </div>
                     
                     <List> 
-                    <div class="cardReview">
+                    <div class="cardReview2">
                     <h1>Review</h1>
                     {/* <h2>Review</h2> */}
                     <h2 class="confirm">Personal Details</h2>
@@ -931,7 +1004,10 @@ export class Confirm extends Component {
                         /> 
                         <ListItem
                         primaryText="Which childcare service/s does the child get 20 Hours ECE from?"
-                        secondaryText={ Child_ECE_Provider_1 }
+                        // secondaryText={ Child_ECE_Provider_1 }
+                        secondaryText={ Child_ece_Org_Name_1 }
+                        
+
                         /> 
                         <ListItem
                         primaryText="How many hours are received per week in total?"
@@ -997,6 +1073,8 @@ export class Confirm extends Component {
                     
                     <br/>
 
+                    <div class="column">
+        <div class="cardButtonLeftConfirm">
         <Fab
           variant="extended"
           size="medium"
@@ -1007,6 +1085,18 @@ export class Confirm extends Component {
         >
           Back
         </Fab>
+        </div>      
+        </div>
+
+        <div class="column">
+        <div class="ButtonLeft">
+        </div>
+        </div>
+
+
+
+        <div class="column">
+        <div class="cardButtonRight">
         <Fab
           variant="extended"
           size="medium"
@@ -1017,6 +1107,8 @@ export class Confirm extends Component {
         >
           Submit
         </Fab>
+        </div>
+        </div>
                     {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
           Back 
         </Button>
