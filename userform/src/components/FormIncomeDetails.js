@@ -51,6 +51,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
+import Leaves from '../assets/bg.png';
 
 
 
@@ -103,6 +104,9 @@ export class FormIncomeDetails extends Component {
 
                         {/* <BorderLinearProgress variant="determinate" value={10} /> */}
 
+                        <div class="cardLeaves">
+                        <img src={Leaves} width="300" height="350" alt="Person"/>
+                        </div>
                         <div class="card">
                             <h1>Tell us about your income and assets</h1>
                             <br></br>
@@ -164,7 +168,7 @@ export class FormIncomeDetails extends Component {
                                         <MenuItem value="">
                                             <em>               </em>
                                         </MenuItem>
-                                        <MenuItem value={'Weekly'}>Weekly</MenuItem>
+                                        <MenuItem value={'weekly'}>Weekly</MenuItem>
                                         <MenuItem value={'Fortnightly'}>Fortnightly</MenuItem>
                                         <MenuItem value={'Monthly'}>Monthly</MenuItem>
                                         <MenuItem value={'One-off'}>One-off</MenuItem>
@@ -307,15 +311,16 @@ export class FormIncomeDetails extends Component {
         labelId="demo-simple-select-outlined-label"
         id="demo-simple-select-outlined"
         onChange={handleChange('jointPartnerFreq2')}
+        defaultValue={values.jointPartnerFreq2}
         label="How often do you expect the payment?"
     >
         <MenuItem value="">
             <em>               </em>
         </MenuItem>
-        <MenuItem value={10}>Weekly</MenuItem>
-        <MenuItem value={20}>Fortnightly</MenuItem>
-        <MenuItem value={30}>Monthly</MenuItem>
-        <MenuItem value={30}>One-off</MenuItem>
+        <MenuItem value={'Weekly'}>Weekly</MenuItem>
+        <MenuItem value={'Fortnightly'}>Fortnightly</MenuItem>
+        <MenuItem value={'Monthly'}>Monthly</MenuItem>
+        <MenuItem value={'One-off'}>One-off</MenuItem>
 
     </Select>
 
@@ -789,6 +794,8 @@ export class FormIncomeDetails extends Component {
 
 </Grid><br></br>
 <br></br>
+<div class="column">
+        <div class="cardButtonLeft">
         <Fab
           variant="extended"
           size="medium"
@@ -799,6 +806,18 @@ export class FormIncomeDetails extends Component {
         >
           Back
         </Fab>
+        </div>      
+        </div>
+
+        <div class="column">
+        <div class="ButtonLeft">
+        </div>
+        </div>
+
+
+
+        <div class="column">
+        <div class="cardButtonRight">
         <Fab
           variant="extended"
           size="medium"
@@ -809,7 +828,8 @@ export class FormIncomeDetails extends Component {
         >
           Next
         </Fab>
-
+        </div>
+        </div>
 
                             {/* <Button variant="contained" size="large" color="primary" className={classes.margin} onClick={this.back} style={styles.button}>
           Back 

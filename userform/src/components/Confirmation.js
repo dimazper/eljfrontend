@@ -16,6 +16,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Leaves from '../assets/bg.png';
 
 
 export class Confirm extends Component {
@@ -564,9 +565,13 @@ export class Confirm extends Component {
                 <HeaderForm/>
                 <React.Fragment>
                     {/* <AppBar title="Confirm User Data" /> */}
+
+                    <div class="cardLeaves">
+                    <img src={Leaves} width="300" height="350" alt="Person"/>
+                    </div>
                     
                     <List> 
-                    <div class="cardReview">
+                    <div class="cardReview2">
                     <h1>Confirmation</h1>
                     {/* <h2>Confirmation</h2> */}
                     {/* <h2>Personal Details</h2> */}

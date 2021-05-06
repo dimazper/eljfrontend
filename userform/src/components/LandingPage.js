@@ -13,6 +13,12 @@ import { Link } from 'react-router-dom';
 import { faChild } from '@fortawesome/free-solid-svg-icons';
 import Header from "./Header";
 import Fab from '@material-ui/core/Fab';
+import ELJ1 from '../assets/ELJ2.jpg';
+import Leaves from '../assets/bg.png';
+import Leaves2 from '../assets/bg2.png';
+import Leaves3 from '../assets/bg3.png';
+
+
 
 
 // landing page
@@ -74,9 +80,45 @@ export class LandingPage extends Component {
            
 <div class="coloumn">
    <Header/>
+   
+
+   <br></br>
+   {/* <h1 id='title'>Childcare Assistance Application <FontAwesomeIcon color='blue' icon={faChild}/></h1>   */}
+   
+   <div class="cardBannerTitle">
+   <h1 id='title'>Childcare Assistance Application</h1>
+   </div> 
+
+   
+   <div class="cardLeaves2">
+   <img src={Leaves2} width="85" height="83" alt="Person"/>
+   </div>
+   
+
+   <div class="cardLeaves3">
+   <img src={Leaves} width="85" height="83" alt="Person"/>
+   </div>
+   
+
+   
+   <div class="cardBanner">
+   <img src={ELJ1} width="1610" height="350" alt="Person"/>
+   {/* <img src={ELJ1} width="70%" alt="Person"/> */}
+   </div>
    <br></br>
    <br></br>
-   <h1 id='title'>Childcare Assistance Application <FontAwesomeIcon color='blue' icon={faChild}/></h1>             
+   <br></br>  
+   <br></br>
+   <br></br>
+   <br></br> 
+   <br></br>
+   <br></br> 
+   <br></br>
+   <br></br>
+   <br></br> 
+   
+  
+      
       <div class="column">
          <div class="cardLanding">
             <h3>New Application</h3>
@@ -145,7 +187,53 @@ export class LandingPage extends Component {
       <p></p>
     </div>
   </div>
+  <br></br>
+  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br> 
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+
+  {/* <div class="cardBanner">
+   </div> */}
+  
+   {/* <div class="cardLeaves">
+   <img src={Leaves} width="300" height="350" alt="Person"/>
+   </div> */}
+
+   {/* <div class="cardLeaves2">
+   <img src={Leaves2} width="100" height="150" alt="Person"/>
+   </div> */}
+
+   <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+
+   {/* <div class="cardLeaves3">
+   <img src={Leaves3} width="200" height="250" alt="Person"/>
+   </div> */}
+
+
 </div>
+
+
 
                
         )
