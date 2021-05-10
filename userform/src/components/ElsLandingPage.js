@@ -17,7 +17,7 @@ import Fab from '@material-ui/core/Fab';
 import ELJ1 from '../assets/ELJ2.jpg';
 import Leaves from '../assets/bg.png';
 import Leaves2 from '../assets/bg2.png';
-import Child1 from '../assets/kid1.png';
+import Child1 from '../assets/kids5.png';
 
 import Leaves3 from '../assets/bg3.png';
 import Header from "./Header";
