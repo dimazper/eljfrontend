@@ -62,6 +62,7 @@ export class ElsFormUserDetails extends Component {
         var a = parseInt(this.ece.Child_ece_hourly_fee_1);
         var b = parseInt(this.ece.Child_ece_hrs_care_1);
         var tot = a*b;
+        const { classes } = this.props;
 
            
            return (
@@ -74,8 +75,14 @@ export class ElsFormUserDetails extends Component {
         )
      }
 
+     continue = e => {
+        e.preventDefault();
+        this.props.nextStep();
+    }
+
     render() { 
         const { values, handleChange } = this.props;
+        const { classes } = this.props;
         // console.log(this.ece.Child_ece_hourly_fee_1);
         // var a = parseInt(this.ece.Child_ece_hourly_fee_1);
         // var b = parseInt(this.ece.Child_ece_hrs_care_1);
@@ -112,9 +119,6 @@ export class ElsFormUserDetails extends Component {
                <p>Name of your childcare service</p>
             </Grid>
             <p>{ece.Child_ece_Org_Name_1}</p>
-
-
-
 
             
             </Grid>
@@ -823,13 +827,7 @@ export class ElsFormUserDetails extends Component {
 
                     
 
-                    
-
-                   
-
-
-
-
+        
 
                        </div>
                        
@@ -856,14 +854,21 @@ export class ElsFormUserDetails extends Component {
         );
     }
 }
+
+const stylesButton = theme => ({
+    margin: {
+      margin: theme.spacing.unit,
+    },
+    extendedIcon: {
+      marginRight: theme.spacing.unit,
+    },
+  });
+
 const styles = {
     button: {
         margin: 15        
     }
   }
-const style = {
-    margin: 15,
-   };
 
- 
+
 export default ElsFormUserDetails;

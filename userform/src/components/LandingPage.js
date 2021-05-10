@@ -14,9 +14,9 @@ import { faChild } from '@fortawesome/free-solid-svg-icons';
 import Header from "./Header";
 import Fab from '@material-ui/core/Fab';
 import ELJ1 from '../assets/ELJ2.jpg';
-import Leaves from '../assets/bg.png';
-import Leaves2 from '../assets/bg2.png';
-import Leaves3 from '../assets/bg3.png';
+import Leaves from '../assets/kid2.png';
+import Leaves2 from '../assets/kid1.png';
+import Leaves3 from '../assets/kid2.png';
 
 
 
@@ -101,11 +101,8 @@ export class LandingPage extends Component {
    
 
    
-   <div class="cardBanner">
-   <img src={ELJ1} width="1610" height="350" alt="Person"/>
-   {/* <img src={ELJ1} width="70%" alt="Person"/> */}
-   </div>
-   <br></br>
+  
+   {/* <br></br>
    <br></br>
    <br></br>  
    <br></br>
@@ -115,7 +112,7 @@ export class LandingPage extends Component {
    <br></br> 
    <br></br>
    <br></br>
-   <br></br> 
+   <br></br>  */}
    
   
       
