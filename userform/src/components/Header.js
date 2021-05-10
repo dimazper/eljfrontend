@@ -9,6 +9,8 @@ import './LandingPage.css';
 import { Link } from 'react-router-dom';
 import { faChild } from '@fortawesome/free-solid-svg-icons';
 import parent from '../assets/parent2.png';
+import Banner  from '../assets/banner2.png';
+
 
 
 export class Header extends Component {
@@ -26,7 +28,8 @@ export class Header extends Component {
         return (  
             <div class="row">
                <ul class="topnav">
-                  <li><a class="active" href="/login">Home</a></li>
+                  <li><a class="active" >    </a></li>
+                  <li> <img src={Banner} width='30%' height='30%' alt="Logo"/></li>
                   <li class="right"><a href="/login">Log Out</a></li>
 
                   <li class="right"><a href="/profile">Profile</a></li>
