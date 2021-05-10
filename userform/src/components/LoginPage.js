@@ -45,7 +45,7 @@ export class LoginPage extends Component {
                 <HeaderForm/> 
                 <React.Fragment>
                     {/* <AppBar title="Login page" /> */}
-                    <div class="card">
+                    <div class="logincard">
                     <div class="row">
                         <p><br/></p>
                         <p>Please enter your login name and password</p>
