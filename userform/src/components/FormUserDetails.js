@@ -249,6 +249,7 @@ export class FormUserDetails extends React.Component {
                             className={classes.group}
                             aria-label="gender"
                             name="gender2"
+                            defaultValue="yes"
                             // className={classes.group}
                             // value={this.state.value}
                             // onChange={this.handleChange}
