@@ -140,7 +140,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 20px;
   text-align: left;
-  background-color: #ccf3ffee;
+  background-color: #ffffff00;
   width: 1617px;
   height: 100px;
   margin-top: 2px;
@@ -222,6 +222,35 @@ body {
   margin-left: 20px;
   box-sizing: inherit;
   margin-top: 20px;
+}
+
+.cardReview2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 30px;
+  margin-left: 400px;
+  margin-top: -180px;
+  text-align: center;
+  background-color: #66626230;
+}
+
+.yourSuperform {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 15px;
+  margin-left: 200px;
+  text-align: left;
+  background-color: #f1f1f100;
+  width: 900px;
+  box-sizing: inherit;
+}
+
+.cardSuperform {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 10px;
+  margin-left: 200px;
+  text-align: left;
+  background-color: #f1f1f17c;
+  width: 900px;
+  box-sizing: inherit;
 }
 
 .confirm {

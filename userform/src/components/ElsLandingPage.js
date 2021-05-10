@@ -76,6 +76,7 @@ export class ElsLandingPage extends Component {
                   <li class="right"><a href="#about">Log Out</a></li>
                </ul>
                <nav title="Early Learning Center Form" />
+
               <h1 id='title'>CCS Supervisor Portal <FontAwesomeIcon color='blue' icon={faSchool}/></h1>             
               {/* <table id='users'>
                  <tbody>
@@ -148,6 +149,7 @@ export class ElsLandingPage extends Component {
                   </Card.Body>
                </Card> */}
             </div>
+            
         )
      }
 }
