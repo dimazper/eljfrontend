@@ -18,6 +18,7 @@ import Leaves2 from '../assets/bg2.png';
 import Child1 from '../assets/kids5.png';
 import Leaves3 from '../assets/bg3.png';
 import Header from "./Header";
+import Modal2 from './modal2';
 // landing page
 export class ElsLandingPage extends Component {
     constructor(props) {
