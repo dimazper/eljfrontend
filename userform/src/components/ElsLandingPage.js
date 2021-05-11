@@ -6,9 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 // import { Card } from 'material-ui';
 import './LandingPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faSchool } from '@fortawesome/free-solid-svg-icons';
-
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import apply from "./apply_images.png"
@@ -18,15 +16,9 @@ import ELJ1 from '../assets/ELJ2.jpg';
 import Leaves from '../assets/bg.png';
 import Leaves2 from '../assets/bg2.png';
 import Child1 from '../assets/kids5.png';
-
 import Leaves3 from '../assets/bg3.png';
 import Header from "./Header";
-import Modal2 from './modal2';
-
-
-
 // landing page
-
 export class ElsLandingPage extends Component {
     constructor(props) {
         super(props) //since we are extending class Table so we have to use super in order to override Component class constructor
@@ -237,4 +229,5 @@ export class ElsLandingPage extends Component {
             margin: 15        
         }
      }
+
 export default ElsLandingPage;

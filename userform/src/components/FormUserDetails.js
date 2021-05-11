@@ -28,7 +28,7 @@ import HeaderForm from './HeaderForm';
 // import { ProgressBar, Step } from "react-step-progress-bar";
 // Import React Progress Bar
 import Accordion from './Accordion';
-import ProgressBar from './ProgressBar';
+// import ProgressBar from './ProgressBar';
 import './LandingPage.css';
 
 import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
@@ -41,6 +41,7 @@ import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import Leaves from '../assets/bg.png';
+import { ProgressBar, Step } from "react-step-progress-bar";
 
 
 export class FormUserDetails extends React.Component {
@@ -96,7 +97,53 @@ export class FormUserDetails extends React.Component {
                     <h1>Tell us about yourself </h1>
                     <br></br>
                     <br></br>
-                    <ProgressBar></ProgressBar>
+                    <ProgressBar percent={26}>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+</ProgressBar>
                     <br></br>
                     <br></br>
                     <br></br>

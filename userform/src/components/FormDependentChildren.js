@@ -31,7 +31,7 @@ import ComboBox from './ComboBox';
 // import { ProgressBar, Step } from "react-step-progress-bar";
 // Import React Progress Bar
 import Accordion from './Accordion';
-import ProgressBar from './ProgressBar';
+// import ProgressBar from './ProgressBar';
 import './LandingPage.css';
 
 import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
@@ -44,10 +44,11 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import Leaves from '../assets/bg.png';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import { ProgressBar, Step } from "react-step-progress-bar";
 
 
 export class FormDependentChildren extends Component {
-    state = { 
+      state = { 
         showing2: false ,
         showing3: true,
         showing4: true,
@@ -74,12 +75,19 @@ export class FormDependentChildren extends Component {
         // this.props.setState({
         //   Child_ece_Org_Name_1: this.state.selectedEce.Child_ece_Org_Name_1,
         // })
-        console.log(this.state.selectedEce.Child_ece_Org_Name_1);
+        // console.log(this.state.selectedEce.Child_ece_Org_Name_1);
+        // console.log(this.state.selectedEce.Child_ece_Id_1);
+        // console.log(values);
+
+        for(let i in this.state.selectedEce){
+            console.log(i);
+            console.log(this.state.selectedEce[i]);
+          
+      } 
       });
     }
-
     render() { 
-        const { values, handleChange } = this.props;
+        const { values, handleChange} = this.props;
         const { showing2,showing3,showing4 } = this.state;
         const showfirst = values.firstName+" "+values.lastName;
         const showsecond = values.firstNameNOTsame+" "+values.lastNameNOTsame;
@@ -365,7 +373,54 @@ export class FormDependentChildren extends Component {
                     <h1>Tell us about your dependent children</h1>
                     <br></br>
                     <br></br>
-                    <ProgressBar></ProgressBar>
+                    <ProgressBar percent={100}>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+  <Step>
+    {({ accomplished, index }) => (
+      <div
+        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+      >
+        {index + 1}
+      </div>
+    )}
+  </Step>
+  
+</ProgressBar>
                     <br></br>
                     <br></br>
                     
@@ -528,13 +583,9 @@ export class FormDependentChildren extends Component {
                       style={{ width: 300 }}
                       renderInput={(params) => <TextField {...params} label="List of Childcare Services" variant="outlined" 
                       />}
-                      
-                      
-                      
                       // onChange={handleChange('Child_ece_Email_1')}
                       // defaultValue={values.Child_ece_Email_1}                     
                     />
-
 
                     {/* <TextField 
                     style={styles.input}
