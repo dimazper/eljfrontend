@@ -313,7 +313,18 @@ export class  UserForm extends Component {
         Child_ece_hourly_fee_2:'',
         Child_ece_total_weekly_fee_2:'',
      }
-
+    //  getSchools = () => {
+    //      return [
+    //         { Child_ece_Id_1: 55509, Child_ece_CCS_OSCAR_1: 234576548,
+    //         Child_ece_Org_Name_1:'Best Start', Child_ece_Email_1:'kelly.abraham@best-start.org', Child_ece_Telephone_1: '068710841', Child_ece_Mobile_1: '068565798', 
+    //         Child_ece_Twenty_Hrs_1:'Yes', Child_ece_HoldingAbsenceFee_1:'No'
+    //         },
+    //         { Child_ece_Id_1: 25384, Child_ece_CCS_OSCAR_1: 123654378,
+    //         Child_ece_Org_Name_1:'Lollipops', Child_ece_Email_1:'michelle.cribb@eeg.co.nz', Child_ece_Telephone_1: '093651640', Child_ece_Mobile_1:'093778700', 
+    //         Child_ece_Twenty_Hrs_1:'Yes', Child_ece_HoldingAbsenceFee_1:'No'
+    //         },          
+    //       ];
+    //  }
      // Proceed to next step
     nextStep = () => {
         const { step } = this.state;
@@ -357,11 +368,38 @@ export class  UserForm extends Component {
 
     // Hande fields change
     handleChange = input => e => {
+        console.log(e.target.value);
+        console.log(input);
         this.setState({[input]: e.target.value});
+
+        //test code
+        if(input === 'Child_ece_Org_Name_1')
+        {
+            this.setState({Child_ece_Id_1: 55509, Child_ece_CCS_OSCAR_1: 234576548, Child_ece_Email_1:'kelly.abraham@best-start.org', 
+                    Child_ece_Telephone_1: '068710841', 
+                    Child_ece_Mobile_1: '068565798',
+                    Child_ece_Twenty_Hrs_1:'Yes',
+                    Child_ece_HoldingAbsenceFee_1:'No'
+                    });
+        }
+        // if(input === 'Child_ece_Org_Name_1')
+        // {
+        //     let schools = getSchools();
+        //     for(let i in schools)
+        //     {
+        //         if (schools[i] === e.target.value)
+        //         {
+        //             this.setState({Child_ece_Email_1:'kelly.abraham@best-start.org', 
+        //             Child_ece_Telephone_1: '068710841', 
+        //             Child_ece_Mobile_1: '068565798'});
+        //         }
+        //     }
+        // }
     }
 
     render() {
         const { step } = this.state;
+          
         const { 
             clientNumber,
             title,
