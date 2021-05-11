@@ -186,9 +186,13 @@ export class FormIncomeDetails extends Component {
                                         labelPlacement="end"
                                         onChange={handleChange('jointPartnerWhere1')}
                                         defaultValue={values.incomeWagesSalary}
+                                        onClick={() => this.setState({ showing3: !showing3 })}
                                     />
                                 </RadioGroup>
                             </FormControl><br></br>
+                            { showing3 ?
+                                <div class="question">
+
                             <Grid container spacing={75}>
 
 
@@ -223,8 +227,10 @@ export class FormIncomeDetails extends Component {
                                     </Select>
 
                                 </Grid>
-
-                            </Grid><br></br>
+                                    
+                            </Grid>
+                             </div> : null }
+                            <br></br>
 
                             <FormControl component="fieldset">
                                 <FormLabel component="legend">Paid parental leave</FormLabel>
@@ -328,6 +334,9 @@ export class FormIncomeDetails extends Component {
                                         labelPlacement="end"
                                         onChange={handleChange('incomeInsurance')}
                                         defaultValue={values.incomeInsurance}
+                                        onClick={() => this.setState({ showing2: !showing2 })}
+
+
                                     />
                                     <FormControlLabel
                                         value="incomeInsurance"
@@ -336,9 +345,15 @@ export class FormIncomeDetails extends Component {
                                         labelPlacement="end"
                                         onChange={handleChange('jointPartnerWhere2')}
                                         defaultValue={values.incomeInsurance}
+                                        onClick={() => this.setState({ showing2: !showing2 })}
+
                                     />
                                 </RadioGroup>
-                            </FormControl><br></br><Grid container spacing={24}>
+                            </FormControl><br></br>
+                            { showing2 ?
+                                <div class="question">
+                            
+                            <Grid container spacing={24}>
 
 
 <Grid item xs={4}>
@@ -374,7 +389,7 @@ export class FormIncomeDetails extends Component {
 </Grid>
 
 </Grid><br></br>
-
+</div> : null }
                             
                             <FormControl component="fieldset">
                                 <FormLabel component="legend">Farm or business income</FormLabel>
