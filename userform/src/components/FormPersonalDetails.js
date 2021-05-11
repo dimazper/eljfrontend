@@ -184,7 +184,7 @@ export class FormPersonalDetails extends Component {
                     control={<Checkbox color="primary" />}
                     onChange={handleChange('ccAssistanceReason')}
                     defaultValue={values.ccAssistanceReason}
-                    label="another reason"
+                    label="Another reason"
                     labelPlacement="end"
                     />
                     <TextareaAutosize aria-label="minimum height" rowsMin={3} placeholder="" />
@@ -288,6 +288,7 @@ export class FormPersonalDetails extends Component {
 <FormControl component="fieldset">
 <RadioGroup row aria-label="position" name="position" defaultValue="no" row>
 <FormControlLabel
+style={styles.input}
 value="no"
 control={<Radio color="primary" />}
 label="No"

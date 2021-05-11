@@ -54,6 +54,7 @@ export class ElsFormUserDetails extends Component {
             });
         })
         .catch(err => {})
+        
 
     }
 
@@ -83,10 +84,12 @@ export class ElsFormUserDetails extends Component {
     render() { 
         const { values, handleChange } = this.props;
         const { classes } = this.props;
+        const rowLen = this.state.ece.length;
         // console.log(this.ece.Child_ece_hourly_fee_1);
         // var a = parseInt(this.ece.Child_ece_hourly_fee_1);
         // var b = parseInt(this.ece.Child_ece_hrs_care_1);
         // var tot = a*b;
+        console.log('row output '+rowLen);
         return (  
             
             <MuiThemeProvider>
