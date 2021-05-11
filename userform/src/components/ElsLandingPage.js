@@ -137,6 +137,7 @@ export class ElsLandingPage extends Component {
            <div class="column">
               <div class="cardLanding">
                  <h3>In Progress</h3>
+                 
                     <p><Modal2/>
                     
                     

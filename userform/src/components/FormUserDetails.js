@@ -129,6 +129,7 @@ export class FormUserDetails extends React.Component {
                         <RadioGroup
                             aria-label="gender"
                             name="gender2"
+                            
                             className={classes.group}
                             // value={this.state.value}
                             // onChange={this.handleChange}
@@ -248,8 +249,8 @@ export class FormUserDetails extends React.Component {
                         <RadioGroup
                             className={classes.group}
                             aria-label="gender"
-                            name="gender2"
-                            defaultValue="yes"
+                            // name="position"
+                            defaultValue="Yes"
                             // className={classes.group}
                             // value={this.state.value}
                             // onChange={this.handleChange}
@@ -347,6 +348,8 @@ export class FormUserDetails extends React.Component {
                             className={classes.group}
                             value={this.state.value}
                             onChange={this.handleChange}
+                            defaultValue="No"
+
                         >
                             <FormControlLabel
                             value="No"
@@ -644,6 +647,8 @@ export class FormUserDetails extends React.Component {
                             className={classes.group}
                             value={this.state.value}
                             onChange={this.handleChange}
+                            defaultValue="No"
+
                         >
                             <FormControlLabel
                             value="No"
