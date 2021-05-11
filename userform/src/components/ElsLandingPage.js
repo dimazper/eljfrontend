@@ -21,6 +21,8 @@ import Child1 from '../assets/kids5.png';
 
 import Leaves3 from '../assets/bg3.png';
 import Header from "./Header";
+import Modal from './modal';
+import Modal2 from './modal2';
 
 
 
@@ -136,8 +138,10 @@ export class ElsLandingPage extends Component {
            <div class="column">
               <div class="cardLanding">
                  <h3>In Progress</h3>
-                    <p>Application: 2
-                       (ELS Supervisor)
+                    <p><Modal2/>
+                    
+                    
+                       
                        <br></br>
                        <br></br>
                        <br></br>
