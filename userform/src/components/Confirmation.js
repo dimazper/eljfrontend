@@ -201,8 +201,6 @@ export class Confirm extends Component {
         e.preventDefault();
         //Process Form//
         
-        console.log("test")
-        
         const axios = require('axios')
         var body = {
             clientNumber: this.props.values.clientNumber,
