@@ -21,7 +21,6 @@ import Child1 from '../assets/kids5.png';
 
 import Leaves3 from '../assets/bg3.png';
 import Header from "./Header";
-import Modal from './modal';
 import Modal2 from './modal2';
 
 
