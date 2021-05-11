@@ -22,8 +22,8 @@ body {
       255,
       255
     ); /*Default bg, similar to the background's base color*/
-    background-image: url("../assets/kid1.png"); 
-    background-position: right; 
+    background-image: url("../assets/kids4.png"); 
+    background-position: bottom-right; 
     background-repeat: no-repeat;
   
 }
