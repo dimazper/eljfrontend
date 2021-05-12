@@ -73,11 +73,12 @@ export class ElsLandingPage extends Component {
         return (<div class="coloumn">
         <Header/>
         
-     
+      
         <br></br>
         {/* <h1 id='title'>Childcare Assistance Application <FontAwesomeIcon color='blue' icon={faChild}/></h1>   */}
         
         <div class="cardBannerTitle">
+           
         <h1 id='title'>Childcare Assistance Application</h1>
         <br></br>
         <h3>New Application</h3>
