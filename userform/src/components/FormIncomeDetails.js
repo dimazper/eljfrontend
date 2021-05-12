@@ -60,7 +60,7 @@ export class FormIncomeDetails extends Component {
     state = {
         showing2: false,
         showing3: false,
-        showing4: true,
+        showing4: false,
         namePrefer: ''
 
     };
@@ -819,10 +819,14 @@ export class FormIncomeDetails extends Component {
                                         labelPlacement="end"
                                         onChange={handleChange('otherTypeOfPayment')}
                                         defaultValue={values.otherTypeOfPayment}
+                                        onClick={() => this.setState({ showing4: !showing4 })}
+
                                     />
                                 </RadioGroup>
                             </FormControl>
-                            <br></br><br></br>
+                            <br></br>
+                            { showing4 ?
+                                <div class="question"><br></br>
                             <Grid container spacing={24}>
 
 
@@ -855,6 +859,7 @@ export class FormIncomeDetails extends Component {
 </Grid>
 
 </Grid><br></br>
+</div> : null }
 <br></br>
 <div class="column">
         <div class="cardButtonLeft">

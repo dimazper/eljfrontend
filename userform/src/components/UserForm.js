@@ -7,6 +7,8 @@ import Confirm from './Confirm';
 import Success from './Success';
 import FormDependentChildren from './FormDependentChildren';
 import Confirmation from './Confirmation';
+import FormPartnerDetails from './FormPartnerDetails';
+
 
 
 export class  UserForm extends Component {
@@ -172,11 +174,11 @@ export class  UserForm extends Component {
         whichChildOSCAR_2:'',
         whichChildOSCAR_3:'',
         whichChildOSCAR_4:'',
-        understandRelationship:'',
+        understandRelationship:'Yes',
         hasPartner:'',
         partnerFullName:'',
         partnerDOB:'',
-        relationshipStatus:'',
+        relationshipStatus:'No',
         p_clientNumber:'',
         p_title:'',
         p_firstName:'',
@@ -1047,6 +1049,15 @@ export class  UserForm extends Component {
                         );
                         
                     case 5:
+                            return(
+                                <FormPartnerDetails 
+                                    nextStep={this.nextStep}
+                                    prevStep={this.prevStep}
+                                    handleChange={this.handleChange}
+                                    values={values} 
+                                />
+                            );
+                    case 6:
                         return(
                             <Confirm
                                 nextStep={this.nextStep}
@@ -1060,7 +1071,7 @@ export class  UserForm extends Component {
                             />
                         );
 
-                     case 6:
+                     case 7:
                             return(
                                 <Confirmation
                                     nextStep={this.nextStep}
