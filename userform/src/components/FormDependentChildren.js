@@ -33,6 +33,8 @@ import ComboBox from './ComboBox';
 import Accordion from './Accordion';
 // import ProgressBar from './ProgressBar';
 import './LandingPage.css';
+import Header from './Header';
+
 
 import { faCircle, faDotCircle, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import ReactPaginate from 'react-paginate';
@@ -349,7 +351,7 @@ export class FormDependentChildren extends Component {
         
         return (          
             <MuiThemeProvider id='title'> 
-                <HeaderForm/>                        
+                <Header/>                        
             <React.Fragment>
 
                 {/* <ProgressBar

@@ -25,6 +25,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
 import Grid from '@material-ui/core/Grid';
+import Header from './Header';
+
 
 
 // Import React Progress Bar
@@ -85,7 +87,7 @@ export class FormIncomeDetails extends Component {
 
         return (
             <MuiThemeProvider id='title'>
-                <HeaderForm />
+                <Header/>
                 <React.Fragment>
 
                     {/* <ProgressBar

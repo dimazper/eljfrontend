@@ -42,6 +42,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import Leaves from '../assets/bg.png';
 import { ProgressBar, Step } from "react-step-progress-bar";
+import Header from './Header';
+
 
 
 export class FormUserDetails extends React.Component {
@@ -72,7 +74,7 @@ export class FormUserDetails extends React.Component {
         
         return (          
             <MuiThemeProvider id='title'> 
-                <HeaderForm/>                    
+                <Header/>                    
             <React.Fragment>
             
 

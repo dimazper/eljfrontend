@@ -17,6 +17,8 @@ import NavigationIcon from '@material-ui/icons/Navigation';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Leaves from '../assets/bg.png';
+import Header from './Header';
+
 
 
 
@@ -630,7 +632,7 @@ export class Confirm extends Component {
 
         return (  
             <MuiThemeProvider>
-                <HeaderForm/>
+                <Header/>
                 <React.Fragment>
                     {/* <AppBar title="Confirm User Data" /> */}
 

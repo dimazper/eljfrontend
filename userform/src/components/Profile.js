@@ -14,6 +14,7 @@ import Select from '@material-ui/core/Select';
 import FormLabel from '@material-ui/core/FormLabel';
 import InputLabel from '@material-ui/core/InputLabel';
 import axios from 'axios';
+import Header from './Header';
 
 
 
@@ -53,7 +54,7 @@ export class Profile extends Component {
 
         return (  
             <MuiThemeProvider>
-                <HeaderForm/> 
+                <Header/> 
                 <React.Fragment>
                 <div>
             {this.state.ccs.map((ccs) =>  (

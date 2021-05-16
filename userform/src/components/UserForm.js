@@ -8,6 +8,7 @@ import Success from './Success';
 import FormDependentChildren from './FormDependentChildren';
 import Confirmation from './Confirmation';
 import FormPartnerDetails from './FormPartnerDetails';
+import FormChecklist from './FormChecklist';
 
 
 
@@ -1014,13 +1015,21 @@ export class  UserForm extends Component {
             switch(step) {
                 case 1:
                     return(
-                        <FormUserDetails
+                        <FormChecklist
                             nextStep={this.nextStep}
                             handleChange={this.handleChange}
                             values={values} 
                         />
                     );
                 case 2:
+                    return(
+                        <FormUserDetails
+                            nextStep={this.nextStep}
+                            handleChange={this.handleChange}
+                            values={values} 
+                        />
+                    );
+                case 3:
                     return(
                         <FormPersonalDetails
                             nextStep={this.nextStep}
@@ -1029,7 +1038,7 @@ export class  UserForm extends Component {
                             values={values} 
                         />
                     );
-                    case 3:
+                    case 4:
                         return(
                             <FormIncomeDetails
                                 nextStep={this.nextStep}
@@ -1038,7 +1047,7 @@ export class  UserForm extends Component {
                                 values={values} 
                             />
                         );
-                    case 4:
+                    case 5:
                         return(
                             <FormDependentChildren
                                 nextStep={this.nextStep}
@@ -1048,7 +1057,7 @@ export class  UserForm extends Component {
                             />
                         );
                         
-                    case 5:
+                    case 6:
                             return(
                                 <FormPartnerDetails 
                                     nextStep={this.nextStep}
@@ -1057,7 +1066,7 @@ export class  UserForm extends Component {
                                     values={values} 
                                 />
                             );
-                    case 6:
+                    case 7:
                         return(
                             <Confirm
                                 nextStep={this.nextStep}
@@ -1071,7 +1080,7 @@ export class  UserForm extends Component {
                             />
                         );
 
-                     case 7:
+                     case 8:
                             return(
                                 <Confirmation
                                     nextStep={this.nextStep}
