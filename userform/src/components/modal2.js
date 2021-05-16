@@ -62,7 +62,7 @@ export default function CustomizedDialogs() {
   return (
     <div>
       <Button  color="primary" onClick={handleClickOpen}>
-      <p>Application: 000000002      </p><br></br>
+      <p>Timmy Robson (000000002)      </p><br></br>
                        
       </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
@@ -71,16 +71,17 @@ export default function CustomizedDialogs() {
         </DialogTitle>
         <DialogContent dividers>
         <Typography gutterBottom>
-            Application: 000000002
+            <h3>Application: 000000002            </h3>
           </Typography>
           <Typography gutterBottom>
-            Child name: Timmy Robson
+            <p><b>Child name:</b> Timmy Robson         </p>
           </Typography>
           <Typography gutterBottom>
-            Status: With ELS provider
+            <p><b>Status:</b> With ELS provider         </p>
+            <p><b>Provider: </b>Best Start - Petone</p>
           </Typography>
           <Typography gutterBottom>
-            Submitted: 11/05/2021
+            <p><b>Submitted:</b> 11/05/2021             </p>
           </Typography>
         </DialogContent>
         <DialogActions>

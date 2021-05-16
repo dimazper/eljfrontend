@@ -40,6 +40,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import Leaves from '../assets/bg.png';
 import { ProgressBar, Step } from "react-step-progress-bar";
+import Header from './Header';
+
 
 
 
@@ -72,7 +74,7 @@ export class FormPersonalDetails extends Component {
 
         return (          
             <MuiThemeProvider id='title'> 
-                <HeaderForm/>                        
+                <Header/>                        
             <React.Fragment>
 
                 {/* <ProgressBar
@@ -97,7 +99,7 @@ export class FormPersonalDetails extends Component {
                     </div>
                           
                     <div class="card">
-                    <h1>Tell us about your work, education and activies</h1>
+                    <h1>Checklist</h1>
                     <br></br>
                     <br></br>
                     <ProgressBar percent={51}>
