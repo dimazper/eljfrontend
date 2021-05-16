@@ -13,19 +13,17 @@ body {
 }
 
 .elslanding {
-
-    margin: 0;
-    margin-top: 10;
-    margin-bottom: 0px;
-    background-color: rgb(
-      255,
-      255,
-      255
-    ); /*Default bg, similar to the background's base color*/
-    background-image: url("../assets/kids4.png"); 
-    background-position: bottom-right; 
-    background-repeat: no-repeat;
-  
+  margin: 0;
+  margin-top: 10;
+  margin-bottom: 0px;
+  background-color: rgb(
+    255,
+    255,
+    255
+  ); /*Default bg, similar to the background's base color*/
+  background-image: url("../assets/kids4.png");
+  background-position: bottom-right;
+  background-repeat: no-repeat;
 }
 ul.topnav {
   list-style-type: none;
@@ -131,8 +129,8 @@ body {
   background-color: #f1f1f100;
   width: 900px;
   box-sizing: inherit;
- }
- .cardSuperform {
+}
+.cardSuperform {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 10px;
   margin-left: 200px;
@@ -140,11 +138,9 @@ body {
   background-color: #f1f1f17c;
   width: 900px;
   box-sizing: inherit;
- }
+}
 
- 
-
- .logincard {
+.logincard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 16px;
   margin-top: 15px;
@@ -165,17 +161,41 @@ body {
   box-sizing: inherit;
 }
 
-.cardLanding {
+.containerForLanding {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0);
+  padding: 16px;
+  margin-top: -10px;
+  margin-left: 400px;
+  text-align: left;
+  background-color: #ffffffaf;
+  width: 900px;
+  box-sizing: inherit;
+}
+
+.cardLanding1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 20px;
   text-align: left;
-  background-color: #e2e2e2ee;
-  width: 500px;
+  background-color: #f1f1f1;
+  width: 400px;
   height: 350px;
-  margin-top: 100px;
-  margin-left: 20px;
+  /* margin-left: 0px; */
   box-sizing: inherit;
-  margin-top: 20px;
+  /* margin-top: 110px; */
+  float: left;
+}
+
+.cardLanding2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 20px;
+  text-align: left;
+  background-color: #f1f1f1;
+  width: 400px;
+  height: 350px;
+  /* margin-left: 20px; */
+  box-sizing: inherit;
+  /* margin-top: 109px; */
+  float: right;
 }
 
 .cardBanner {
@@ -227,23 +247,30 @@ body {
   height: 200px;
   margin-top: -110px;
   /* margin-left: 32px; */
-  margin-left: 20px;
+  margin-left: 6px;
   box-sizing: inherit;
   background-position: right top;
 }
 
 .cardLeaves3 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  position: absolute;
+  right: 30px;
+  bottom: -600px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 20px;
   text-align: right;
-  background-color: #ffffff00;
-  width: 1617px;
+  background-color: #f30a0afa;
+  width: 0px;
   height: 200px;
-  margin-top: -200px;
-  /* margin-left: 32px; */
-  margin-right: 1px;
+  margin-top: 300px;
+  margin-left: 1300px;
   box-sizing: inherit;
-  background-position: right top;
+  background-position: right bottom; */
+}
+
+.wrap {
+  background-position: right bottom;
+  background-image: url("../assets/kids3.png");
 }
 
 .cardButtonLeft {
@@ -288,6 +315,16 @@ body {
   background-color: #66626230;
 }
 
+.cardReview {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 30px;
+  margin-left: 400px;
+  text-align: center;
+  background-color: #66626230;
+  width: 900px;
+  box-sizing: inherit;
+}
+
 .yourSuperform {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 15px;
@@ -329,16 +366,6 @@ body {
   margin: 100px;
   text-align: left;
   background-color: #f1f1f100;
-  width: 900px;
-  box-sizing: inherit;
-}
-
-.cardReview {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
-  padding: 30px;
-  margin-left: 400px;
-  text-align: center;
-  background-color: #66626230;
   width: 900px;
   box-sizing: inherit;
 }
