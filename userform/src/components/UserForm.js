@@ -34,12 +34,12 @@ export class  UserForm extends Component {
         streetName:'',
         suburb:'',
         townCity:'',
-        mailaddress:'',
+        mailaddress:'No',
         mailingAddr:'',
         homePhone:'',
         mobPhone:'',
         otherPhone:'',
-        email:'',
+        email:'No',
         getEmails:'',
         ethnicGroup:'',
         ethnicity:'',
@@ -49,10 +49,10 @@ export class  UserForm extends Component {
         dateArrived:'',
         countryOfBirth:'',
         ccAssistanceReason:'',
-        isWorking:'',
-        workRelatedCourse:'',
-        activities:'',
-        medicalReason:'',
+        isWorking:'No',
+        workRelatedCourse:'No',
+        activities:'No',
+        medicalReason:'No',
         employerName:'',
         employerAddr:'',
         employerPhone:'',
@@ -177,7 +177,7 @@ export class  UserForm extends Component {
         whichChildOSCAR_3:'',
         whichChildOSCAR_4:'',
         understandRelationship:'Yes',
-        hasPartner:'',
+        hasPartner:'No',
         partnerFullName:'',
         partnerDOB:'',
         relationshipStatus:'No',
@@ -293,7 +293,7 @@ export class  UserForm extends Component {
         p_other52weeksValue5 :'',
         childcareSubsidy :'',
         oscarSubsidy:'',
-        paidParentalLeave:'',
+        paidParentalLeave:'No',
         Child_ece_Id_1: '',
         Child_ece_CCS_OSCAR_1:'',
         Child_ece_Org_Name_1:'',
@@ -1018,6 +1018,7 @@ export class  UserForm extends Component {
                     return(
                         <FormChecklist
                             nextStep={this.nextStep}
+                            prevStep={this.prevStep}
                             handleChange={this.handleChange}
                             values={values} 
                         />
@@ -1026,6 +1027,7 @@ export class  UserForm extends Component {
                     return(
                         <FormUserDetails
                             nextStep={this.nextStep}
+                            prevStep={this.prevStep}
                             handleChange={this.handleChange}
                             values={values} 
                         />

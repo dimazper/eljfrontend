@@ -99,7 +99,7 @@ export class FormUserDetails extends React.Component {
                     <h1>Tell us about yourself </h1>
                     <br></br>
                     <br></br>
-                    <ProgressBar percent={26}>
+                    <ProgressBar percent={0}>
   <Step>
     {({ accomplished, index }) => (
       <div
@@ -1228,11 +1228,11 @@ export class FormUserDetails extends React.Component {
                             <TextField 
                             style={styles.input}
                             type='date'
-                            hintText="Date citizenship granted" //hfgfg
+                            // hintText="Date citizenship granted" //hfgfg
                             floatingLabelText="Date citizenship granted"
                             onChange={handleChange('dateGranted')}
                             defaultValue={values.dateGranted}
-                            label="Date citizenship granted"
+                            // label="Date citizenship granted"
                                 variant="outlined"
                                 id="mui-theme-provider-outlined-input"
                                 />
@@ -1253,11 +1253,11 @@ export class FormUserDetails extends React.Component {
                             <TextField 
                             style={styles.input}
                             type='date'
-                            hintText="Date permanent residence granted" //hfgfg
+                            // hintText="Date permanent residence granted" //hfgfg
                             floatingLabelText="Date permanent residence granted"
                             onChange={handleChange('dateGranted')}
                             defaultValue={values.dateGranted}
-                            label="Date permanent residence granted"
+                            // label="Date permanent residence granted"
                                 variant="outlined"
                                 id="mui-theme-provider-outlined-input"
                                 />
@@ -1265,7 +1265,7 @@ export class FormUserDetails extends React.Component {
                             </div> : null }
 
                             <FormControlLabel className='question' onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary"/>} labelPlacement="end"
-                            value="Other"
+                            // value="Other"
                             control={<Radio color="primary" />}
                             label="Other"
                             labelPlacement="end"

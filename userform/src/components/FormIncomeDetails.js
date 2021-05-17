@@ -114,7 +114,7 @@ export class FormIncomeDetails extends Component {
                             <h1>Tell us about your income and assets</h1>
                             <br></br>
                             <br></br>
-                            <ProgressBar percent={75}>
+                            <ProgressBar percent={50}>
   <Step>
     {({ accomplished, index }) => (
       <div

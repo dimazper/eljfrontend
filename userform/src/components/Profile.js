@@ -15,6 +15,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import InputLabel from '@material-ui/core/InputLabel';
 import axios from 'axios';
 import Header from './Header';
+import Fab from '@material-ui/core/Fab';
 
 
 
@@ -48,6 +49,11 @@ export class Profile extends Component {
         })
         .catch(err => {})
     }
+
+    back = e => {
+        e.preventDefault();
+        window.location.href='/landing';
+    }; 
 
     render() { 
         const { values, handleChange } = this.props;
@@ -249,6 +255,20 @@ export class Profile extends Component {
                     
 
                     </Grid><br></br>
+
+                    <div class="column">
+        <div class="cardButtonLeft">
+        <Fab
+          variant="extended"
+          size="medium"
+          color="primary"
+          aria-label="Add"
+          onClick={this.back} style={styles.button}
+        >
+          Save and Exit
+        </Fab>
+        </div>      
+        </div>
 
                    
 

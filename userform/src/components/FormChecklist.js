@@ -56,12 +56,12 @@ export class FormChecklist extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
-    }
+    };
 
-    back = e => {
-        e.preventDefault();
-        this.props.prevStep();
-    }; 
+    // back = e => {
+    //     e.preventDefault();
+    //     this.props.prevStep();
+    // }; 
     
     render() { 
         const { values, handleChange } = this.props;
@@ -148,17 +148,33 @@ export class FormChecklist extends Component {
                     
                     <br></br>
 
-
-
-        <div class="column">
-        <div class="cardButtonRight">
+                    {/* <div class="column">
+        <div class="cardButtonLeft">
         <Fab
           variant="extended"
           size="medium"
           color="primary"
           aria-label="Add"
           className={classes.margin}
-          onClick={this.continue} style={styles.button}
+          onClick={this.back} style={styles.button}
+        >
+          Back
+        </Fab>
+        </div>      
+        </div> */}
+
+
+
+<div class="column">
+        <div class="cardButtonRightCheckList">
+        <Fab
+          variant="extended"
+          size="medium"
+          color="primary"
+          aria-label="Add"
+          className={classes.margin}
+          onClick={this.continue} 
+          style={styles.button}
         >
           Next
         </Fab>

@@ -375,7 +375,7 @@ export class FormDependentChildren extends Component {
                     <h1>Tell us about your dependent children</h1>
                     <br></br>
                     <br></br>
-                    <ProgressBar percent={100}>
+                    <ProgressBar percent={75}>
   <Step>
     {({ accomplished, index }) => (
       <div
@@ -539,7 +539,7 @@ export class FormDependentChildren extends Component {
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="no"
                             control={<Radio color="primary" />}
-                            label="None of my childrenne of my children"
+                            label="None of my children of my children"
                             labelPlacement="end"
                             onChange={handleChange('childReceive20Hrs')}
                             defaultValue={values.childReceive20Hrs}
@@ -651,7 +651,25 @@ export class FormDependentChildren extends Component {
 
                   <p class="question">Which childcare service/s does the child get 20 Hours ECE from?</p>
                     <FormGroup aria-label="position" coloumn>
-                    <TextField 
+
+                    <Autocomplete
+                      id="combo-box-demo"
+                      options={school}
+                      getOptionLabel={(option) => option.Child_ece_Org_Name_1}
+                      defaultValue={school.find(v => v.Child_ece_Org_Name_1 == values.Child_ece_Org_Name_1)}
+                      onChange={this.onSelectedEceChange}
+                      value={this.state.selectedEce.Child_ece_Org_Name_1}
+                      onSelect={
+                        handleChange('Child_ece_Org_Name_1')
+                      }
+                      style={{ width: 300 }}
+                      renderInput={(params) => <TextField {...params} label="List of Childcare Services" variant="outlined" 
+                      />}
+                      // onChange={handleChange('Child_ece_Email_1')}
+                      // defaultValue={values.Child_ece_Email_1}                     
+                    /> 
+                      
+                    {/* <TextField 
                     style={styles.input}
                        hintText="childcare service/s" //hfgfg
                        floatingLabelText="childcare service/s"
@@ -660,7 +678,7 @@ export class FormDependentChildren extends Component {
                        label="childcare service/s"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"
-                        />
+                        /> */}
                     <br></br>
                   </FormGroup>
 
