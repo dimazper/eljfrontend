@@ -295,6 +295,17 @@ body {
   margin-top: 20px;
 }
 
+.cardButtonRightCheckList {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 20px;
+  text-align: right;
+  background-color: #ffffff00;
+  width: 500px;
+  margin-left: 400px;
+  box-sizing: inherit;
+  margin-top: 20px;
+}
+
 .cardButtonLeftConfirm {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 20px;
@@ -456,6 +467,14 @@ div {
   text-align: center;
 }
 
+.container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2d74da;
+  text-align: center;
+}
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: rgb(255, 255, 255);

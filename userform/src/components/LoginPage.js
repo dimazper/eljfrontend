@@ -6,6 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import HeaderForm from './HeaderForm';
 import Fab from '@material-ui/core/Fab';
+import Header from './Header';
 // import { UserForm } from './components/UserForm';
 
 export class LoginPage extends Component {

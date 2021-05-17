@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import Header from "./Header";
 import { List, ListItem } from 'material-ui/List';
 import Fab from '@material-ui/core/Fab';
+import HeaderForm from './HeaderForm';
 
 const MyButton = styled(Button)({
   background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -38,7 +39,7 @@ export class Placeholder extends Component {
     render() { 
         return (  
             <MuiThemeProvider>
-            <Header/>
+            <HeaderForm/>
                 <React.Fragment>
                 <List> 
                 <div class="cardReview">

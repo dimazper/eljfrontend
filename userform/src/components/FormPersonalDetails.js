@@ -99,10 +99,10 @@ export class FormPersonalDetails extends Component {
                     </div>
                           
                     <div class="card">
-                    <h1>Checklist</h1>
+                    <h1>Tell us about your work, education and activities</h1>
                     <br></br>
                     <br></br>
-                    <ProgressBar percent={51}>
+                    <ProgressBar percent={25}>
   <Step>
     {({ accomplished, index }) => (
       <div

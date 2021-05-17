@@ -102,7 +102,7 @@ export class FormPartnerDetails extends Component {
                     <h1>Tell us about your relationship status</h1>
                     <br></br>
                     <br></br>
-                    <ProgressBar percent={51}>
+                    <ProgressBar percent={100}>
   <Step>
     {({ accomplished, index }) => (
       <div
