@@ -370,13 +370,17 @@ export class Confirm extends Component {
     oscarSubsidy: this.props.values.oscarSubsidy,
     paidParentalLeave: this.props.values.paidParentalLeave,
     terminationPay: this.props.values.terminationPay,
-            
+  
+       // axios.get('http://54.153.158.95:8000/ccs/',
+    // {headers: {'authorization': 'Token 4a5f71da0b2e237c6765c3363e4f18634769ad41'}})
 
         }
         axios({
             method: 'post',
-            url: 'http://34.230.74.44:8000/ccs/',
-            headers: {'authorization': 'Token 5f1c57dbbe2dbaabe6f8ada1c7f3c0e6dd2e2a35'},
+            url: 'http://54.153.158.95:8000/ccs/',
+            headers: {'authorization': 'Token 4a5f71da0b2e237c6765c3363e4f18634769ad41'},
+            // url: 'http://34.230.74.44:8000/ccs/',
+            // headers: {'authorization': 'Token 5f1c57dbbe2dbaabe6f8ada1c7f3c0e6dd2e2a35'},
             data: body
         })
           .then(function (response) {
