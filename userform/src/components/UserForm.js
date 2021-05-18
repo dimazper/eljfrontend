@@ -348,25 +348,25 @@ export class  UserForm extends Component {
     editStepSection1 = () => {
         const { step } = this.state;
         this.setState({
-            step: step -4
+            step: step -5
         });
     }
     editStepSection2 = () => {
         const { step } = this.state;
         this.setState({
-            step: step -3
+            step: step -4
         });
     }
     editStepSection3 = () => {
         const { step } = this.state;
         this.setState({
-            step: step -2
+            step: step -3
         });
     }
     editStepSection4 = () => {
         const { step } = this.state;
         this.setState({
-            step: step -1
+            step: step -2
         });
     }
 
