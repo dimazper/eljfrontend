@@ -38,7 +38,7 @@ export class InformationPage extends Component {
     render() { 
         return (  
             <MuiThemeProvider>
-            <Header/>
+            {/* <Header/> */}
                 <React.Fragment>
                 <List> 
                 <div class="cardReview">
