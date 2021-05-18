@@ -54,6 +54,8 @@ export class FormDependentChildren extends Component {
         showing2: false ,
         showing3: true,
         showing4: true,
+        showing7: true,
+        showing8: true,
         namePrefer:'',
         selectedEce: []
     };
@@ -90,15 +92,12 @@ export class FormDependentChildren extends Component {
     }
     render() { 
         const { values, handleChange} = this.props;
-        const { showing2,showing3,showing4 } = this.state;
+        const { showing2,showing3,showing4,showing7, showing8 } = this.state;
         const showfirst = values.firstName+" "+values.lastName;
         const showsecond = values.firstNameNOTsame+" "+values.lastNameNOTsame;
         const { classes } = this.props;
         const school = [
-          { Child_ece_Id_1: 55509, Child_ece_CCS_OSCAR_1: 234576548,
-          Child_ece_Org_Name_1:'Best Start Petone', Child_ece_Email_1:'kelly.abraham@best-start.org', Child_ece_Telephone_1: '068710841', Child_ece_Mobile_1: '068565798', 
-          Child_ece_Twenty_Hrs_1:'Yes', Child_ece_HoldingAbsenceFee_1:'No'
-          },
+          
           { Child_ece_Id_1: 25384, Child_ece_CCS_OSCAR_1: 123654378,
           Child_ece_Org_Name_1:'Lollipops', Child_ece_Email_1:'michelle.cribb@eeg.co.nz', Child_ece_Telephone_1: '093651640', Child_ece_Mobile_1:'093778700', 
           Child_ece_Twenty_Hrs_1:'Yes', Child_ece_HoldingAbsenceFee_1:'No'
@@ -267,16 +266,17 @@ export class FormDependentChildren extends Component {
             },		
             {		
             Child_ece_Org_Name_1:'	The Park Early Learning Centre	'
-            },		
-            {		
-            Child_ece_Org_Name_1:'	BestStart Petone	'
-            },		
+            },				
             {		
             Child_ece_Org_Name_1:'	Active Explorers Central City	'
             },		
             {		
             Child_ece_Org_Name_1:'	White Heron Learning Centre - Otara	'
-            },		
+            },	
+            { Child_ece_Id_1: 55509, Child_ece_CCS_OSCAR_1: 234576548,
+              Child_ece_Org_Name_1:'BestStart Petone', Child_ece_Email_1:'kelly.abraham@best-start.org', Child_ece_Telephone_1: '068710841', Child_ece_Mobile_1: '068565798', 
+              Child_ece_Twenty_Hrs_1:'Yes', Child_ece_HoldingAbsenceFee_1:'No'
+              },	
             {		
             Child_ece_Org_Name_1:'	PORSE Hawkes Bay Q2	'
             },		
@@ -347,6 +347,258 @@ export class FormDependentChildren extends Component {
             Child_ece_Org_Name_1:'	BestStart Lytton 	'
             },		
             		        
+        ];
+        const school2 = [
+          
+          { Child_ece_Id_2: 25384, Child_ece_CCS_OSCAR_2: 223654378,
+          Child_ece_Org_Name_2:'Lollipops', Child_ece_Email_2:'michelle.cribb@eeg.co.nz', Child_ece_Telephone_2: '093652640', Child_ece_Mobile_2:'093778700', 
+          Child_ece_Twenty_Hrs_2:'Yes', Child_ece_HoldingAbsenceFee_2:'No'
+          },  
+          {		
+            Child_ece_Org_Name_2:'	Creators@Home - Southland	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Creators@Home - Lower Hutt	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Hikurangi Educare	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Te Kōhanga Reo o Tāwerawera Ki Te Kūao o Taupiri	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Ngongotaha Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Lollipops Britomart	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	PORSE Whangarei S2	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Kids Collective	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Beach Haven Playcentre 	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Eden Early Learning	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Nurtured at Home-Wellington 2	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	PAUA Early Childhood 9	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Folkestone Street Infant & Childcare	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Pongaroa Early Years	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Little Wonders Oanaka	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Bizzy Buddyz (2)	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	BestStart Motutaiko Street	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	BestStart Glasgow Street	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Farmhouse Preschool Patumahoe	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Kids at Home The Bay 3	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Learning Adventures Airport Oaks	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Waiapu Kids - Merivale Whanau Aroha	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	BestStart Redwood 	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Cherrys on Maryhill	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Giggles Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Grasshoppers Early Learning Centre Ltd	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Longford Kindergarten	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Junior Junction	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Te Puawaitanga o Ngati Ruanui ECE	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Adventureland Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	PORSE Otago/Southland Q2	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Learning Links Palmerston	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Little Oaks Pre-School	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Little Monkeys Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Pohutukawa 2 - Standard	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Kidditech Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Oamaru Playcentre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Tutū	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Aubrey Early Learning Centre 	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Superstart Childcare	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	The Miller Nest Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Little Ones Preschool	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Te Kōhanga Reo o Āniwaniwa 	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Cashmere Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Daisies Early Education & Care Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Active Explorers Richmond 	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Creators@Home - Bay of Plenty	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Nurture and Bloom Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Bear Park Centre of Learning	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Waiuku Learning Space	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	PORSE Whanganui S2	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Playway	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Lollipops Educare Albany	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Annabels Kindergarten - Darfield	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	The Park Early Learning Centre	'
+            },				
+            {		
+            Child_ece_Org_Name_2:'	Active Explorers Central City	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	White Heron Learning Centre - Otara	'
+            },	
+            { Child_ece_Id_2: 55509, Child_ece_CCS_OSCAR_2: 234576548,
+              Child_ece_Org_Name_2:'BestStart Petone', Child_ece_Email_2:'kelly.abraham@best-start.org', Child_ece_Telephone_2: '068720842', Child_ece_Mobile_2: '068565798', 
+              Child_ece_Twenty_Hrs_2:'Yes', Child_ece_HoldingAbsenceFee_2:'No'
+              },	
+            {		
+            Child_ece_Org_Name_2:'	PORSE Hawkes Bay Q2	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Elim Christian Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Elim International Kids Early Childhood Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Kidsfirst Kindergartens Hawea	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Havelock North Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Barnardos Early Learning Centre Clendon	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Tots on Triton Early Childhood Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Spring Creek Playcentre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Somerset Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Kowhai Kids Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Learning Days Childcare Limited	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Buckle My Shoe Early Learning Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Ko Te Aroha	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	The Rainbow Corner Early Learning Centre Bayfair	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Annabels Educare - New Brighton	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Learning Adventures Mangorei	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	ELCM Alfriston College 	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Pascals Albany	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Kids Land Educare Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Arrowtown Preschool Cotter Ave	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Country Kidz	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	Maungaarangi Kindergarten and Family Centre	'
+            },		
+            {		
+            Child_ece_Org_Name_2:'	BestStart Lytton 	'
+            },		
+                            
         ];
         
         return (          
@@ -654,13 +906,13 @@ export class FormDependentChildren extends Component {
 
                     <Autocomplete
                       id="combo-box-demo"
-                      options={school}
-                      getOptionLabel={(option) => option.Child_ece_Org_Name_1}
-                      defaultValue={school.find(v => v.Child_ece_Org_Name_1 == values.Child_ece_Org_Name_1)}
+                      options={school2}
+                      getOptionLabel={(option) => option.Child_ece_Org_Name_2}
+                      defaultValue={school.find(v => v.Child_ece_Org_Name_2 == values.Child_ece_Org_Name_2)}
                       onChange={this.onSelectedEceChange}
-                      value={this.state.selectedEce.Child_ece_Org_Name_1}
+                      value={this.state.selectedEce.Child_ece_Org_Name_2}
                       onSelect={
-                        handleChange('Child_ece_Org_Name_1')
+                        handleChange('Child_ece_Org_Name_2')
                       }
                       style={{ width: 300 }}
                       renderInput={(params) => <TextField {...params} label="List of Childcare Services" variant="outlined" 
@@ -730,7 +982,7 @@ export class FormDependentChildren extends Component {
                             value={this.state.value}
                             onChange={this.handleChange}
                         >
-                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                            <FormControlLabel onClick={() => this.setState({ showing8: !showing8 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="None of my children"
                             control={<Radio color="primary" />}
                             label="None of my children"
@@ -740,7 +992,7 @@ export class FormDependentChildren extends Component {
                             />
                                <br></br>
                                
-                    { showing3 ? 
+                    { showing8 ? 
                     <div>  
                     <p class="question">Child 1</p> 
                     <p class="question">Child's Name</p>
@@ -789,7 +1041,7 @@ export class FormDependentChildren extends Component {
                             value={this.state.value}
                             onChange={this.handleChange}
                         >
-                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                            <FormControlLabel onClick={() => this.setState({ showing7: !showing7 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="None of my children"
                             control={<Radio color="primary" />}
                             label="None of my children"
@@ -799,7 +1051,7 @@ export class FormDependentChildren extends Component {
                             />
                                <br></br>
                                
-                    { showing3 ? 
+                    { showing7 ? 
                     <div>  
                     <p class="question">Child 1</p> 
                     <p class="question">Child's Name</p>

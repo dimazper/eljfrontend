@@ -1028,7 +1028,7 @@ export class Confirm extends Component {
                         /> 
                         <ListItem
                         primaryText="Which childcare service/s does the child get 20 Hours ECE from?"
-                        secondaryText={ Child_ECE_Provider_2 }
+                        secondaryText={ Child_ece_Org_Name_2 }
                         /> 
                         <ListItem
                         primaryText="How many hours are received per week in total?"

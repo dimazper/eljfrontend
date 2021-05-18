@@ -52,6 +52,12 @@ export class FormUserDetails extends React.Component {
         showing3: false,
         showing4: true,
         showing5: false,
+        showing6: false,
+        showing7: false,
+        showing8: false,
+        showing9:false,
+        showing13:false,
+        showing12: false,
         namePrefer:'',
     };
 
@@ -66,7 +72,7 @@ export class FormUserDetails extends React.Component {
     
     render() { 
         const { values, handleChange } = this.props;
-        const { showing2,showing3, showing5 } = this.state;
+        const { showing2,showing3, showing5, showing6,showing7,showing8,showing9,showing13 ,showing12} = this.state;
         const showfirst = values.firstName+" "+values.lastName;
         const showsecond = values.firstNameNOTsame+" "+values.lastNameNOTsame;
         const { classes } = this.props;
@@ -490,7 +496,7 @@ export class FormUserDetails extends React.Component {
                             onChange={handleChange('nameToCall')}
                             defaultValue={values.nameToCall}
                             />
-                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                            <FormControlLabel onClick={() => this.setState({ showing6: !showing6 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="Other"
                             control={<Radio color="primary" />}
                             label="Other"
@@ -499,7 +505,7 @@ export class FormUserDetails extends React.Component {
                             defaultValue={values.nameToCall}
                             />
                         
-                { showing3 ?
+                { showing6 ?
                 <div>
                 <FormGroup aria-label="position" coloumn>
                 <p class="question">Write the full name</p> 
@@ -707,7 +713,7 @@ export class FormUserDetails extends React.Component {
                             onChange={handleChange('mailaddress')}
                             defaultValue={values.mailaddress}
                             />
-                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                            <FormControlLabel onClick={() => this.setState({ showing7: !showing7 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="Yes"
                             control={<Radio color="primary" />}
                             label="Yes"
@@ -715,7 +721,7 @@ export class FormUserDetails extends React.Component {
                             onChange={handleChange('mailaddress')}
                             defaultValue={values.mailaddress}
                             />
-                    { showing3 ? 
+                    { showing7 ? 
                     <div>  
                     <FormGroup aria-label="position" coloumn>
                     <p class="question">Tell us your mailing address</p>
@@ -846,7 +852,7 @@ export class FormUserDetails extends React.Component {
                             onChange={handleChange('email')}
                             defaultValue={values.email}
                             />
-                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                            <FormControlLabel onClick={() => this.setState({ showing8: !showing8 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="Yes"
                             control={<Radio color="primary" />}
                             label="Yes"
@@ -854,7 +860,7 @@ export class FormUserDetails extends React.Component {
                             onChange={handleChange('email')}
                             defaultValue={values.email}
                             />
-                    { showing3 ? 
+                    { showing8 ? 
                     <div>  
                     <FormGroup aria-label="position" coloumn>
                     <TextField 
@@ -992,7 +998,7 @@ export class FormUserDetails extends React.Component {
                             onChange={handleChange('ethnicGroup')}
                             defaultValue={values.ethnicGroup}
                             />
-                            <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
+                            <FormControlLabel onClick={() => this.setState({ showing9: !showing9 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="Other"
                             control={<Checkbox color="primary" />}
                             label="Other"
@@ -1001,7 +1007,7 @@ export class FormUserDetails extends React.Component {
                             defaultValue={values.ethnicGroup}
                             />
                             <br></br>
-                            { showing3 ? 
+                            { showing9 ? 
                     <div>  
                     <FormGroup aria-label="position" coloumn>
                     <TextField 
@@ -1214,7 +1220,7 @@ export class FormUserDetails extends React.Component {
                             onChange={handleChange('residenceStatus')}
                             defaultValue={values.residenceStatus}
                             />
-                            <FormControlLabel className='question' onClick={() => this.setState({ showing2: !showing2 })} control={<Checkbox color="primary"/>} labelPlacement="end"
+                            <FormControlLabel className='question' onClick={() => this.setState({ showing12: !showing12 })} control={<Checkbox color="primary"/>} labelPlacement="end"
                             value="Granted Citizenship"
                             control={<Radio color="primary" />}
                             label="Granted New Zealand citizenship"
@@ -1222,7 +1228,7 @@ export class FormUserDetails extends React.Component {
                             onChange={handleChange('residenceStatus')}
                             defaultValue={values.residenceStatus}
                             />
-                            { showing2 ? 
+                            { showing12 ? 
                             <div>  
                             <FormGroup aria-label="position" coloumn>
                             <TextField 
@@ -1264,15 +1270,15 @@ export class FormUserDetails extends React.Component {
                             </FormGroup>
                             </div> : null }
 
-                            <FormControlLabel className='question' onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary"/>} labelPlacement="end"
-                            // value="Other"
+                            <FormControlLabel className='question' onClick={() => this.setState({ showing13: !showing13 })} control={<Checkbox color="primary"/>} labelPlacement="end"
+                            value="Other"
                             control={<Radio color="primary" />}
                             label="Other"
                             labelPlacement="end"
                             onChange={handleChange('residenceStatus')}
                             defaultValue={values.residenceStatus}
                             />
-                    { showing3 ? 
+                    { showing13 ? 
                     <div>  
                     <FormGroup aria-label="position" coloumn>
                     <TextField 
