@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import FetchUser from './components/FetchUser';
 import './App.css';
-import Placeholder from './components/Placeholder';
+import InformationPage from './components/InformationPage';
 
   
 class App extends React.Component {
@@ -31,7 +31,7 @@ class App extends React.Component {
       <div>
             
                         
-        <Placeholder/>
+        <InformationPage/>
            
             
         
