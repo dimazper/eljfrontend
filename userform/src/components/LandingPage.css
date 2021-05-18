@@ -112,14 +112,6 @@ body {
 }
 
 /* Style the counter cards */
-.cardReview2 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
-  padding: 30px;
-  margin-left: 400px;
-  margin-top: -180px;
-  text-align: center;
-  background-color: #66626230;
-}
 
 .yourSuperform {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
@@ -323,6 +315,7 @@ body {
   margin-left: 400px;
   margin-top: -180px;
   text-align: center;
+  width: 900px;
   background-color: #66626230;
 }
 
