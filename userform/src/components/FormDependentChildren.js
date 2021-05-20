@@ -597,8 +597,7 @@ export class FormDependentChildren extends Component {
             },		
             {		
             Child_ece_Org_Name_2:'	BestStart Lytton 	'
-            },		
-                            
+            },		                            
         ];
         
         return (          
@@ -809,6 +808,8 @@ export class FormDependentChildren extends Component {
                        floatingLabelText="Child's Name"
                        onChange={handleChange('Child_ECE_ChildName_1')}
                        defaultValue={values.Child_ECE_ChildName_1 }
+                      //  defaultValue={values.childFullName_1 }
+                      //  label="Child's Name"
                        label="Child's Name"
                         variant="outlined"
                         id="mui-theme-provider-outlined-input"

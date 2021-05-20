@@ -264,176 +264,175 @@ export class Confirm extends Component {
             dateArrived: this.props.values.dateArrived,
             countryOfBirth: this.props.values.countryOfBirth,
             ccAssistanceReason: this.props.values.ccAssistanceReason,
-    isWorking: this.props.values.isWorking,
-    workRelatedCourse: this.props.values.workRelatedCourse,
-    activities: this.props.values.activities,
-    medicalReason: this.props.values.medicalReason,
-    employerName: this.props.values.employerName,
-    employerAddr: this.props.values.employerAddr,
-    employerPhone: this.props.values.employerPhone,
-    employerFaxEmail: this.props.values.employerFaxEmail,
-    hoursPerWeek: this.props.values.hoursPerWeek,
-    hoursTravel: this.props.values.hoursTravel,
-    isWorkRelatedCourse: this.props.values.isWorkRelatedCourse,
-    trainingOrgName: this.props.values.trainingOrgName,
-    trainingOrgAddr: this.props.values.trainingOrgAddr,
-    trainingOrgPhone: this.props.values.trainingOrgPhone,
-    trainingOrgFaxEmail: this.props.values.trainingOrgFaxEmail,
-    employerFaxEmail: this.props.values.employerFaxEmail,
-    nameOfCourse: this.props.values.nameOfCourse,
-    isNZQA: this.props.values.isNZQA,
-    courseStartDate: this.props.values.courseStartDate,
-    courseEndDate: this.props.values.courseEndDate,
-    courseHoursPerWeek: this.props.values.courseHoursPerWeek,
-    otherStudyHoursPerWeek: this.props.values.otherStudyHoursPerWeek,
-    hoursTravelCCtoCourse: this.props.values.hoursTravelCCtoCourse,
-    isArrangedActivities: this.props.values.isArrangedActivities,
-    activityType: this.props.values.activityType,
-    hoursActivity: this.props.values.hoursActivity,
-    hoursTravelCCtoActivity: this.props.values.hoursTravelCCtoActivity,
-    applyForMedicalReasons: this.props.values.applyForMedicalReasons,
-    medicalDurationExpected: this.props.values.medicalDurationExpected,
-    hoursPerWeekNeedCC: this.props.values.hoursPerWeekNeedCC,
-    incomeWagesSalary: this.props.values.incomeWagesSalary,
-    incomePPL: this.props.values.incomePPL,
-    terminationPay: this.props.values.terminationPay,
-    redundancyPay: this.props.values.redundancyPay,
-    acc: this.props.values.acc,
-    incomeInsurance: this.props.values.incomeInsurance,
-    incomeBusiness: this.props.values.incomeBusiness,
-    incomeSelfEmpContract: this.props.values.incomeSelfEmpContract,
-    incomeInterest: this.props.values.incomeInterest,
-    incomeDividends: this.props.values.incomeDividends,
-    incomeRental: this.props.values.incomeRental,
-    incomeFlatmates: this.props.values.incomeFlatmates,
-    incomeChildSup: this.props.values.incomeChildSup,
-    incomeOtherForChild: this.props.values.incomeOtherForChild,
-    incomeMaintenance: this.props.values.incomeMaintenance,
-    incomeFormerPartner: this.props.values.incomeFormerPartner,
-    incomeStudentAllowance: this.props.values.incomeStudentAllowance,
-    incomeOverseasPension: this.props.values.incomeOverseasPension,
-    incomeSuper: this.props.values.incomeSuper,
-    incomeEstate: this.props.values.incomeEstate,
-    incomeTrusts: this.props.values.incomeTrusts,
-    incomeOther: this.props.values.incomeOther,
-    otherTypeOfPayment: this.props.values.otherTypeOfPayment,
-    jointPartnerWhere1: this.props.values.jointPartnerWhere1,
-    jointPartnerWith1: this.props.values.jointPartnerWith1,
-    jointPartnerYou1: this.props.values.jointPartnerYou1,
-    jointPartnerFreq1: this.props.values.jointPartnerFreq1,
-    jointPartnerWhere2: this.props.values.jointPartnerWhere2,
-    jointPartnerWith2: this.props.values.jointPartnerWith2,
-    jointPartnerYou2: this.props.values.jointPartnerYou2,
-    jointPartnerFreq2 : this.props.values.jointPartnerFreq2,
-    jointPartnerWhere3 : this.props.values.jointPartnerWhere3,
-    jointPartnerWith3 : this.props.values.jointPartnerWith3,
-    jointPartnerYou3 : this.props.values.jointPartnerYou3,
-    jointPartnerFreq3 : this.props.values.jointPartnerFreq3,
-    jointPartnerWhere4 : this.props.values.jointPartnerWhere4,
-    jointPartnerWith4 : this.props.values.jointPartnerWith4,
-    jointPartnerYou4 : this.props.values.jointPartnerYou4,
-    jointPartnerFreq4 : this.props.values.jointPartnerFreq4,
-    jointPartnerWhere5 : this.props.values.jointPartnerWhere5,
-    jointPartnerWith5 : this.props.values.jointPartnerWith5,
-    jointPartnerYou5 : this.props.values.jointPartnerYou5,
-    jointPartnerFreq5 : this.props.values.jointPartnerFreq5,
-    other52weeksType1 : this.props.values.other52weeksType1,
-    other52weeksWhere1 : this.props.values.other52weeksWhere1,
-    other52weeksValue1 : this.props.values.other52weeksValue1,
-    other52weeksType2 : this.props.values.other52weeksType2,
-    other52weeksWhere2 : this.props.values.other52weeksWhere2,
-    other52weeksValue2 : this.props.values.other52weeksValue2,
-    other52weeksType3 : this.props.values.other52weeksType3,
-    other52weeksWhere3 : this.props.values.other52weeksWhere3,
-    other52weeksValue3 : this.props.values.other52weeksValue3,
-    other52weeksType4 : this.props.values.other52weeksType4,
-    other52weeksWhere4 : this.props.values.other52weeksWhere4,
-    other52weeksValue4 : this.props.values.other52weeksValue4,
-    other52weeksType5 : this.props.values.other52weeksType5,
-    other52weeksWhere5 : this.props.values.other52weeksWhere5,
-    other52weeksValue5 : this.props.values.other52weeksValue5,
-    childFullName_1: this.props.values.childFullName_1,
-    childDOB_1: this.props.values.childDOB_1,
-    childRelationToYou_1: this.props.values.childRelationToYou_1,
-    childFullName_2: this.props.values.childFullName_2,
-    childDOB_2: this.props.values.childDOB_2,
-    childRelationToYou_2: this.props.values.childRelationToYou_2,
-    childReceive20Hrs: this.props.values.childReceive20Hrs,
-    childFullName_3: this.props.values.childFullName_3,
-    childDOB_3: this.props.values.childDOB_3,
-    childRelationToYou_3: this.props.values.childRelationToYou_3,
-    childFullName_4: this.props.values.childFullName_4,
-    childDOB_4: this.props.values.childDOB_4,
-    childRelationToYou_4: this.props.values.childRelationToYou_4,
-    childFullName_5: this.props.values.childFullName_5,
-    childDOB_5: this.props.values.childDOB_5,
-    childRelationToYou_5: this.props.values.childRelationToYou_5,
-    Child_ECE_ChildName_1: this.props.values.Child_ECE_ChildName_1,
-    Child_ECE_Provider_1: this.props.values.Child_ECE_Provider_1,
-    Child_ECE_WeekTotal_1: this.props.values.Child_ECE_WeekTotal_1,
-    Child_ECE_StartDate_1: this.props.values.Child_ECE_StartDate_1,
-    Child_ECE_ChildName_2: this.props.values.Child_ECE_ChildName_2,
-    Child_ECE_Provider_2: this.props.values.Child_ECE_Provider_2,
-    Child_ECE_WeekTotal_2: this.props.values.Child_ECE_WeekTotal_2,
-    Child_ECE_StartDate_2: this.props.values.Child_ECE_StartDate_2,
-    Child_ECE_ChildName_3: this.props.values.Child_ECE_ChildName_3,
-    Child_ECE_Provider_3: this.props.values.Child_ECE_Provider_3,
-    Child_ECE_WeekTotal_3: this.props.values.Child_ECE_WeekTotal_3,
-    Child_ECE_StartDate_3: this.props.values.Child_ECE_StartDate_3,
-    Child_ECE_ChildName_4: this.props.values.Child_ECE_ChildName_4,
-    Child_ECE_Provider_4: this.props.values.Child_ECE_Provider_4,
-    Child_ECE_WeekTotal_4: this.props.values.Child_ECE_WeekTotal_4,
-    Child_ECE_StartDate_4: this.props.values.Child_ECE_StartDate_4,
-    whichChildCCS_1: this.props.values.whichChildCCS_1,
-    whichChildCCS_2: this.props.values.whichChildCCS_2,
-    whichChildCCS_3: this.props.values.whichChildCCS_3,
-    whichChildCCS_4: this.props.values.whichChildCCS_4,
-    whichChildOSCAR_1: this.props.values.whichChildOSCAR_1,
-    whichChildOSCAR_2: this.props.values.whichChildOSCAR_2,
-    whichChildOSCAR_3: this.props.values.whichChildOSCAR_3,
-    whichChildOSCAR_4: this.props.values.whichChildOSCAR_4,
-    childcareSubsidy: this.props.values.childcareSubsidy,
-    oscarSubsidy: this.props.values.oscarSubsidy,
-    paidParentalLeave: this.props.values.paidParentalLeave,
-    terminationPay: this.props.values.terminationPay,
-    Child_ece_Id_1: this.props.values.Child_ece_Id_1,
-    Child_ece_CCS_OSCAR_1: this.props.values.Child_ece_CCS_OSCAR_1,
-    Child_ece_Org_Name_1: this.props.values.Child_ece_Org_Name_1,
-    Child_ece_Email_1: this.props.values.Child_ece_Email_1,
-    Child_ece_Telephone_1: this.props.values.Child_ece_Telephone_1,
-    Child_ece_Mobile_1: this.props.values.Child_ece_Mobile_1,
-    Child_ece_Twenty_Hrs_1: this.props.values.Child_ece_Twenty_Hrs_1,
-    Child_ece_HoldingAbsenceFee_1: this.props.values.Child_ece_HoldingAbsenceFee_1,
-    Child_ece_hrs_care_1: this.props.values.Child_ece_hrs_care_1,
-    Child_ece_hourly_fee_1: this.props.values.Child_ece_hourly_fee_1,
-    Child_ece_total_weekly_fee_1: this.props.values.Child_ece_total_weekly_fee_1,
-    Child_ece_Id_2: this.props.values.Child_ece_Id_2,
-    Child_ece_CCS_OSCAR_2: this.props.values.Child_ece_CCS_OSCAR_2,
-    Child_ece_Org_Name_2: this.props.values.Child_ece_Org_Name_2,
-    Child_ece_Email_2: this.props.values.Child_ece_Email_2,
-    Child_ece_Telephone_2: this.props.values.Child_ece_Telephone_2,
-    Child_ece_Mobile_2: this.props.values.Child_ece_Mobile_2,
-    Child_ece_Twenty_Hrs_2: this.props.values.Child_ece_Twenty_Hrs_2,
-    Child_ece_HoldingAbsenceFee_2: this.props.values.Child_ece_HoldingAbsenceFee_2,
-    Child_ece_hrs_care_2: this.props.values.Child_ece_hrs_care_2,
-    Child_ece_hourly_fee_2: this.props.values.Child_ece_hourly_fee_2,
-    Child_ece_total_weekly_fee_2: this.props.values.Child_ece_total_weekly_fee_2,
-    
-
+            isWorking: this.props.values.isWorking,
+            workRelatedCourse: this.props.values.workRelatedCourse,
+            activities: this.props.values.activities,
+            medicalReason: this.props.values.medicalReason,
+            employerName: this.props.values.employerName,
+            employerAddr: this.props.values.employerAddr,
+            employerPhone: this.props.values.employerPhone,
+            employerFaxEmail: this.props.values.employerFaxEmail,
+            hoursPerWeek: this.props.values.hoursPerWeek,
+            hoursTravel: this.props.values.hoursTravel,
+            isWorkRelatedCourse: this.props.values.isWorkRelatedCourse,
+            trainingOrgName: this.props.values.trainingOrgName,
+            trainingOrgAddr: this.props.values.trainingOrgAddr,
+            trainingOrgPhone: this.props.values.trainingOrgPhone,
+            trainingOrgFaxEmail: this.props.values.trainingOrgFaxEmail,
+            employerFaxEmail: this.props.values.employerFaxEmail,
+            nameOfCourse: this.props.values.nameOfCourse,
+            isNZQA: this.props.values.isNZQA,
+            courseStartDate: this.props.values.courseStartDate,
+            courseEndDate: this.props.values.courseEndDate,
+            courseHoursPerWeek: this.props.values.courseHoursPerWeek,
+            otherStudyHoursPerWeek: this.props.values.otherStudyHoursPerWeek,
+            hoursTravelCCtoCourse: this.props.values.hoursTravelCCtoCourse,
+            isArrangedActivities: this.props.values.isArrangedActivities,
+            activityType: this.props.values.activityType,
+            hoursActivity: this.props.values.hoursActivity,
+            hoursTravelCCtoActivity: this.props.values.hoursTravelCCtoActivity,
+            applyForMedicalReasons: this.props.values.applyForMedicalReasons,
+            medicalDurationExpected: this.props.values.medicalDurationExpected,
+            hoursPerWeekNeedCC: this.props.values.hoursPerWeekNeedCC,
+            incomeWagesSalary: this.props.values.incomeWagesSalary,
+            incomePPL: this.props.values.incomePPL,
+            terminationPay: this.props.values.terminationPay,
+            redundancyPay: this.props.values.redundancyPay,
+            acc: this.props.values.acc,
+            incomeInsurance: this.props.values.incomeInsurance,
+            incomeBusiness: this.props.values.incomeBusiness,
+            incomeSelfEmpContract: this.props.values.incomeSelfEmpContract,
+            incomeInterest: this.props.values.incomeInterest,
+            incomeDividends: this.props.values.incomeDividends,
+            incomeRental: this.props.values.incomeRental,
+            incomeFlatmates: this.props.values.incomeFlatmates,
+            incomeChildSup: this.props.values.incomeChildSup,
+            incomeOtherForChild: this.props.values.incomeOtherForChild,
+            incomeMaintenance: this.props.values.incomeMaintenance,
+            incomeFormerPartner: this.props.values.incomeFormerPartner,
+            incomeStudentAllowance: this.props.values.incomeStudentAllowance,
+            incomeOverseasPension: this.props.values.incomeOverseasPension,
+            incomeSuper: this.props.values.incomeSuper,
+            incomeEstate: this.props.values.incomeEstate,
+            incomeTrusts: this.props.values.incomeTrusts,
+            incomeOther: this.props.values.incomeOther,
+            otherTypeOfPayment: this.props.values.otherTypeOfPayment,
+            jointPartnerWhere1: this.props.values.jointPartnerWhere1,
+            jointPartnerWith1: this.props.values.jointPartnerWith1,
+            jointPartnerYou1: this.props.values.jointPartnerYou1,
+            jointPartnerFreq1: this.props.values.jointPartnerFreq1,
+            jointPartnerWhere2: this.props.values.jointPartnerWhere2,
+            jointPartnerWith2: this.props.values.jointPartnerWith2,
+            jointPartnerYou2: this.props.values.jointPartnerYou2,
+            jointPartnerFreq2 : this.props.values.jointPartnerFreq2,
+            jointPartnerWhere3 : this.props.values.jointPartnerWhere3,
+            jointPartnerWith3 : this.props.values.jointPartnerWith3,
+            jointPartnerYou3 : this.props.values.jointPartnerYou3,
+            jointPartnerFreq3 : this.props.values.jointPartnerFreq3,
+            jointPartnerWhere4 : this.props.values.jointPartnerWhere4,
+            jointPartnerWith4 : this.props.values.jointPartnerWith4,
+            jointPartnerYou4 : this.props.values.jointPartnerYou4,
+            jointPartnerFreq4 : this.props.values.jointPartnerFreq4,
+            jointPartnerWhere5 : this.props.values.jointPartnerWhere5,
+            jointPartnerWith5 : this.props.values.jointPartnerWith5,
+            jointPartnerYou5 : this.props.values.jointPartnerYou5,
+            jointPartnerFreq5 : this.props.values.jointPartnerFreq5,
+            other52weeksType1 : this.props.values.other52weeksType1,
+            other52weeksWhere1 : this.props.values.other52weeksWhere1,
+            other52weeksValue1 : this.props.values.other52weeksValue1,
+            other52weeksType2 : this.props.values.other52weeksType2,
+            other52weeksWhere2 : this.props.values.other52weeksWhere2,
+            other52weeksValue2 : this.props.values.other52weeksValue2,
+            other52weeksType3 : this.props.values.other52weeksType3,
+            other52weeksWhere3 : this.props.values.other52weeksWhere3,
+            other52weeksValue3 : this.props.values.other52weeksValue3,
+            other52weeksType4 : this.props.values.other52weeksType4,
+            other52weeksWhere4 : this.props.values.other52weeksWhere4,
+            other52weeksValue4 : this.props.values.other52weeksValue4,
+            other52weeksType5 : this.props.values.other52weeksType5,
+            other52weeksWhere5 : this.props.values.other52weeksWhere5,
+            other52weeksValue5 : this.props.values.other52weeksValue5,
+            childFullName_1: this.props.values.childFullName_1,
+            childDOB_1: this.props.values.childDOB_1,
+            childRelationToYou_1: this.props.values.childRelationToYou_1,
+            childFullName_2: this.props.values.childFullName_2,
+            childDOB_2: this.props.values.childDOB_2,
+            childRelationToYou_2: this.props.values.childRelationToYou_2,
+            childReceive20Hrs: this.props.values.childReceive20Hrs,
+            childFullName_3: this.props.values.childFullName_3,
+            childDOB_3: this.props.values.childDOB_3,
+            childRelationToYou_3: this.props.values.childRelationToYou_3,
+            childFullName_4: this.props.values.childFullName_4,
+            childDOB_4: this.props.values.childDOB_4,
+            childRelationToYou_4: this.props.values.childRelationToYou_4,
+            childFullName_5: this.props.values.childFullName_5,
+            childDOB_5: this.props.values.childDOB_5,
+            childRelationToYou_5: this.props.values.childRelationToYou_5,
+            Child_ECE_ChildName_1: this.props.values.Child_ECE_ChildName_1,
+            Child_ECE_Provider_1: this.props.values.Child_ECE_Provider_1,
+            Child_ECE_WeekTotal_1: this.props.values.Child_ECE_WeekTotal_1,
+            Child_ECE_StartDate_1: this.props.values.Child_ECE_StartDate_1,
+            Child_ECE_ChildName_2: this.props.values.Child_ECE_ChildName_2,
+            Child_ECE_Provider_2: this.props.values.Child_ECE_Provider_2,
+            Child_ECE_WeekTotal_2: this.props.values.Child_ECE_WeekTotal_2,
+            Child_ECE_StartDate_2: this.props.values.Child_ECE_StartDate_2,
+            Child_ECE_ChildName_3: this.props.values.Child_ECE_ChildName_3,
+            Child_ECE_Provider_3: this.props.values.Child_ECE_Provider_3,
+            Child_ECE_WeekTotal_3: this.props.values.Child_ECE_WeekTotal_3,
+            Child_ECE_StartDate_3: this.props.values.Child_ECE_StartDate_3,
+            Child_ECE_ChildName_4: this.props.values.Child_ECE_ChildName_4,
+            Child_ECE_Provider_4: this.props.values.Child_ECE_Provider_4,
+            Child_ECE_WeekTotal_4: this.props.values.Child_ECE_WeekTotal_4,
+            Child_ECE_StartDate_4: this.props.values.Child_ECE_StartDate_4,
+            whichChildCCS_1: this.props.values.whichChildCCS_1,
+            whichChildCCS_2: this.props.values.whichChildCCS_2,
+            whichChildCCS_3: this.props.values.whichChildCCS_3,
+            whichChildCCS_4: this.props.values.whichChildCCS_4,
+            whichChildOSCAR_1: this.props.values.whichChildOSCAR_1,
+            whichChildOSCAR_2: this.props.values.whichChildOSCAR_2,
+            whichChildOSCAR_3: this.props.values.whichChildOSCAR_3,
+            whichChildOSCAR_4: this.props.values.whichChildOSCAR_4,
+            childcareSubsidy: this.props.values.childcareSubsidy,
+            oscarSubsidy: this.props.values.oscarSubsidy,
+            paidParentalLeave: this.props.values.paidParentalLeave,
+            terminationPay: this.props.values.terminationPay,
+            Child_ece_Id_1: this.props.values.Child_ece_Id_1,
+            Child_ece_CCS_OSCAR_1: this.props.values.Child_ece_CCS_OSCAR_1,
+            Child_ece_Org_Name_1: this.props.values.Child_ece_Org_Name_1,
+            Child_ece_Email_1: this.props.values.Child_ece_Email_1,
+            Child_ece_Telephone_1: this.props.values.Child_ece_Telephone_1,
+            Child_ece_Mobile_1: this.props.values.Child_ece_Mobile_1,
+            Child_ece_Twenty_Hrs_1: this.props.values.Child_ece_Twenty_Hrs_1,
+            Child_ece_HoldingAbsenceFee_1: this.props.values.Child_ece_HoldingAbsenceFee_1,
+            Child_ece_hrs_care_1: this.props.values.Child_ece_hrs_care_1,
+            Child_ece_hourly_fee_1: this.props.values.Child_ece_hourly_fee_1,
+            Child_ece_total_weekly_fee_1: this.props.values.Child_ece_total_weekly_fee_1,
+            Child_ece_Id_2: this.props.values.Child_ece_Id_2,
+            Child_ece_CCS_OSCAR_2: this.props.values.Child_ece_CCS_OSCAR_2,
+            Child_ece_Org_Name_2: this.props.values.Child_ece_Org_Name_2,
+            Child_ece_Email_2: this.props.values.Child_ece_Email_2,
+            Child_ece_Telephone_2: this.props.values.Child_ece_Telephone_2,
+            Child_ece_Mobile_2: this.props.values.Child_ece_Mobile_2,
+            Child_ece_Twenty_Hrs_2: this.props.values.Child_ece_Twenty_Hrs_2,
+            Child_ece_HoldingAbsenceFee_2: this.props.values.Child_ece_HoldingAbsenceFee_2,
+            Child_ece_hrs_care_2: this.props.values.Child_ece_hrs_care_2,
+            Child_ece_hourly_fee_2: this.props.values.Child_ece_hourly_fee_2,
+            Child_ece_total_weekly_fee_2: this.props.values.Child_ece_total_weekly_fee_2,
+            
     // axios.get('http://54.153.158.95:8000/ccs/',
     // {headers: {'authorization': 'Token 4a5f71da0b2e237c6765c3363e4f18634769ad41'}})
         }
-        axios({
-            method: 'post',
-            url: 'http://54.153.158.95:8000/ccs/',
-            headers: {'authorization': 'Token 4a5f71da0b2e237c6765c3363e4f18634769ad41'},
-
+    axios({
+        method: 'post',
+        url: 'http://54.153.158.95:8000/ccs/',
+        headers: {'authorization': 'Token 4a5f71da0b2e237c6765c3363e4f18634769ad41'},
+            // url: 'http://34.230.74.44:8000/ccs/',
             // headers: {'authorization': 'Token 5f1c57dbbe2dbaabe6f8ada1c7f3c0e6dd2e2a35'},
             data: body
-        })
-          .then(function (response) {
+    })
+        .then(function (response) {
             console.log(response);
-          })
+        })
 
 
         this.props.nextStep();
@@ -632,7 +631,7 @@ export class Confirm extends Component {
             Child_ece_total_weekly_fee_2,
 
              
-         } } = this.props;
+        } } = this.props;
         const { classes } = this.props;
 
         return (  
@@ -641,148 +640,146 @@ export class Confirm extends Component {
                 <React.Fragment>
                     {/* <AppBar title="Confirm User Data" /> */}
 
-                    <div class="cardLeaves">
-                    <img src={Leaves} width="300" height="350" alt="Person"/>
-                    </div>
+                      <div class="cardLeaves">
+                          <img src={Leaves} width="300" height="350" alt="Person"/>
+                      </div>
                     
-                    <List> 
+                  <List> 
                     <div class="cardReview2">
-                    <h1>Review</h1>
-                    {/* <h2>Review</h2> */}
-                    <h2 class="confirm">Personal Details</h2>
+                          <h1>Review</h1>
+                          <h2 class="confirm">Personal Details</h2>
                     <ListItem
                         primaryText="Client Number"
                         secondaryText={ clientNumber }
-                        />
+                    />
                     <ListItem
                         primaryText="Title"
                         secondaryText={ title }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="First Name"
                         secondaryText={ firstName }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Last Name"
                         secondaryText={ lastName }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Name on birth certificate the same as above"
                         secondaryText={ nameOnBirthCert }
-                        />
-                        
-                        <ListItem
+                    />                       
+                    <ListItem
                         primaryText="First name (not same as birth certificate)"
                         secondaryText={ firstNameNOTsame }
-                        />
-                         <ListItem
+                    />
+                    <ListItem
                         primaryText="Last name (not same as birth certificate)"
                         secondaryText={ lastNameNOTsame }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Have you ever been known by any other name?"
                         secondaryText={ knownByOtherName }
-                        />
-                         <ListItem
+                    />
+                    <ListItem
                         primaryText="Other name(s) known by"
                         secondaryText={ nameOtherKnown }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="What name would you like us to call you?"
                         secondaryText={ nameToCall }
-                        />
-                         <ListItem
+                    />
+                    <ListItem
                         primaryText="Preferred name"
                         secondaryText={ namePrefer }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Date of birth"
                         secondaryText={ dob }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Gender"
                         secondaryText={ gender }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Inland Revenue tax number"
                         secondaryText={ irdNumber }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Flat/ House Number"
                         secondaryText={ flatHouseNum }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Street Name"
                         secondaryText={ streetName }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Suburb"
                         secondaryText={ suburb }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Town/City"
                         secondaryText={ townCity }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Is your mailing address different from where you live?"
                         secondaryText={ mailaddress }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Mailing address (if different from where you live)"
                         secondaryText={ mailingAddr }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Home phone"
                         secondaryText={ homePhone }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Mobile phone"
                         secondaryText={ mobPhone }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Other phone"
                         secondaryText={ otherPhone }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Do you agree to get emails from us?"
                         secondaryText={ email }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Email address"
                         secondaryText={ getEmails }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="the group(s) you most identify with"
                         secondaryText={ ethnicGroup }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="the group(s) you most identify with (if you opt for other)"
                         secondaryText={ ethnicity }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Do you usually live in New Zealand?"
                         secondaryText={ usuallyNZ }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Residence status"
                         secondaryText={ residenceStatus }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Date granted"
                         secondaryText={ dateGranted }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="What is your residence status (if you opt for other)?"
                         secondaryText={ residenceStatus }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="The date you arrived in New Zealand"
                         secondaryText={ dateArrived }
-                        />
-                        <ListItem
+                    />
+                    <ListItem
                         primaryText="Country of birth"
                         secondaryText={ countryOfBirth }
-                        /> 
+                    /> 
                         <Fab
                         variant="extended"
                         size="medium"
@@ -793,14 +790,13 @@ export class Confirm extends Component {
                         >
                         Edit
                         </Fab>
-                        </div>
-                        
-                        </List>
+                      </div>      
+                    </List>
 
                         
-                        <List>
+                    <List>
                         <div class="cardReview"> 
-                        <h2 class="confirm">Work, education and activities</h2>       
+                            <h2 class="confirm">Work, education and activities</h2>       
                         <ListItem
                         primaryText="Tell us the reason you or your partner (if you have one) are applying for childcare assistance. Tick all that apply"
                         secondaryText={ ccAssistanceReason }
@@ -832,7 +828,7 @@ export class Confirm extends Component {
                         Edit
                         </Fab>
                         </div>
-                        </List>
+                    </List>
                         
 
                         
