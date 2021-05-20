@@ -260,6 +260,22 @@ body {
   background-position: right bottom; */
 }
 
+.cardLeaves4 {
+  position: absolute;
+  right: 30px;
+  bottom: -40px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 20px;
+  text-align: right;
+  background-color: #f30a0afa;
+  width: 0px;
+  height: 200px;
+  margin-top: 300px;
+  margin-left: 1300px;
+  box-sizing: inherit;
+  background-position: right bottom; */
+}
+
 .wrap {
   background-position: right bottom;
   background-image: url("../assets/kids3.png");
@@ -283,6 +299,17 @@ body {
   background-color: #ffffff00;
   width: 500px;
   margin-left: 20px;
+  box-sizing: inherit;
+  margin-top: 20px;
+}
+
+.cardButtonRightELS {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff00;
+  width: 500px;
+  margin-left: 800px;
   box-sizing: inherit;
   margin-top: 20px;
 }

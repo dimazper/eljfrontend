@@ -38,22 +38,20 @@ export class InformationPage extends Component {
     render() { 
         return (  
             <MuiThemeProvider>
-            {/* <Header/> */}
                 <React.Fragment>
                 <List> 
                 <div class="cardReview">
                     <div class="row">
                         <p><br/></p>
-                        <h2>Childcare Assistance
-application form</h2>
-                        <p>Work and Income may be able to help with assistance towards childcare costs if:  <br></br>
-<br></br>• you’re the main caregiver of the child, and 
-<br></br>• your family is on a low or middle income, and 
+                        <p>Use this application to apply for: <br></br>
+<br></br>• Childcare Subsidy – Payments that help families with the cost of pre-school childcare
+<br></br>• OSCAR Subsidy – Payments for children who are at school and are under 14 years (or under 18 if you get a Child Disability Allowance for them).<br></br>
+<br></br>If you need more information go to workandincome.govt.nz and search on Childcare or call us on 0800 559 009.
+We suggest you read these instructions before you fill in the application, so you get a feel for what’s needed.<br></br><br></br>
+Work and Income may be able to help with assistance towards childcare costs if: <br></br>• you’re the main caregiver of the child, and
+<br></br>• your family is on a low or middle income, and
 <br></br>• you’re a New Zealand citizen or permanent resident, and
 <br></br>• your child has at least three hours of care a week.
-<br></br><br></br>
-
-
 <br></br><br></br>The childcare assistance available to you will depend on your individual situation and the type of childcare your child is enrolled in.
 If you have a 3 or 4 year old child, they may be able to get up to 20 hours of early childhood education (20 Hours ECE) funded by the Government. It will depend on the type of childcare service your child attends and whether they offer 20 hours ECE.</p>                      
                         </div>

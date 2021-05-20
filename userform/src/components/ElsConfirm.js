@@ -31,7 +31,8 @@ export class FormUserDetails extends Component {
                     {/* <h2>Personal Details</h2> */}
                     <ListItem
                         primaryText="A confirmation email has been sent to:"
-                        secondaryText={ Child_ece_Email_1 }
+                        // secondaryText={ Child_ece_Email_1 }
+                        secondaryText="MSD for review"
                         />
                     <ListItem
                         primaryText="Your reference number is:"

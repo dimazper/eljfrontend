@@ -348,7 +348,7 @@ export class ElsFormUserDetails extends Component {
                     
 
                     </Grid><br></br>
-                    <Grid container spacing={24}>
+                    {/* <Grid container spacing={24}>
                    <Grid item xs={4}>
                        <p>Child 2's full name</p>
                     </Grid>
@@ -460,7 +460,7 @@ export class ElsFormUserDetails extends Component {
                     /> 
                     
 
-                    </Grid><br></br><br></br>
+                    </Grid><br></br><br></br> */}
                     <h1>Parent Application Review</h1>
                     <List>
                     
@@ -840,7 +840,8 @@ export class ElsFormUserDetails extends Component {
             )
         )}
       </div>
-
+      <div class="column">
+    <div class="cardButtonRightELS">
       <Fab
           variant="extended"
           size="medium"
@@ -851,6 +852,8 @@ export class ElsFormUserDetails extends Component {
         >
           Submit
         </Fab>
+        </div>
+        </div>
 
                 </React.Fragment>
             </MuiThemeProvider>

@@ -96,8 +96,15 @@ export class LandingPage extends Component {
    </div>
    
 
-   <div class="cardLeaves3">
+   <div class="cardLeaves4">
    <img src={kids5} width="100%" alt="Person"/>
+   <br></br>
+   <br></br> 
+   <br></br>
+   <br></br> 
+   <br></br> 
+   <br></br> 
+   <br></br> 
    </div>
    
 
