@@ -5,6 +5,9 @@ import { List, ListItem } from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton';
 import HeaderForm from './HeaderForm';
 import Fab from '@material-ui/core/Fab';
+import './LandingPage.css';
+import TextField from '@material-ui/core/TextField';
+import FormGroup from '@material-ui/core/FormGroup';
 
 
 export class FormUserDetails extends Component {
@@ -37,13 +40,46 @@ export class FormUserDetails extends Component {
                     <ListItem
                         primaryText="Your reference number is:"
                         secondaryText={ id }
-                        />
+                    />
 
                     <ListItem
+                        primaryText="Supervisor’s statement:"
+                        secondaryText={ id }
+                    />
+
+                    <ListItem
+                        primaryText="• The information I have provided is true and complete."
+                        secondaryText={ id }
+                    />
+
+                    <ListItem
+                        primaryText="• I have authority to complete this form for my organisation."
+                        secondaryText={ id }
+                    />
+
+                    <ListItem
+                        primaryText="Supervisor’s name "
+                        secondaryText={ id }
+                    />
+
+                    <FormGroup aria-label="position" coloumn>                   
+                    <TextField
+                        style={styles.input}
+                        hintText="9 digit Number" //hfgfg
+                        floatingLabelText="Full name "
+                        // onChange={handleChange('clientNumber')}
+                        // defaultValue={values.clientNumber}
+                        label="Full name"
+                        variant="outlined"
+                        id="mui-theme-provider-outlined-input"
+                        />
+                    </FormGroup>
+
+                    {/* <ListItem
                         primaryText="If you have applied for Childcare and Oscar Subsidy, your application has now been sent to ELS and MSD.
                         You don't need to do anything else. ELS or MSD might contact you to discuss your application. ELS or MSD will notify you once your application
                         has been processed "
-                        />
+                        /> */}
                         <Fab
                         variant="extended"
                         size="medium"
