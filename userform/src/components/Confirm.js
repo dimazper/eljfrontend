@@ -968,7 +968,6 @@ export class Confirm extends Component {
                         </div> 
                         </List>
                          
-
                         
                         <List>  
                         <div class="cardReview"> 
@@ -1008,9 +1007,7 @@ export class Confirm extends Component {
                         <ListItem
                         primaryText="Which childcare service/s does the child get 20 Hours ECE from?"
                         // secondaryText={ Child_ECE_Provider_1 }
-                        secondaryText={ Child_ece_Org_Name_1 }
-                        
-
+                        secondaryText={ Child_ece_Org_Name_1 } 
                         /> 
                         <ListItem
                         primaryText="How many hours are received per week in total?"
@@ -1076,7 +1073,7 @@ export class Confirm extends Component {
                     
                     <br/>
 
-                    <div class="column">
+        <div class="column">
         <div class="cardButtonLeftConfirm">
         <Fab
           variant="extended"
@@ -1095,8 +1092,6 @@ export class Confirm extends Component {
         <div class="ButtonLeft">
         </div>
         </div>
-
-
 
         <div class="column">
         <div class="cardButtonRight">
