@@ -450,34 +450,34 @@ export class FormIncomeDetails extends Component {
                                         defaultValue={values.incomeSelfEmpContract}
                                     />
                                 </RadioGroup>
-                            </FormControl><br></br><br></br>
-                            <FormControl component="fieldset">
-                                <FormLabel component="legend">Interest from savings, investments or bonds</FormLabel>
-                                <RadioGroup row aria-label="position" name="position" defaultValue="no" row>
-                                    <FormControlLabel
-                                        value="no"
-                                        control={<Radio color="primary" />}
-                                        label="No"
-                                        labelPlacement="end"
-                                        onChange={handleChange('incomeInterest')}
-                                        defaultValue={values.incomeInterest}
-                                    />
-                                    <FormControlLabel
-                                        value="yes"
-                                        control={<Radio color="primary" />}
-                                        label="Yes"
-                                        labelPlacement="end"
-                                        onChange={handleChange('incomeInterest')}
-                                        defaultValue={values.incomeInterest}
-                                    />
-                                    <FormControlLabel
-                                        value="jointly"
-                                        control={<Radio color="primary" />}
-                                        label="Jointly with partner"
-                                        labelPlacement="end"
-                                        onChange={handleChange('incomeInterest')}
-                                        defaultValue={values.incomeInterest}
-                                    />
+                                </FormControl><br></br><br></br>
+                                <FormControl component="fieldset">
+                                    <FormLabel component="legend">Interest from savings, investments or bonds</FormLabel>
+                                    <RadioGroup row aria-label="position" name="position" defaultValue="no" row>
+                                        <FormControlLabel
+                                            value="no"
+                                            control={<Radio color="primary" />}
+                                            label="No"
+                                            labelPlacement="end"
+                                            onChange={handleChange('incomeInterest')}
+                                            defaultValue={values.incomeInterest}
+                                        />
+                                        <FormControlLabel
+                                            value="yes"
+                                            control={<Radio color="primary" />}
+                                            label="Yes"
+                                            labelPlacement="end"
+                                            onChange={handleChange('incomeInterest')}
+                                            defaultValue={values.incomeInterest}
+                                        />
+                                        <FormControlLabel
+                                            value="jointly"
+                                            control={<Radio color="primary" />}
+                                            label="Jointly with partner"
+                                            labelPlacement="end"
+                                            onChange={handleChange('incomeInterest')}
+                                            defaultValue={values.incomeInterest}
+                                        />
                                 </RadioGroup>
                             </FormControl><br></br><br></br>
                             <FormControl component="fieldset">

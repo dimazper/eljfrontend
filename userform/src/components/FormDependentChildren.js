@@ -790,7 +790,7 @@ export class FormDependentChildren extends Component {
                             <FormControlLabel onClick={() => this.setState({ showing3: !showing3 })} control={<Checkbox color="primary" />} labelPlacement="start"
                             value="no"
                             control={<Radio color="primary" />}
-                            label="None of my children of my children"
+                            label="None of my children"
                             labelPlacement="end"
                             onChange={handleChange('childReceive20Hrs')}
                             defaultValue={values.childReceive20Hrs}
